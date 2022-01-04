@@ -1,0 +1,8 @@
+.arrow{
+    width: 60px;
+}
+
+.flippedArrow{
+    width: 60px;
+    transform: rotate(180deg);
+}
