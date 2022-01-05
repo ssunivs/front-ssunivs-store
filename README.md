@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# 슈니버스 스토어 입니다 =3
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 개발 공지
 
-In the project directory, you can run:
+일단은 이 곳에 어떻게 개발할지 정리해 놓겠습니답! \
+읽어보시고 의견이나 지적할 것있으시면 말해주시길 바랍니다ㅎㅎ
 
-### `npm start`
+### 절대경로를 위한 `jsconfig.json`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+복잡한 상대경로 보다는 \
+절대경로를 통해 직관적으로 알 수 있는게 나은 것같아서 \
+따로 `jsconfig.json`이란 파일을 넣었습니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+이제 import시 절대경로를 사용하실 수 있습니다.
 
-### `npm test`
+### `module.css`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+styled-components 이거 사용안하고 그냥 \
+css를 import해서 사용하는데 \
+className겹침과 실수 방지를 위한 [module.css](https://velog.io/@kwonh/React-CSS%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4-css-module-sass-css-in-js)을 사용하겠습니다.
 
-### `npm run build`
+### `React Context`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+저희 props 많이 사용할텐데 \
+큰 규모 프로젝트에서는 이 방법을 사용한다고 하니 \
+[React Context](https://www.daleseo.com/react-context/)를 편의를 위해 사용하겠습니다
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 그 밖에 좋은 거...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+있으면 알려주시고 업로드 해주세요~

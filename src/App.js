@@ -1,11 +1,11 @@
 import {
-	BrowserRouter as Router , //hash, Browser 두종류
-	Switch, //이 태그안에 담겨져 있는 Route들은 각각 렌더링됨
-	Route, //url
+	BrowserRouter as Router ,
+	Switch,
+	Route,
 } from "react-router-dom";
-import Home from "route/Home";
-import QnA from "route/QnA";
-import Store from "route/Store";
+import Home from "pages/Home";
+import QnA from "pages/QnA";
+import Store from "pages/Store";
 import GNB from "components/GNB";
 
 function App() {
