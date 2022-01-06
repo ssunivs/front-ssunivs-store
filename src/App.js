@@ -3,23 +3,35 @@ import {
 	Switch,
 	Route,
 } from "react-router-dom";
+
+//Pages
 import Home from "pages/Home";
-import QnA from "pages/QnA";
-import Store from "pages/Store";
-import GNB from "components/GNB";
+import Cart from "pages/Cart";
+import MyPage from "pages/MyPage";
+
+//Common components
+import Header from "components/Header";
+import Footer from "components/Footer";
+
+import styles from "App.module.css";
+
 
 function App() {
   return (
-  <Router>
-      <GNB />
+    <Router>
+      <div id={styles.wrap}>
+        
+        <Header />
 
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/QnA" component={QnA} />
-      <Route path="/Store" component={Store} />
-    </Switch>   
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/Cart" component={Cart} />
+          <Route path="/MyPage" component={MyPage} />
+         </Switch>   
 
-  </Router>  
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
