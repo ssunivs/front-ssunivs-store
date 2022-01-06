@@ -15,6 +15,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 이제 import시 절대경로를 사용하실 수 있습니다.
 
+### CSS id & className
+
+네이밍은 [요](https://github.com/dumplehomin/HTML-CSS-Guide/blob/master/1.Naming%20Guide.md)걸로 맞추기로 했습니다.
+
 ### `module.css`
 
 styled-components 이거 사용안하고 그냥 \
