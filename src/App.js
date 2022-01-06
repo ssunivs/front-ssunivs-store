@@ -29,8 +29,8 @@ function App() {
           <Route path="/MyPage" component={MyPage} />
          </Switch>   
 
-        <Footer />
       </div>
+        <Footer />
     </Router>
   );
 }

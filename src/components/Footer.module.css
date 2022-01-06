@@ -1,3 +1,20 @@
-.Footer{
+#footer{
     margin-top: 100px;
+    background-color: #ffff;
+    font-size: 15px;
+}
+
+#footerLogo{
+    width: 60px;
+    height: 60px;
+}
+
+.certificationMark{
+    width: 43px;
+    height: 43px;
+}
+
+.teamNotion{
+    width: 18px;
+    height: 18px;
 }
