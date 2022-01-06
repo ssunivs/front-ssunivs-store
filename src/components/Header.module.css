@@ -1,9 +1,15 @@
-.Header{
+
+#header{
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+}
+
+.storeMainLogo{
+    position: relative;
+    left: 25%; /*더 깔끔한 방법찾기*/
 }
 
 img{

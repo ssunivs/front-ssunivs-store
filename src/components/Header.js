@@ -4,12 +4,13 @@ import store_logo from "assets/store_logo.png";
 
 function Header(){ //메뉴 로고 mypage,cart
     return (
-        <div className={styles.Header}>
+        <div id={styles.header}>
 
             <div>menu</div>
 
             <Link to="/">
             <img 
+            className={styles.storeMainLogo}
             src={store_logo}
             alt="SSUNIVERSE Store main logo" 
             />
