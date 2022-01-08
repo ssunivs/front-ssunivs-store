@@ -1,0 +1,21 @@
+#home {
+    text-align: center;
+}
+
+.mainSsua1{
+    width: 230px;
+    position: relative;
+    bottom: 20px;
+}
+
+.mainSsua2{
+    width: 230px;
+    position: relative;
+    top : 40px;
+}
+
+.mainSsua3{
+    width: 230px;
+    position: relative;
+    bottom: 20px;
+}
