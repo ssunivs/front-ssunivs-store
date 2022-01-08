@@ -31,6 +31,10 @@ className겹침과 실수 방지를 위한 [module.css](https://velog.io/@kwonh/
 큰 규모 프로젝트에서는 이 방법을 사용한다고 하니 \
 [React Context](https://www.daleseo.com/react-context/)를 편의를 위해 사용하겠습니다
 
+### `React Icon`
+
+인터페이스 아이콘은 [React Icon](https://react-icons.github.io/react-icons/)을 사용하겠습니다
+
 ## 개발 참고?
 
 ### #wrap이랑 #footer랑 따로 놨습니다
