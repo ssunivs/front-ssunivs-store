@@ -2,6 +2,8 @@ import {Link} from "react-router-dom";
 import styles from "components/Header.module.css";
 import store_logo from "assets/store_logo.png";
 
+
+
 function Header(){ //메뉴 로고 mypage,cart
     return (
         <div id={styles.header}>

@@ -1,4 +1,6 @@
 #wrap{
     padding: 50px 40px 0px 40px;
     border: 1px solid black;
+    color: #2c2c2c;
+    font-weight: 300;
 }

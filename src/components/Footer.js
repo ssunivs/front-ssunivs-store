@@ -1,6 +1,6 @@
 import styles from "components/Footer.module.css";
 
-function Footer(){ 
+function Footer(){ //wrap에 안 쌓여 있습니다.
     return (
     <footer id={styles.footer}>
         <div>up</div>
@@ -37,17 +37,27 @@ function Footer(){
 
                 <p>
 					<br></br>
-						<a href="https://pf.kakao.com/_JNgis">카카오톡 채널 고객센터</a> 
+						<a href="https://pf.kakao.com/_JNgis"
+                        target="_blank"
+                        rel="noopener noreferrer">카카오톡 채널 고객센터</a> 
 						    | TEL. 0502-1905-0525 
                             <br></br>
                             <br></br>
 						<p>
-							<a href="https://www.ssunivs.com/개인정보-보호정책"> [개인정보 보호정책] | </a>
-							<a href="https://www.ssunivs.com/서비스-이용약관"> [서비스 이용약관] </a>
+							<a href="https://www.ssunivs.com/개인정보-보호정책"
+                            target="_blank"
+                            rel="noopener noreferrer"> [개인정보 보호정책] | </a>
+							<a href="https://www.ssunivs.com/서비스-이용약관"
+                            target="_blank"
+                            rel="noopener noreferrer"> [서비스 이용약관] </a>
                             <br></br>
 						</p>
-							<a href="mailto:ssua@ssunivs.com?cc=snvs.official@gmail.com">Contact Us | </a>
-							<a href="https://ssuniverse.notion.site/Hello-SSUNIVERSE-7373f0cd163d4d2ca0b1574389441727">
+							<a href="mailto:ssua@ssunivs.com?cc=snvs.official@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer">Contact Us | </a>
+							<a href="https://ssuniverse.notion.site/Hello-SSUNIVERSE-7373f0cd163d4d2ca0b1574389441727"
+                            target="_blank"
+                            rel="noopener noreferrer">
                                 Notion
                                 <img src="https://raw.githubusercontent.com/ssunivs/ssutopia-store/main/img/flower-blue.png"
                             alt='Team Notion'
