@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom";
-import styles from "components/Header.module.css";
 import store_logo from "assets/store_logo.png";
+import Menu from "components/Menu";
+
+import styles from "components/Header.module.css";
 
 import {
     IoMdPerson,
@@ -13,7 +15,7 @@ function Header(){ //메뉴 & 로고  & mypage,cart
     return (
         <div id={styles.header}>
 
-            <div>menu</div>
+            <Menu />
 
             <div className={styles.Logos}>
                 <Link to="/">
@@ -28,8 +30,8 @@ function Header(){ //메뉴 & 로고  & mypage,cart
             </div>
 
             <div className={styles.rnb}>
-                <Link to="/MyPage"><IoMdPerson size="30px" color="white"/></Link>
-                <Link to="/Cart"><IoMdCart size="30px" color="white"/></Link>
+                <Link to="/MyPage"><IoMdPerson size="40px" color="white"/></Link>
+                <Link to="/Cart"><IoMdCart size="40px" color="white"/></Link>
             </div>
             
         </div>

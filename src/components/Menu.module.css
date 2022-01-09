@@ -1,0 +1,38 @@
+.hamburgerMenu{
+    position: absolute;
+}
+
+.hamburgerIcon div{
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    margin: 8px 0px;
+    transition: all 0.5s;
+}
+
+.line1Actived{
+    transform: rotate(-45deg) translate(-8px, 9px);
+}
+
+.line2Actived{
+    opacity: 0;
+}
+
+.line3Actived{
+    transform: rotate(45deg) translate(-8px, -9px);
+}
+
+
+
+.menuClosed{
+    display: none;
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.menuOpend{
+    background-color: #04488C;
+    transform: translateX(200px);
+    transition: transform 0.5s ;
+    width: 200px;
+}
