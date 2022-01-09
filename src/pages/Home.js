@@ -2,6 +2,7 @@ import styles from "pages/Home.module.css";
 import main_ssua1 from "assets/main_ssua1.png";
 import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
+import fix_ssua from "assets/fix_ssua.png";
 
 function Home(){
     return (
@@ -21,6 +22,13 @@ function Home(){
             src={main_ssua3}
             alt="main_ssua3" 
             />
+            <div>
+                <img 
+                className={styles.floatSsua}
+                src={fix_ssua}
+                alt="fix_ssua" 
+                />
+            </div> 
         </div>
     );
 }
