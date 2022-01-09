@@ -15,7 +15,9 @@ function Header(){ //메뉴 & 로고  & mypage,cart
     return (
         <div id={styles.header}>
 
-            <Menu />
+            <div className={styles.menu}>
+                <Menu />
+            </div>
 
             <div className={styles.Logos}>
                 <Link to="/">

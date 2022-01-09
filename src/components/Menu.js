@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import SocialLinks from "components/SocialLinks";
 import styles from "components/Menu.module.css";
 
 function Menu(){
@@ -16,8 +17,35 @@ function Menu(){
                 <div className={open? styles.line2Actived : styles.line}></div>
                 <div className={open? styles.line3Actived : styles.line}></div>
             </div>
+            
             <div className={open? styles.menuOpend : styles.menuClosed}>
-                eee
+            
+            <div>Serch</div>
+            
+            <ul>
+                <li>ABOUT US</li>
+                <li>ssuniverse</li>
+                <li>ssua</li>
+
+                <li>STORE</li>
+                <li>All</li>
+                <li>Reservation</li>
+
+                <li>BOARD</li>
+                <li>Notice</li>
+                <li>FAQ</li>
+
+                <li>CONTACT</li>
+                <li>ssua@ssunivs.com</li>
+            </ul>
+
+            <SocialLinks size="20px"/>
+
+            <div>
+                <div>LOG IN</div>
+                <div>MY PAGE</div>
+                <div>CART</div>
+            </div>
             </div>
         </div>
     );

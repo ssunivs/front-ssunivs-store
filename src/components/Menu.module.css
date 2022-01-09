@@ -25,14 +25,19 @@
 
 
 .menuClosed{
-    display: none;
-    transform: translateX(0);
+    position: absolute;
+    background-color: #04488C;
+    transform: translateX(-200px);
     transition: transform 0.5s;
+    width: 200px;
+    z-index: 2;
 }
 
 .menuOpend{
+    position: absolute;
     background-color: #04488C;
-    transform: translateX(200px);
+    transform: translateX(0px);
     transition: transform 0.5s ;
     width: 200px;
+    z-index: 2;
 }
