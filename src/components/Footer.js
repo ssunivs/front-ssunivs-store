@@ -25,7 +25,8 @@ function Footer(){ //wrap에 안 쌓여 있습니다.
                     rel="noopener noreferrer">
 					<img src="https://image.inicis.com/mkt/certmark/inipay/inipay_43x43_color.png" 
                     className={styles.certificationMark}
-                    title='클릭하시면 이니시스 결제시스템의 유효성을 확인하실 수 있습니다.' />
+                    title='클릭하시면 이니시스 결제시스템의 유효성을 확인하실 수 있습니다.'
+                    alt="이니시스" />
 				</a>
 
                 <a href="https://okbfex.kbstar.com/quics?page=C021590&cc=b034066%3Ab035526&mHValue=8994de4139f9babe938e12c5ed93f12e#AutoLogOut"
@@ -33,7 +34,8 @@ function Footer(){ //wrap에 안 쌓여 있습니다.
                 rel="noopener noreferrer">
 					<img src="http://img1.kbstar.com/img/escrow/escrowcmark.gif" 
                     className={styles.certificationMark}
-                    title='클릭하시면 kb에스크로 판매자 확인정보를 조회하실 수 있습니다.' />
+                    title='클릭하시면 kb에스크로 판매자 확인정보를 조회하실 수 있습니다.'
+                    alt="kb에스크로" />
 				</a>
 
                 <p>
