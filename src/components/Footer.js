@@ -1,4 +1,5 @@
 import styles from "components/Footer.module.css";
+import SocialLinks from "components/SocialLinks";
 
 function Footer(){ //wrap에 안 쌓여 있습니다.
     return (
@@ -68,29 +69,7 @@ function Footer(){ //wrap에 안 쌓여 있습니다.
 
                 <p>© 슈니버스 Co. All Rights Reserved. </p>
             </div>
-
-            <ul class="social-links">
-                <li><a rel="nofollow"
-                class="social-tooltip"
-                title="Insta"
-                href="https://www.instagram.com/snvs.official/"
-                target="_blank"
-                rel="noopener noreferrer"></a></li>
-
-                <li><a rel="nofollow"
-                class="social-tooltip"
-                title="Youtube"
-                href="https://www.youtube.com/channel/UC1xb52mAFAng2sQFaBhZ-KQ"
-                target="_blank"
-                rel="noopener noreferrer"></a></li>
-                
-                <li><a rel="nofollow"
-                class="social-tooltip"
-                title="Github"
-                href="https://github.com/ssunivs"
-                target="_blank"
-                rel="noopener noreferrer"></a></li>
-            </ul>
+            <SocialLinks size="25px"/>
         </div>
 	</footer>
     );

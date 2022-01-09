@@ -6,11 +6,22 @@
     margin-bottom: 100px;
 }
 
-.storeMainLogo{
-    position: relative;
-    left: 25%; /*더 깔끔한 방법찾기*/
+.Logos{
+    display: flex;
+    align-items: center;
+
+    color: #ffff;
+    font-size: 19px;
+    word-spacing: 20px;
 }
 
-img{
+.storeMainLogo{
+    position: relative;
+    left: 130%; /*더 깔끔한 방법찾기*/
     width: 90px;
+}
+
+.logoFence{
+    margin-left: 120px;
+    margin-right: 10px;
 }
