@@ -12,6 +12,7 @@ import MyPage from "pages/MyPage";
 //Common components
 import Header from "components/Header";
 import Footer from "components/Footer";
+import FloatingMenu from "components/FloatingMenu";
 
 import styles from "App.module.css";
 
@@ -20,15 +21,13 @@ function App() {
   return (
     <Router>
       <div id={styles.wrap}>
-  
         <Header />
-
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Cart" component={Cart} />
           <Route path="/MyPage" component={MyPage} />
-         </Switch>   
-
+        </Switch>  
+        <FloatingMenu/>
       </div>
         <Footer />
     </Router>

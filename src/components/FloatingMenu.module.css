@@ -1,9 +1,17 @@
 #floatingMenu{
     position:fixed;
-	width:60px;
+	bottom: 30px;
+	right: 30px;
+	
+	
+	/* width:60px;
 	height:60px;
 	bottom:40px;
 	right:40px;
     height: auto;
-    width: 80px; 
+    width: 80px;  */
+}
+
+.fixSsuaIcon{
+	width: 90px;
 }
