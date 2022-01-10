@@ -1,0 +1,9 @@
+#floatingMenu{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+    height: auto;
+    width: 80px; 
+}
