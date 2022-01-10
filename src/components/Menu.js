@@ -50,7 +50,7 @@ function Menu(){
                 </ul>
             </ul>
 
-            <SocialLinks size="20px"/>
+            <SocialLinks size="30px"/>
 
             <div className={styles.user}>
                 <div>LOG IN</div>
