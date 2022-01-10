@@ -30,6 +30,21 @@
     margin-right: 10px;
 }
 
+@media screen and (max-width:599px) {
+    /*모바일세로크기*/
+    .logoFence{
+        visibility: hidden;
+    }
+    .moveToPage{
+    /*ssunivers가 logo밑으로 오게*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(200%);
+    width: 100%;
+    height: auto;
+    }
+}
+
 .rnb{
     float: right;
 }
