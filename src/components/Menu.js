@@ -20,28 +20,39 @@ function Menu(){
             
             <div className={open? styles.menuOpend : styles.menuClosed}>
             
-            <div>Serch</div>
+            <div className = {styles.search}>Search</div>
             
-            <ul>
+            <ul className={styles.menuList}>
                 <li>ABOUT US</li>
-                <li>ssuniverse</li>
-                <li>ssua</li>
+                <ul className={styles.detailLists}>
+                    <li>ssuniverse</li>
+                    <li>ssua</li>
+                    <br></br>
+                </ul>
 
                 <li>STORE</li>
-                <li>All</li>
-                <li>Reservation</li>
+                <ul className={styles.detailLists}>
+                    <li>All</li>
+                    <li>Reservation</li>
+                    <br></br>
+                </ul>
 
                 <li>BOARD</li>
-                <li>Notice</li>
-                <li>FAQ</li>
+                <ul className={styles.detailLists}>
+                    <li>Notice</li>
+                    <li>FAQ</li>
+                    <br></br>
+                </ul>
 
                 <li>CONTACT</li>
-                <li>ssua@ssunivs.com</li>
+                <ul className={styles.detailLists}>
+                    <li>ssua@ssunivs.com</li>
+                </ul>
             </ul>
 
             <SocialLinks size="20px"/>
 
-            <div>
+            <div className={styles.user}>
                 <div>LOG IN</div>
                 <div>MY PAGE</div>
                 <div>CART</div>
