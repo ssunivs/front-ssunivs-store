@@ -5,11 +5,11 @@ import {
     RiTwitterFill,
     RiGithubFill} from "react-icons/ri";
 
-
+import styles from "components/SocialLinks.module.css";
 
 function SocialLinks( { size } ){ //햄버거 메뉴, 푸터에 들어갑니다
     return (
-        <div>
+        <div className={styles.socialIcons}>
             <a title="KakaoTalk"
                 href="https://pf.kakao.com/_JNgis/chat"
                 target="_blank"
