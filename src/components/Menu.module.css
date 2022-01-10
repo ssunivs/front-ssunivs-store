@@ -27,18 +27,18 @@
 .menuClosed{
     position: absolute;
     background-color: #04488C;
-    transform: translateX(-200px);
+    transform: translateX(-400px);
     transition: transform 0.5s;
-    width: 200px;
+    width: 300px;
     z-index: 2;
 }
 
 .menuOpend{
     position: absolute;
     background-color: #04488C;
-    transform: translateX(0px);
+    transform: translateX(-41px);
     transition: transform 0.5s ;
-    width: 200px;
+    width: 300px;
     z-index: 2;
 }
 
@@ -73,4 +73,33 @@
     padding-right:12px;
     padding-bottom: 10px;
     padding-left: 12px;
+}
+
+@media screen and (max-width:1799px) {
+    /*데스크탑기준*/
+    .menuOpend{
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width:1199px){
+    /* 타블렛 가로 */
+    .menuOpend{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:899px) {
+    /* 모바일 가로, 타블렛 세로 */
+    .menuOpend{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    /* 모바일 세로 */
+    .menuOpend{
+        width: 300px;
+    }
 }
