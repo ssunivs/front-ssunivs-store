@@ -20,7 +20,7 @@ import Cart from "pages/Cart";
 //Common components
 import Header from "components/Header";
 import Footer from "components/Footer";
-
+import FloatingMenu from "components/FloatingMenu";
 import styles from "App.module.css";
 
 
@@ -30,7 +30,7 @@ function App() {
       <div id={styles.wrap}>
   
         <Header />
-
+        <FloatingMenu />
         <Switch>
           <Route exact path="/" component={Home} />
 
