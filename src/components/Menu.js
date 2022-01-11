@@ -55,7 +55,7 @@ function Menu(){
                 </ul>
             </ul>
 
-            <SocialLinks size="30px"/>
+            <SocialLinks size="30px" color="white"/>
 
                 <ul className={styles.user}>
                     <Link to="/LogIn"><li>LOG IN</li></Link>
