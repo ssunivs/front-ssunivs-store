@@ -26,7 +26,7 @@ function Menu(){
             <ul className={styles.menuList}>
                 <li>ABOUT US</li>
                 <ul className={styles.detailLists}>
-                <li><Link to="/AboutSsua">ssua</Link></li>
+                <Link to="/AboutSsua"><li>ssua</li></Link>
                 <Link to="/AboutSsunivers"><li>ssuniverse</li></Link>
                     <br></br>
                 </ul>
