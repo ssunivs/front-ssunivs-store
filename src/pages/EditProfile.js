@@ -32,6 +32,8 @@ function EditProfile(){
                     <th>이메일</th> <td>0</td>
                 </tr>
             </table>
+
+            <button>저장</button>
         </div>
 
         
