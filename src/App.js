@@ -4,10 +4,6 @@ import {
 	Route,
 } from "react-router-dom";
 
-//redux
-import { Provider } from "react-redux";
-import store from "redux/store";
-
 //Pages -> 코드 줄이는 거 연구필요..
 import Home from "pages/Home";
 import AboutSsua from "pages/AboutSsua";
@@ -30,7 +26,6 @@ import styles from "App.module.css";
 
 function App() {
   return (
-    <Provider store={store}>
       <Router>
         <div id={styles.wrap}>
     
@@ -56,7 +51,6 @@ function App() {
         </div>
           <Footer />
       </Router>
-    </Provider>
   );
 }
 
