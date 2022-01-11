@@ -47,17 +47,21 @@ function Menu(){
 
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
+                <a  href="mailto:ssua@ssunivs.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     <li>ssua@ssunivs.com</li>
+                </a>
                 </ul>
             </ul>
 
             <SocialLinks size="30px"/>
 
-            <div className={styles.user}>
-            <Link to="/LogIn"><div>LOG IN</div></Link>
-            <Link to="/MyPage"><div>MY PAGE</div></Link>
-            <Link to="Cart"><div>CART</div></Link>
-            </div>
+                <ul className={styles.user}>
+                    <Link to="/LogIn"><li>LOG IN</li></Link>
+                    <Link to="/MyPage"><li>MY PAGE</li></Link>
+                    <Link to="Cart"><li>CART</li></Link>    
+                </ul>
             </div>
         </div>
     );
