@@ -15,6 +15,7 @@ import FAQ from "pages/FAQ";
 import LogIn from "pages/LogIn";
 import MyPage from "pages/MyPage";
 import Cart from "pages/Cart";
+import EditProfile from "pages/EditProfile";
 
 
 //Common components
@@ -46,6 +47,8 @@ function App() {
             <Route path="/LogIn" component={LogIn} />
             <Route path="/MyPage" component={MyPage} />
             <Route path="/Cart" component={Cart} />
+
+            <Route path="/EditProfile" component={EditProfile} />
           </Switch>   
 
         </div>

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import headTitle from "pages/headTitle.module.css";
 import styles from "pages/MyPage.module.css";
 
@@ -31,7 +33,9 @@ function MyPage(){
 
                 <ul>
                     <li>주문조회</li>
-                    <li>회원정보</li>
+                    <Link to="/EditProfile">
+                        <li>회원정보</li>
+                    </Link>
                     <li>쿠폰</li>
                 </ul>
             </div>
