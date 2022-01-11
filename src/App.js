@@ -4,6 +4,10 @@ import {
 	Route,
 } from "react-router-dom";
 
+//redux
+import { Provider } from "react-redux";
+import store from "redux/store";
+
 //Pages -> 코드 줄이는 거 연구필요..
 import Home from "pages/Home";
 import AboutSsua from "pages/AboutSsua";
@@ -26,31 +30,33 @@ import styles from "App.module.css";
 
 function App() {
   return (
-    <Router>
-      <div id={styles.wrap}>
-  
-        <Header />
-        <FloatingMenu />
-        <Switch>
-          <Route exact path="/" component={Home} />
+    <Provider store={store}>
+      <Router>
+        <div id={styles.wrap}>
+    
+          <Header />
+          <FloatingMenu />
+          <Switch>
+            <Route exact path="/" component={Home} />
 
-          <Route path="/AboutSsua" component={AboutSsua} />
-          <Route path="/AboutSsunivers" component={AboutSsunivers} />
+            <Route path="/AboutSsua" component={AboutSsua} />
+            <Route path="/AboutSsunivers" component={AboutSsunivers} />
 
-          <Route path="/MainStore" component={MainStore} />
-          <Route path="/Reservation" component={Reservation} />
+            <Route path="/MainStore" component={MainStore} />
+            <Route path="/Reservation" component={Reservation} />
 
-          <Route path="/Notice" component={Notice} />
-          <Route path="/FAQ" component={FAQ} />
+            <Route path="/Notice" component={Notice} />
+            <Route path="/FAQ" component={FAQ} />
 
-          <Route path="/LogIn" component={LogIn} />
-          <Route path="/MyPage" component={MyPage} />
-          <Route path="/Cart" component={Cart} />
-        </Switch>   
+            <Route path="/LogIn" component={LogIn} />
+            <Route path="/MyPage" component={MyPage} />
+            <Route path="/Cart" component={Cart} />
+          </Switch>   
 
-      </div>
-        <Footer />
-    </Router>
+        </div>
+          <Footer />
+      </Router>
+    </Provider>
   );
 }
 
