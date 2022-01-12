@@ -17,7 +17,7 @@ function MainStore(){
             <p id={styles.store}>슈니버스의 다양한 상품들을 만나보세요.</p>
             <br></br>
             <div className={styles.store_1}>
-                <NavLink to="pages/SsuaDollGoods">
+                <NavLink to="/SsuaDollGoods">
                 <img
                 className={styles.store_ssua1}
                 src={store_ssua1}
