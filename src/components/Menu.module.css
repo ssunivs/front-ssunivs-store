@@ -50,6 +50,7 @@
     font-family:'Segoe UI';
     /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     list-style:none;
+    font-weight: bold;
     padding-left:10px;
     color: aliceblue;
     font-size: larger;
@@ -58,6 +59,7 @@
 
 .detailLists {
     list-style:none;
+    font-weight:normal;
     color: aliceblue;
     padding-left:12px;
     font-size: 17px;
@@ -73,9 +75,11 @@
     color: aliceblue;
     padding-top: 10px;
     padding-left:12px;
+    font-weight:normal;
 }
 
 .user {
+    font-weight:normal;
     font-family:'Segoe UI';
     font-size: larger;
     padding-right:12px;
