@@ -6,7 +6,7 @@ h1 {
 #store { 
     text-align:center;
 }
-.store_ssua1, .store_plus, .store_box {
+.store_ssua1, .store_set, .store_box {
     width : 300px;
     height : 300px;
     padding : 10px;
@@ -20,5 +20,4 @@ h1 {
 .store_doll{
     text-align : center;
     /* width:[width of img];  */
-
 }
