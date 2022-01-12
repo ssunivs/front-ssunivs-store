@@ -1,7 +1,6 @@
 function SsuaDollBox(){
-    return (
+    return(
         <div>SsuaDollBox</div>
     );
 }
-
 export default SsuaDollBox;
