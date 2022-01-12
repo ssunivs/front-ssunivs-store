@@ -3,10 +3,13 @@ import styles from "pages/MainStore.module.css";
 import store_ssua1 from "assets/store_ssua1.png"; //store이미지
 import store_plus from "assets/store_plus.png"; // 원 플러스 원 이미지 
 import store_box from "assets/store_box.png" //박스 이미지
+import NavBar from "components/NavBar.js";
 
 function MainStore(){
     return (
         <div>
+            <NavBar />
+            <br></br>
             <br></br> 
             <h1>Store</h1>
             <p id={styles.store}>슈니버스의 다양한 상품들을 만나보세요.</p>
