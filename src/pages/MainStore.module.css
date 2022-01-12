@@ -1,0 +1,24 @@
+h1 {
+    text-align : center;
+    font-size : 50px;
+}
+
+#store { 
+    text-align:center;
+}
+.store_ssua1, .store_plus, .store_box {
+    width : 300px;
+    height : 300px;
+    padding : 10px;
+    margin-left :105px;
+    margin-right : 105px;
+    display:block;
+}
+.store_1, .store_2, .store_3{
+    display : inline-block;
+}
+.store_doll{
+    text-align : center;
+    /* width:[width of img];  */
+
+}
