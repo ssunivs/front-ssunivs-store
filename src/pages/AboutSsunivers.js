@@ -1,6 +1,13 @@
+import NavBar from "components/NavBar.js";
+
 function AboutSsunivers(){
     return (
-        <div>About us-ssunivers</div>
+        <div>
+            <NavBar />
+            <br></br>
+            <br></br>
+            <h1>슈니버스를 소개합니다 !</h1>
+        </div>
     );
 }
 
