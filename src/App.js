@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/Cart" component={Cart} />
           <Route path="/MyPage" component={MyPage} />
-         </Switch>   
+        </Switch>   
 
       </div>
         <Footer />
