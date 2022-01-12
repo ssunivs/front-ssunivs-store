@@ -28,7 +28,7 @@ function Header(){ //메뉴 & 로고  & mypage,cart
                 />
                 </Link>
                 <div className={styles.logoFence}>|</div>
-                <div>ssuniverse</div>
+                <div className={styles.moveToPage}>ssuniverse</div>
             </div>
 
             <div className={styles.rnb}>

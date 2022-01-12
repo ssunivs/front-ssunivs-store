@@ -4,7 +4,6 @@ import SocialLinks from "components/SocialLinks";
 function Footer(){ //wrap에 안 쌓여 있습니다.
     return (
     <footer id={styles.footer}>
-        <div>up</div>
         <div class="grid one-full">
             <img id={styles.footerLogo} src="https://www.ssunivs.com/wp-content/uploads/2021/07/video_watermark.png" alt="우주최강 슈니버스=3"/>
 			

@@ -1,8 +1,9 @@
 #header{
+    font-family:'Segoe UI';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     user-select: none;
 }
 
@@ -28,6 +29,25 @@
 .logoFence{
     margin-left: 5px;
     margin-right: 10px;
+}
+
+.moveToPage{
+    font-size: 22px;
+}
+
+@media screen and (max-width:599px) {
+    /*모바일세로크기*/
+    .logoFence{
+        visibility: hidden;
+    }
+    .moveToPage{
+    /*ssunivers가 logo밑으로 오게*/
+    position: absolute;
+    top: 40%;
+    transform: translate(0%,170%);
+    width: 100%;
+    height: auto;
+    }
 }
 
 .rnb{

@@ -1,6 +1,8 @@
 function MainStore(){
     return (
-        <div>MainStore</div>
+        <div>
+            Mainstore
+        </div>
     );
 }
 

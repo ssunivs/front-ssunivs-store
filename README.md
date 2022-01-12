@@ -25,11 +25,9 @@ styled-components 이거 사용안하고 그냥 \
 css를 import해서 사용하는데 \
 className겹침과 실수 방지를 위한 [module.css](https://velog.io/@kwonh/React-CSS%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4-css-module-sass-css-in-js)을 사용하겠습니다.
 
-### `React Context`
+### `Redux`
 
-저희 props 많이 사용할텐데 \
-큰 규모 프로젝트에서는 이 방법을 사용한다고 하니 \
-[React Context](https://www.daleseo.com/react-context/)를 편의를 위해 사용하겠습니다
+Redux를 이용해 state와 props를 효율적으로 관리해보겟습니답
 
 ### `React Icon`
 

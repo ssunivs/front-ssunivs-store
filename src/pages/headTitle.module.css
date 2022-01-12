@@ -1,0 +1,20 @@
+.head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width:899px) {
+    /* 모바일 가로, 타블렛 세로 */
+    .head{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    /* 모바일 세로 */
+    .head{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

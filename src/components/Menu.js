@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 
 import SocialLinks from "components/SocialLinks";
 import styles from "components/Menu.module.css";
@@ -20,32 +21,47 @@ function Menu(){
             
             <div className={open? styles.menuOpend : styles.menuClosed}>
             
-            <div>Serch</div>
+            <div className = {styles.search}>Search</div>
             
-            <ul>
+            <ul className={styles.menuList}>
                 <li>ABOUT US</li>
-                <li>ssuniverse</li>
-                <li>ssua</li>
+                <ul className={styles.detailLists}>
+                <Link to="/AboutSsua"><li className={styles.list}>ssua</li></Link>
+                <Link to="/AboutSsunivers"><li className={styles.list}>ssuniverse</li></Link>
+                    <br></br>
+                </ul>
 
                 <li>STORE</li>
-                <li>All</li>
-                <li>Reservation</li>
+                <ul className={styles.detailLists}>
+                <Link to="/MainStore"><li className={styles.list}>All</li></Link>
+                <Link to="/Reservation"><li className={styles.list}>Reservation</li></Link>
+                    <br></br>
+                </ul>
 
                 <li>BOARD</li>
-                <li>Notice</li>
-                <li>FAQ</li>
+                <ul className={styles.detailLists}>
+                <Link to="/Notice"><li className={styles.list}>Notice</li></Link>
+                <Link to="/FAQ"><li className={styles.list}>FAQ</li></Link>
+                    <br></br>
+                </ul>
 
                 <li>CONTACT</li>
-                <li>ssua@ssunivs.com</li>
+                <ul className={styles.detailLists}>
+                <a  href="mailto:ssua@ssunivs.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <li className={styles.list}>ssua@ssunivs.com</li>
+                </a>
+                </ul>
             </ul>
 
-            <SocialLinks size="20px"/>
+            <SocialLinks size="30px" color="white"/>
 
-            <div>
-                <div>LOG IN</div>
-                <div>MY PAGE</div>
-                <div>CART</div>
-            </div>
+                <ul className={styles.user}>
+                    <Link to="/LogIn"><li className={styles.list}>LOG IN</li></Link>
+                    <Link to="/MyPage"><li className={styles.list}>MY PAGE</li></Link>
+                    <Link to="Cart"><li className={styles.list}>CART</li></Link>    
+                </ul>
             </div>
         </div>
     );

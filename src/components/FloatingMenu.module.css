@@ -1,0 +1,49 @@
+.floatingMenu{
+    position:fixed;
+	display:block;
+	/*화면 전체에서 얼마나 떨어져서 floating*/
+	bottom: 30px;
+	right: 30px;
+}
+
+.fixSsuaIcon{
+	/*슈아 크기.. 근데 이거 같이 커짐*/
+	width: 90px;
+	cursor: pointer;
+}
+
+.floatingDetailMenu{
+	visibility: hidden;
+	list-style:none;
+	width: 50px;
+	animation: bot-to-top 2s ease-out;
+}
+
+.openDetailMenu{
+	/* display:block; */
+	visibility:visible;
+	list-style:none;
+	width: 50px;
+	animation: scale-in 0.5s;	
+}
+
+
+#kakao,#insta,#mail{	
+	cursor: pointer;
+	background-color:aliceblue;
+	border-radius: 50px;
+	box-shadow: 2px 2px 3px #999;
+	margin-bottom: 15px;
+	padding-right: 20px;
+	
+}
+
+@keyframes scale-in {
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1);opacity: 1;}
+}
+
+@keyframes bot-to-top {
+    0%   {bottom:-40px}
+    50%  {bottom:40px}
+}
