@@ -1,5 +1,5 @@
 function SsuaDollGoods(){
-    return (
+    return(
         <div>SsuaDollGoods</div>
     );
 }

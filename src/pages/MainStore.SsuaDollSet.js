@@ -1,7 +1,6 @@
 function SsuaDollSet(){
-    return (
+    return(
         <div>SsuaDollSet</div>
     );
 }
-
 export default SsuaDollSet;
