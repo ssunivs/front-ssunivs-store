@@ -17,24 +17,24 @@ function FloatingMenu() {
                     href="https://pf.kakao.com/_JNgis/chat"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.kakao}><RiKakaoTalkFill size="50" color="#04488C"/></li>
+                        <li id={styles.kakao}><RiKakaoTalkFill size="30" color="#04488C"/></li>
                     </a>
                     <a title="Instagram"
                     href="https://www.instagram.com/snvs.official/"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.insta}><GrInstagram size="50" color="#04488C"/></li>
+                        <li id={styles.insta}><GrInstagram size="30" color="#04488C"/></li>
                     </a>
                     <a title="Mail"
                     href="mailto:ssua@ssunivs.com"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.mail}><GrMail size="50" color="#04488C"/></li>
+                        <li id={styles.mail}><GrMail size="30" color="#04488C"/></li>
                     </a>
             </ul>
                 <img 
-                onClick={onFloatingMenuClick}
                 className={styles.fixSsuaIcon}
+                onClick={onFloatingMenuClick}
                 src={fixSsuaIcon}
                 alt="슈아고정버튼" 
                 />

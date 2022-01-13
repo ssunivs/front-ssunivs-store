@@ -33,7 +33,7 @@ function Menu(){
             </div>
             
             <div className={open? styles.menuOpend : styles.menuClosed}
-                style={{backgroundColor: (path==="/")? "#04488C" : "#A5D1FC"}}>
+                style={{backgroundColor: "#04488C"}}>
             
             <div className = {styles.search}>Search</div>
             
