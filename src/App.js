@@ -22,6 +22,9 @@ import MyPage from "pages/MyPage";
 import Cart from "pages/Cart";
 import EditProfile from "pages/EditProfile";
 
+import SsuaDollBox from "pages/MainStore.SsuaDollBox";
+import SsuaDollGoods from "pages/MainStore.SsuaDollGoods";
+import SsuaDollSet from "pages/MainStore.SsuaDollSet";
 
 //Common components
 import Header from "components/Header";
@@ -56,6 +59,11 @@ function App() {
             <Route path="/Cart" component={Cart} />
 
             <Route path="/EditProfile" component={EditProfile} />
+
+            <Route path="/MainStore.SsuaDollGoods" component={SsuaDollGoods} />
+            <Route path="/MainStore.SsuaDollSet" component={SsuaDollSet} />
+            <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />
+
           </Switch>   
 
         </Wrap>
