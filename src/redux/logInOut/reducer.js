@@ -30,4 +30,4 @@ const logInOutReducer = (state=initialState,action)=>{
     }
 }
 
-export default logInOutReducer
+export default persistReducer(persistConfig, logInOutReducer)
