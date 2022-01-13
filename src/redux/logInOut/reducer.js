@@ -1,10 +1,19 @@
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+
 import { SET_LOGIN, SET_LOGOUT } from "./types";
 
-const initialState = {
-    logInState : False
+const persistConfig = {
+    key: "root", //어디서부터 저장할지
+    storage: storage, //storage 성격에 맞게
+    whitelist:["Name"], //데이터
 }
 
-const logInReducer = (state=initialState,action)=>{
+const initialState = {
+    logInState : false
+}
+
+const logInOutReducer = (state=initialState,action)=>{
     switch(action.type){
         case SET_LOGIN:
             return{
@@ -21,4 +30,4 @@ const logInReducer = (state=initialState,action)=>{
     }
 }
 
-export default logInReducer
+export default logInOutReducer
