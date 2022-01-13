@@ -5,7 +5,9 @@
 .hamburgerMenu{
     position: absolute;
 }
-
+.hamburgerIcon {
+    cursor: pointer;
+}
 .hamburgerIcon div{
     width: 30px;
     height: 4px;
