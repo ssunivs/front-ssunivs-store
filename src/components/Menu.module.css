@@ -1,7 +1,6 @@
-/* *{
-    color: aliceblue;
-} */
-
+*{
+    font-family:'Segoe UI';
+}
 .hamburgerMenu{
     position: absolute;
 }
@@ -47,7 +46,6 @@
 
 .menuList {
     font-family:'Segoe UI';
-    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     list-style:none;
     font-weight: bold;
     padding-left:10px;
