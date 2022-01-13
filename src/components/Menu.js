@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import {Link} from "react-router-dom";
 
 import SocialLinks from "components/SocialLinks";
@@ -10,16 +12,28 @@ function Menu(){
         setOpen((current) => !current);
     }
 
+    //Detect pathname
+    const location = useLocation();
+    let path = location.pathname;
+
+    useEffect((path) => {
+        path = location.pathname;
+    }, [location]);
+
     return (
         <div>
             <div className={styles.hamburgerIcon}
                 onClick={onMenuClick}>
-                <div className={open? styles.line1Actived : styles.line}></div>
-                <div className={open? styles.line2Actived : styles.line}></div>
-                <div className={open? styles.line3Actived : styles.line}></div>
+                <div className={open? styles.line1Actived : styles.line}
+                    style={{backgroundColor: (path==="/")? "white" : "#b2b2b2"}}></div>
+                <div className={open? styles.line2Actived : styles.line}
+                    style={{backgroundColor: (path==="/")? "white" : "#b2b2b2"}}></div>
+                <div className={open? styles.line3Actived : styles.line}
+                    style={{backgroundColor: (path==="/")? "white" : "#b2b2b2"}}></div>
             </div>
             
-            <div className={open? styles.menuOpend : styles.menuClosed}>
+            <div className={open? styles.menuOpend : styles.menuClosed}
+                style={{backgroundColor: (path==="/")? "#04488C" : "#A5D1FC"}}>
             
             <div className = {styles.search}>Search</div>
             

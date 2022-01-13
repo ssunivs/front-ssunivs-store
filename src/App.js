@@ -27,14 +27,15 @@ import EditProfile from "pages/EditProfile";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FloatingMenu from "components/FloatingMenu";
-import styles from "App.module.css";
 
+import Wrap from "components/Wrap";
 
 function App() {
+
   return (
     <Provider store={store}>
       <Router>
-        <div id={styles.wrap}>
+        <Wrap>
     
           <Header />
           <FloatingMenu />
@@ -57,7 +58,7 @@ function App() {
             <Route path="/EditProfile" component={EditProfile} />
           </Switch>   
 
-        </div>
+        </Wrap>
           <Footer />
       </Router>
     </Provider>

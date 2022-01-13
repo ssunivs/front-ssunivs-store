@@ -1,8 +1,12 @@
 import { SET_COLOR_SKY, SET_COLOR_WHITE } from "./types";
 
+const SKY = "#A5D1FC";
+const WHITE = "white";
+
 const initialState = {
-    backGrondColor : "#A5D1FC",
-    fontColor : "white"
+    backGrondColor : SKY,
+    footerColor : WHITE,
+    fontColor : WHITE
 }
 
 const changeColorReducer = (state=initialState,action)=>{
@@ -10,15 +14,17 @@ const changeColorReducer = (state=initialState,action)=>{
         case SET_COLOR_SKY:
             return{
                 ...state,
-                backGrondColor: "A5D1FC",
-                fontColor: "white"
+                backGrondColor : SKY,
+                footerColor : WHITE,
+                fontColor : WHITE
             }
         
         case SET_COLOR_WHITE:
             return{
                 ...state,
-                backGrondColor: "white",
-                fontColor: "#2C2C2C"
+                backGrondColor : WHITE,
+                footerColor : SKY,
+                fontColor : SKY
             }
         default: return state
     }

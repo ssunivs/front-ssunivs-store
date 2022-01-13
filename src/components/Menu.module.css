@@ -7,7 +7,6 @@
 }
 
 .hamburgerIcon div{
-    background-color:white;
     width: 30px;
     height: 4px;
     margin: 8px 0px;
@@ -30,7 +29,6 @@
 
 .menuClosed{
     position: absolute;
-    background-color: #04488C;
     transform: translateX(-400px);
     transition: transform 0.5s;
     width: 300px;
@@ -39,7 +37,6 @@
 
 .menuOpend{
     position: absolute;
-    background-color: #04488C;
     transform: translateX(-41px);
     transition: transform 0.5s ;
     width: 300px;
