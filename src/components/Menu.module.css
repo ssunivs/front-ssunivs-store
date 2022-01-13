@@ -31,8 +31,8 @@
 
 .menuClosed{
     position: absolute;
-    transform: translateX(-400px);
-    transition: transform 0.8s;
+    transform: translateX(-500px);
+    transition: transform 1.2s;
     width: 300px;
     z-index: 2;
 }
@@ -40,7 +40,7 @@
 .menuOpend{
     position: absolute;
     transform: translateX(-41px);
-    transition: transform 0.8s ;
+    transition: transform 0.8s;
     width: 300px;
     z-index: 2;
 }
@@ -81,14 +81,24 @@
     font-weight:normal;
     font-family:'Segoe UI';
     font-size: larger;
-    padding-right:12px;
-    padding-bottom: 10px;
-    padding-left: 12px;
+    list-style:none;
+    padding-left:6px; /*12 - margin기준*/
+
+    display: flex;
+}
+
+/* LOG IN, MY PAGE, CART*/
+.user .list{
+    margin: 0px 6px;
 }
 
 @media screen and (max-width:1799px) {
     /*데스크탑기준*/
     .menuOpend{
+        width: 400px;
+    }
+
+    .menuClosed{
         width: 400px;
     }
     
@@ -99,6 +109,10 @@
     .menuOpend{
         width: 400px;
     }
+
+    .menuClosed{
+        width: 400px;
+    }
 }
 
 @media screen and (max-width:899px) {
@@ -106,11 +120,19 @@
     .menuOpend{
         width: 400px;
     }
+
+    .menuClosed{
+        width: 400px;
+    }
 }
 
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
     .menuOpend{
+        width: 300px;
+    }
+
+    .menuClosed{
         width: 300px;
     }
 }

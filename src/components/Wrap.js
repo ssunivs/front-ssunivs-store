@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
-import styles from "components/Wrap.module.css"
+import styles from "components/Wrap.module.css";
 
 function Wrap({children}){
     //Detect pathname
