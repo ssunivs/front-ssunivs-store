@@ -6,18 +6,66 @@ h1 {
 #store { 
     text-align:center;
 }
-.store_ssua1, .store_set, .store_box {
-    width : 300px;
-    height : 300px;
+/* .store_ssua1, .store_set, .store_box {
+    width:300px;
+    height:300px;
     padding : 10px;
     margin-left :105px;
     margin-right : 105px;
     display:block;
-}
+} */
 .store_1, .store_2, .store_3{
     display : inline-block;
 }
 .store_doll{
     text-align : center;
     /* width:[width of img];  */
+}
+/* 반응형 웹 페이지 ~576px */
+@media (max-width:576px){
+    .store_ssua1, .store_set, .store_box {
+        /*background-position */
+        width:110px;
+        padding :5px;
+        display:block;
+    }
+}
+/* ~768px */
+@media (min-width: 576px){
+    .store_ssua1, .store_set, .store_box {
+        width: 150px; 
+        padding : 5px;
+        display:block;
+        /* background-position:30% */
+    }
+}
+
+@media (min-width: 672px){
+    .store_ssua1, .store_set, .store_box {
+        width: 180px;
+        padding : 5px;
+        display:block;
+        /* background-position:30% */
+    }
+}
+
+/* 768px~992px */
+@media (min-width:768px){
+    .store_ssua1, .store_set, .store_box {
+        width: 200px; /*큰 화면 기준 300*/
+        height: 200px;
+        padding : 5px;
+        display:block;
+    }
+}
+/* 992px ~ */
+@media (min-width:992px){
+    .store_ssua1, .store_set, .store_box {
+        width:300px; /*큰 화면 기준 300*/
+        height:300px;
+        padding : 10px;
+        margin-left :105px;
+        margin-right : 105px;
+        display:block;
+    }
 }
