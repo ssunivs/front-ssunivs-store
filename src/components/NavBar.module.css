@@ -17,7 +17,7 @@
     position: relative;
     color: #4b4b4b;
     text-decoration: none;
-    border: 3px solid #A5D1FC; /*테두리 색상변경예정*/
+    border: 3px solid #A5D1FC; /*테두리 색상*/
     padding: 10px 15px 10px 25px;
     display: block;
     width: 150px;
@@ -65,25 +65,6 @@
 #navBar ul li .dropdown li:nth-of-type(1) a {
     border-top: none;
 }
-
-/* #navBar .accent {
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: rgb(255, 131, 131);
-    position: absolute;
-    transition: 0.3s ease;
-} */
-
-/* #navBar .animate {
-    width: 100%;
-    transition: 0.3s ease;
-} */
-
-/* #navBar .item:hover {
-    color: #ffffff;
-} */
 
 #navBar ul li:hover {
     background-color: #369FFF;
