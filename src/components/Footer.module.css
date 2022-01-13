@@ -1,5 +1,7 @@
 #footer{
     padding: 30px 30px 30px 30px;
+
+    transition: all 0.5s;
     
     font-size: 14px;
     font-family: "Roboto Slab", Arial, sans-serif;

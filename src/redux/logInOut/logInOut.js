@@ -4,8 +4,8 @@ import { setLogIn, setLogOut } from "./actions";
 const logInOut = () => {
     return(
         <div>
-            <button onClick={()=>setLogIn()}>In</button>
-            <button onClick={()=>setLogOut()}>Out</button>
+            <button onClick={()=>setLogIn()}>Log In</button>
+            <button onClick={()=>setLogOut()}>Log Out</button>
         </div>
     );
 };
