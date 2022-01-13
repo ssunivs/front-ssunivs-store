@@ -1,8 +1,13 @@
+//Router
 import {
 	BrowserRouter as Router ,
 	Switch,
 	Route,
 } from "react-router-dom";
+
+//Redux
+import { Provider } from "react-redux";
+import store from "redux/store";
 
 //Pages -> 코드 줄이는 거 연구필요..
 import Home from "pages/Home";
@@ -25,13 +30,15 @@ import SsuaDollSet from "pages/MainStore.SsuaDollSet";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FloatingMenu from "components/FloatingMenu";
-import styles from "App.module.css";
 
+import Wrap from "components/Wrap";
 
 function App() {
+
   return (
+    <Provider store={store}>
       <Router>
-        <div id={styles.wrap}>
+        <Wrap>
     
           <Header />
           <FloatingMenu />
@@ -59,9 +66,10 @@ function App() {
 
           </Switch>   
 
-        </div>
+        </Wrap>
           <Footer />
       </Router>
+    </Provider>
   );
 }
 

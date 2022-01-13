@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+
 import {Link} from "react-router-dom";
 import store_logo from "assets/store_logo.png";
 import Menu from "components/Menu";
@@ -12,6 +15,15 @@ import {
 
 
 function Header(){ //메뉴 & 로고  & mypage,cart
+
+    //Detect pathname
+    const location = useLocation();
+    let path = location.pathname;
+
+    useEffect((path) => {
+        path = location.pathname;
+    }, [location]);
+
     return (
         <div id={styles.header}>
 
@@ -19,7 +31,8 @@ function Header(){ //메뉴 & 로고  & mypage,cart
                 <Menu />
             </div>
 
-            <div className={styles.Logos}>
+            <div className={styles.Logos}
+                style={{color: (path==="/")? "white" : "#b2b2b2"}}>
                 <Link to="/">
                 <img 
                 className={styles.storeMainLogo}
@@ -32,8 +45,8 @@ function Header(){ //메뉴 & 로고  & mypage,cart
             </div>
 
             <div className={styles.rnb}>
-                <Link to="/MyPage"><IoMdPerson size="40px" color="white"/></Link>
-                <Link to="/Cart"><IoMdCart size="40px" color="white"/></Link>
+                <Link to="/MyPage"><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
+                <Link to="/Cart"><IoMdCart size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
             </div>
             
         </div>
