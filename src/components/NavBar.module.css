@@ -4,7 +4,7 @@
 }
 
 #navBar ul li {
-    background-color: #bdc5c7;
+    background-color: #A5D1FC;
     float: left;
     list-style: none;
     margin-right: 10px;
@@ -13,11 +13,11 @@
 
 #navBar ul li a {
     font: 700 15px Open 'Segoe UI';
-    font-weight: bold;
+    /* font-weight: bold; */
     position: relative;
     color: #4b4b4b;
     text-decoration: none;
-    border: 3px solid #4263ce; /*테두리 색상변경예정*/
+    border: 3px solid #A5D1FC; /*테두리 색상변경예정*/
     padding: 10px 15px 10px 25px;
     display: block;
     width: 150px;
@@ -86,7 +86,7 @@
 } */
 
 #navBar ul li:hover {
-    background-color: cadetblue;
+    background-color: #369FFF;
 }
 
 #navBar ul li:hover .dropdown{
