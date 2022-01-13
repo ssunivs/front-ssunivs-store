@@ -2,11 +2,12 @@
     color: aliceblue;
 } */
 
-.hamburgerMenu{
-    position: absolute;
-}
 .hamburgerIcon {
+    position: absolute;
     cursor: pointer;
+
+    z-index: 3;
+    top: 50px;
 }
 .hamburgerIcon div{
     width: 30px;
@@ -16,15 +17,21 @@
 }
 
 .line1Actived{
+    position: fixed;
     transform: rotate(-45deg) translate(-8px, 9px);
+    /* transform: rotate(-45deg) translate(-8px, 9px); */
 }
 
 .line2Actived{
+    position: fixed;
     opacity: 0;
 }
 
 .line3Actived{
+    position: fixed;
+    top: 74px;
     transform: rotate(45deg) translate(-8px, -9px);
+    /* transform: rotate(45deg) translate(-8px, -9px); */
 }
 
 
@@ -33,16 +40,26 @@
     position: absolute;
     transform: translateX(-500px);
     transition: transform 1.2s;
-    width: 300px;
+    
     z-index: 2;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+
+    padding: 90px 0px 0px 0px;
 }
 
 .menuOpend{
-    position: absolute;
+    position: fixed;
     transform: translateX(-41px);
     transition: transform 0.8s;
-    width: 300px;
+
     z-index: 2;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+
+    padding: 90px 0px 0px 0px;
 }
 
 .menuList {
