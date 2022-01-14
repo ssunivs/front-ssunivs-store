@@ -31,9 +31,6 @@ function SsuaDollBox(){
                 <br></br> <br></br>
                 <input id={styles.store_buy} 
                 type="button" value="CART"></input>
-
-
-
             </form>
 
             </div>
