@@ -80,6 +80,8 @@
 
 .list{
     color: aliceblue;
+
+    transition: all 0.8s;
 }
 
 .search {
