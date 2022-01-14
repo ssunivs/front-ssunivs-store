@@ -1,7 +1,58 @@
 #container{
-    border:black 1px solid;
-    width: 400px;
+    border:rgb(231, 231, 231) 1px solid;
     margin: auto;
-    
-    color: #2c2c2c;
+    /* padding-bottom: 10px; */
+    margin-bottom: 20px;
+}
+
+#myPageMiniTitle{
+    background-color: rgb(231, 231, 231);
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#recentlyThreeMonth{
+    color: #a5a5a5;
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+/* #stateLayer{
+    display: table;
+}
+
+#stateLayerInner{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#stateBox{
+    display: inline-block;
+} */
+
+/* .state1, .state2, .state3 {
+    text-align: center;
+    float: left;
+    margin-right: 2px;
+} */
+
+#stateBox{
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#mypageBnt {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
