@@ -1,4 +1,5 @@
 import NavBar from "components/NavBar.js";
+import headTitle from "pages/headTitle.module.css";
 
 function Notice(){
     return (
@@ -6,7 +7,7 @@ function Notice(){
             <NavBar />
             <br></br>
             <br></br>
-            <h1>공지사항</h1>
+            <h1 className={headTitle.head}>공지사항</h1>
         </div>
     );
 }

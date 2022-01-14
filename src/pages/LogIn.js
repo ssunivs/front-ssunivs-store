@@ -1,9 +1,10 @@
 import styles from "pages/LogIn.module.css"
+import headTitle from "pages/headTitle.module.css";
 
 function LogIn(){
     return (
         <div>
-            <h1>Log In</h1>
+            <h1 className={headTitle.head}>Log In</h1>
             <form id={styles.userLogInForm}>
                 <input id ={styles.userID}
                 type="text" placeholder="ID" value="" autofocus></input>

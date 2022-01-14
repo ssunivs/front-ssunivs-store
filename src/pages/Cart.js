@@ -1,7 +1,9 @@
+import headTitle from "pages/headTitle.module.css";
+
 function Cart(){
     return (
         <div>
-            <h1>Cart</h1>
+            <h1  className={headTitle.head}>Cart</h1>
         </div>
     );
 }
