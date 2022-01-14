@@ -1,15 +1,21 @@
-/* 완전 미완성 페이지 ..... */
-
-/* store 페이지에 있는 3개의 상품에 대한 CSS입니다. */
-.store_product{
-    display:inline-block;
-}
 /* box 페이지를 들어가면 나오는 박스 그림에 대한 css */
-.store_product_box{
-    width:500px;
-    /* display :inline-block;  */
-    /* align : "left"; */
+.store_box{
+    width:400px;
+    float : left;
+    padding-left :20%;
+    padding-right : 6%;
 }
-#store_comment{
-    display: inline;
+#check_box{
+    display:inline;
+
+}
+#store_buy{
+    border-radius:8px;
+    background-color : #369FFF;
+    font-size: 20px;
+    padding : 5px;
+    width : 300px;
+    text-decoration: none;
+    border:0;
+    outline:0;
 }
