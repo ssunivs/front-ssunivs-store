@@ -1,30 +1,26 @@
-import { Button, ButtonToolbar } from 'react-bootstrap';
-import styles from "pages/LogIn.module.css";
+import styles from "pages/LogIn.module.css"
+import headTitle from "pages/headTitle.module.css";
 
 function LogIn(){
     return (
         <div>
-            <h1>Log In</h1><br></br>
-            <div className={styles.logInBox}>
-                <input id={styles.idBox}  type="text" class="form-control" placeholder="ID" aria-describedby="basic-addon1"/>
-            </div>
-            
-            <div className={styles.logInBox}>
-                <input id={styles.passwordBox} type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1"/>
-            </div>
-                <p>비밀번호 찾기</p>
-            <br></br>
-            <ButtonToolbar>
-                <Button variant="primary">로그인</Button>
-                <Button variant="secondary">회원가입</Button>
-                {/* <Button variant="success">네이버 로그인</Button>
-                <Button variant="warning">카카오 로그인</Button> */}
-                {/* <Button variant="info">Info</Button>
-                <Button variant="light">Light</Button> */}
-            </ButtonToolbar><br></br>
-            <ButtonToolbar>
-                <Button variant="dark">구글 로그인</Button>
-            </ButtonToolbar>
+            <h1 className={headTitle.head}>Log In</h1>
+            <form id={styles.userLogInForm}>
+                <input id ={styles.userID}
+                type="text" placeholder="ID" value="" autofocus></input>
+                <br></br>
+                <input id ={styles.userPW}
+                type="text" placeholder="Password" value="" autofocus></input>
+                <p id={styles.findPW}> 비밀번호찾기</p>
+                <input id = {styles.logInBtn}
+                type="submit" value="로그인"></input>
+                <br></br>
+                <input id = {styles.signUpBtn}
+                type="button" value="회원가입"></input>
+                <br></br>
+                <input id = {styles.logInGoogleBtn}
+                type="button" value="구글 로그인"></input>
+            </form>
         </div>
     );
 }

@@ -1,6 +1,9 @@
 import { createStore } from "redux";
-import changeColorReducer from "./changeColor/reducer";
+import logInOutReducer from "./logInOut/reducer";
 
-const store = createStore(changeColorReducer);
+//redux-persist
+import { persistStore } from "redux-persist";
 
-export default store;
+export const store = createStore(logInOutReducer);
+
+export const persistor = persistStore(store)

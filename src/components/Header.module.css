@@ -17,6 +17,8 @@
     position: absolute;
     left: 44%;
     
+    transition: all 1.5s;
+
     font-size: 19px;
     word-spacing: 20px;
 }
@@ -51,4 +53,8 @@
 
 .rnb{
     float: right;
+}
+
+.rnb IoMdPerson{
+    transition: all 2s;
 }

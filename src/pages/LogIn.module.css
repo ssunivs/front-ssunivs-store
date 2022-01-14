@@ -1,9 +1,54 @@
-.logInBox{
-    width: 300px;
+#userLogInForm{
+    text-align: center;
 }
 
-#passwordBox{
-    margin-top: 5px;
+#userID, #userPW{
+    font-family:'Segoe UI';
+    font-size: 13px;
+    outline-offset: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    /* position : absolute;
+    left:50%;
+    margin-left: -175px; */
+    width: 350px;
+    height: 30px;
+    padding-left: 10px;
     margin-bottom: 5px;
 }
 
+#userID:focus, #userPW:focus{
+    outline-color:#4b4b4b;
+}
+
+#logInBtn, #signUpBtn, #logInGoogleBtn{
+    font-size: 13px;
+    width: 365px;
+    height: 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#findPW{
+    /*오른쪽으로 옮기기*/
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 0;
+    vertical-align:bottom;
+}
+
+#logInBtn{
+    color: aliceblue;
+    background-color: #369FFF;
+}
+
+#signUpBtn{
+    color: #4b4b4b;
+    background-color: #cccccc;
+}
+
+#logInGoogleBtn{
+    color: #4b4b4b;
+    background-color: rgb(184, 221, 252);
+}

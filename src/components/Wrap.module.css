@@ -1,8 +1,9 @@
 #wrap{
     padding: 50px 40px 100px 40px;
-    border: 1px solid black;
 
     color: #2c2c2c;
     font-weight: 300;
     font-family: "Roboto Slab", Arial, sans-serif;
+
+    transition: all 0.5s;
 }

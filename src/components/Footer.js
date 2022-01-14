@@ -17,9 +17,7 @@ function Footer(){
 
     return (
         <footer id={styles.footer}
-                style={{backgroundColor: (path==="/")? "white" : "#A5D1FC",
-                        color: (path==="/")? "#2c2c2c" : "white"}}
-                >
+                style={{backgroundColor: (path==="/")? "white" : "#A5D1FC",}}>
             <div class="grid one-full">
                 <img id={styles.footerLogo} src="https://www.ssunivs.com/wp-content/uploads/2021/07/video_watermark.png" alt="우주최강 슈니버스=3"/>
                 
