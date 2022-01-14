@@ -1,6 +1,5 @@
-/* box 페이지를 들어가면 나오는 박스 그림에 대한 css */
-.store_box{
-    width:400px;
+.store_box, .store_set{
+    width:380px;
     float : left;
     padding-left :20%;
     padding-right : 6%;
