@@ -27,7 +27,7 @@ const LogInOut = ({ id, logInState, setLogIn, setLogOut}) => {
 */
 const mapStateToProps = (state) => {
     return{
-        logInState: state.logInState
+        logInState: state.logInOut.logInState
     };
 }; 
 
