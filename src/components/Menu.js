@@ -6,7 +6,10 @@ import {Link} from "react-router-dom";
 import SocialLinks from "components/SocialLinks";
 import styles from "components/Menu.module.css";
 
-function Menu(){
+//Detect LogInState
+import { connect } from "react-redux";
+
+function Menu({logInState}){
     const [open, setOpen] = useState(false);
     const onMenuClick = () =>{
         setOpen((current) => !current);
@@ -52,7 +55,7 @@ function Menu(){
                 <ul className={styles.detailLists}>
                 <Link to="/MainStore"><li className={styles.list}
                                         style={{color: (path==="/MainStore")? "#A5D1FC" : ""}}>All</li></Link>
-                <Link to="/Reservation"><li className={styles.list}
+                <Link to={(logInState)?"/Reservation":"/LogIn"}><li className={styles.list}
                                         style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>
                     <br></br>
                 </ul>
@@ -81,9 +84,9 @@ function Menu(){
                 <ul className={styles.user}>
                     <Link to="/LogIn"><li className={styles.list}
                                           style={{color: (path==="/LogIn")? "#A5D1FC" : ""}}>LOG IN</li></Link>
-                    <Link to="/MyPage"><li className={styles.list}
+                    <Link to={(logInState)?"/MyPage":"/LogIn"}><li className={styles.list}
                                           style={{color: (path==="/MyPage")? "#A5D1FC" : ""}}>MY PAGE</li></Link>
-                    <Link to="Cart"><li className={styles.list}
+                    <Link to={(logInState)?"/Cart":"/LogIn"}><li className={styles.list}
                                           style={{color: (path==="/Cart")? "#A5D1FC" : ""}}>CART</li></Link>    
                 </ul>
             </div>
@@ -91,4 +94,11 @@ function Menu(){
     );
 }
 
-export default Menu;
+//Detect LogInState
+const mapStateToProps = (state) => {
+    return{
+        logInState: state.logInOut.logInState
+    };
+}; 
+
+export default connect(mapStateToProps)(Menu);
