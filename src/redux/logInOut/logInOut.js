@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { setLogIn, setLogOut } from "./actions";
 
-const logInOut = ({ id, logInState}) => {
+const LogInOut = ({ id, logInState }) => {
     return(
         <div>
             <input id = {id}
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch)=>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(logInOut);
+export default connect(mapStateToProps, mapDispatchToProps)(LogInOut);
