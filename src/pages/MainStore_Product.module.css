@@ -1,9 +1,20 @@
-/* box 페이지를 들어가면 나오는 박스 그림에 대한 css */
-.store_box{
-    width:400px;
+.store_box, .store_set{
+    width:380px;
     float : left;
     padding-left :20%;
     padding-right : 6%;
+}
+.store_goods{
+    width:350px;
+    float : left;
+    padding-left: 10%;
+    padding-right: 5%
+
+}
+.store_ssua2{
+    width:350px;
+    float:left;
+    padding-right:3%;
 }
 #check_box{
     display:inline;

@@ -6,20 +6,11 @@ h1 {
 #store { 
     text-align:center;
 }
-/* .store_ssua1, .store_set, .store_box {
-    width:300px;
-    height:300px;
-    padding : 10px;
-    margin-left :105px;
-    margin-right : 105px;
-    display:block;
-} */
 .store_1, .store_2, .store_3{
     display : inline-block;
 }
 .store_doll{
     text-align : center;
-    /* width:[width of img];  */
 }
 /* 반응형 웹 페이지 ~576px */
 @media (max-width:576px){
