@@ -1,11 +1,17 @@
 import { connect } from "react-redux";
 import { setLogIn, setLogOut } from "./actions";
 
-const logInOut = () => {
+const logInOut = ({ id, logInState}) => {
     return(
         <div>
-            <button onClick={()=>setLogIn()}>Log In</button>
-            <button onClick={()=>setLogOut()}>Log Out</button>
+            <input id = {id}
+                   style={{display: (logInState)? "none": ""}}
+                   onClick={() => setLogIn}
+                type="submit" value="(임시) 바로 로그인"></input>
+            <input id = {id}
+                   style={{display: (logInState)? "": "none"}}
+                   onClick={() => setLogOut}
+                type="submit" value="(임시) 바로 로그아웃"></input>    
         </div>
     );
 };

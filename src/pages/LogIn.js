@@ -1,7 +1,9 @@
 import styles from "pages/LogIn.module.css"
 import headTitle from "pages/headTitle.module.css";
+import logInOut from "redux/logInOut/logInOut";
 
 function LogIn(){
+    console.log(logInOut.type);
     return (
         <div>
             <h1 className={headTitle.head}>Log In</h1>
@@ -12,9 +14,8 @@ function LogIn(){
                 <input id ={styles.userPW}
                 type="text" placeholder="Password" value="" autofocus></input>
                 <p id={styles.findPW}> 비밀번호찾기</p>
-                <input id = {styles.logInBtn}
-                type="submit" value="로그인"></input>
                 <br></br>
+                <logInOut id={styles.logInBtn}/>
                 <input id = {styles.signUpBtn}
                 type="button" value="회원가입"></input>
                 <br></br>
@@ -24,5 +25,7 @@ function LogIn(){
         </div>
     );
 }
+/*<input id = {styles.logInBtn}
+type="submit" value="로그인"></input>*/
 
 export default LogIn;

@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import logInOutReducer from "./logInOut/reducer";
 
 //redux-persist
