@@ -7,11 +7,11 @@ import logInOutReducer from './logInOut/reducer';
 const persistConfig = {
     key: "root",
     storage: storage,
-    whitelist: ["logInState"],
+    whitelist: ["logInOut"],
 };
 
 const rootReducer = combineReducers({
-    logInState: logInOutReducer,
+    logInOut: logInOutReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

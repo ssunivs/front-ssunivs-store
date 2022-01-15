@@ -1,26 +1,35 @@
 import { connect } from "react-redux";
 import { setLogIn, setLogOut } from "./actions";
 
-const LogInOut = ({ id, logInState }) => {
+const LogInOut = ({ id, logInState}) => {
     return(
         <div>
-            <input id = {id}
+            <button id = {id}
                    style={{display: (logInState)? "none": ""}}
-                   onClick={() => setLogIn}
-                type="submit" value="(임시) 바로 로그인"></input>
-            <input id = {id}
+                   onClick={() => setLogIn}>(임시) 바로 로그인
+                                            {logInState}</button>
+            <button id = {id}
                    style={{display: (logInState)? "": "none"}}
-                   onClick={() => setLogOut}
-                type="submit" value="(임시) 바로 로그아웃"></input>    
+                   onClick={() => setLogOut}>(임시) 바로 로그아웃</button>    
         </div>
     );
 };
-
+/*
+<input id = {id}
+                   style={{display: (logInState)? "none": ""}}
+                   onSubmit={() => setLogIn}
+                type="submit" value="(임시) 바로 로그인"></input>
+            <input id = {id}
+                   style={{display: (logInState)? "": "none"}}
+                   onSubmit={() => setLogOut}
+                type="submit" value="(임시) 바로 로그아웃"></input>    
+        </div>
+*/
 const mapStateToProps = (state) => {
     return{
         logInState: state.logInState
     };
-};
+}; 
 
 const mapDispatchToProps = (dispatch)=>{
     return {
