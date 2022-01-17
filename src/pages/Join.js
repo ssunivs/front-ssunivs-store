@@ -1,6 +1,7 @@
 import formStyles from "pages/EditProfile.module.css";
 import headTitle from "pages/headTitle.module.css";
 import required from "../assets/ico_required_blue.gif";
+import {Link} from "react-router-dom";
 
 function Join(){
     return (
@@ -85,7 +86,8 @@ function Join(){
                         </tr>
                     </tbody>
                 </table>
-                    <input id={formStyles.userSubmit} type="submit" value="회원가입하기"></input>
+                <Link to="/Welcome">
+                    <input id={formStyles.userSubmit} type="submit" value="회원가입하기"></input></Link>
                 </form>
             
         </div>
