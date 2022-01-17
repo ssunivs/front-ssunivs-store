@@ -1,4 +1,5 @@
 import headTitle from "pages/headTitle.module.css";
+import styles from "pages/Cart.module.css";
 
 function Cart(){
     return (
