@@ -14,17 +14,7 @@ const LogInOut = ({ id, logInState, setLogIn, setLogOut}) => {
         </div>
     );
 };
-/*
-<input id = {id}
-                   style={{display: (logInState)? "none": ""}}
-                   onSubmit={() => setLogIn}
-                type="submit" value="(임시) 바로 로그인"></input>
-            <input id = {id}
-                   style={{display: (logInState)? "": "none"}}
-                   onSubmit={() => setLogOut}
-                type="submit" value="(임시) 바로 로그아웃"></input>    
-        </div>
-*/
+
 const mapStateToProps = (state) => {
     return{
         logInState: state.logInOut.logInState
