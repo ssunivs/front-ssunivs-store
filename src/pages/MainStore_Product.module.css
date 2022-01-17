@@ -9,7 +9,6 @@
     float : left;
     padding-left: 10%;
     padding-right: 5%
-
 }
 .store_ssua2{
     width:350px;
@@ -29,4 +28,13 @@
     text-decoration: none;
     border:0;
     outline:0;
+}
+/* .storegoods_photo1{
+    display : block;
+    margin : auto;
+    width : 400px;
+} */
+
+#store_explain_1, #store_explain_2, #store_explain_3{
+    font-size: 20px;
 }
