@@ -1,15 +1,19 @@
+.faq{
+    list-style: none;
+}
 
-details > summary{
-    font-size: 25px;
+.faqDetails > summary{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     list-style-image: url("assets/flower_open.png");
-    
 }
-.details >li {
-    font-size:18px;
+
+.faqDetails p{
+    display: block;
+    font-size:15px;
     padding : 20px;
     padding-left : 30px;
-    /* display : inline-block; */
     background-color :aliceblue ;
-    list-style-position: inside;
 }
