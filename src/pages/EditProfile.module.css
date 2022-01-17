@@ -1,7 +1,53 @@
 #container{
-    border:black 1px solid;
-    width: 400px;
     margin: auto;
-    
     color: #2c2c2c;
+}
+
+#container input:focus {
+    outline-color:#2c2c2c;
+}
+
+#container input{
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.userTable{
+    border-collapse : collapse;
+    text-align: left;
+}
+
+#userTableHead{
+    padding: 11px 0px 10px 18px;
+}
+
+#userTableData{
+    padding: 16px 26px;
+    height: 40px;
+}
+
+.userTableLine{ 
+    border-bottom:1px solid  rgb(231, 231, 231);
+}
+
+.userMobile{
+    width: 45px;
+    text-align: center;
+}
+
+
+#userSubmit{
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(231, 231, 231);
+    margin-top: 30px;
+    font-size: 13px;
+    border: none;
+}
+
+#userSubmit:hover{
+    background-color: #A5D1FC;
+    border-color: #A5D1FC;
 }
