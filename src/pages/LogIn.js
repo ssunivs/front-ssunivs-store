@@ -1,6 +1,6 @@
 import styles from "pages/LogIn.module.css"
 import headTitle from "pages/headTitle.module.css";
-import LogInOut from "../redux/logInOut/logInOut";
+import LogInOut from "../redux/logInOut/LogInOut";
 // redux/logInOut/LogInOut";
 
 function LogIn(){
