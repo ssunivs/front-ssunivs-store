@@ -1,23 +1,12 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-
 import styles from "components/Footer.module.css";
 import SocialLinks from "components/SocialLinks";
 
 //wrap에 안 쌓여 있습니다.
 function Footer(){
 
-    //Detect pathname
-    const location = useLocation();
-    let path = location.pathname;
-
-    useEffect((path) => {
-        path = location.pathname;
-    }, [location]);
-
     return (
         <footer id={styles.footer}
-                style={{backgroundColor: (path==="/")? "white" : "#A5D1FC",}}>
+                style={{backgroundColor: "white"}}>
             <div class="grid one-full">
                 <img id={styles.footerLogo} src="https://www.ssunivs.com/wp-content/uploads/2021/07/video_watermark.png" alt="우주최강 슈니버스=3"/>
                 
@@ -84,7 +73,7 @@ function Footer(){
     
                     <p>© 슈니버스 Co. All Rights Reserved. </p>
                 </div>
-                <SocialLinks size="25px"/>
+                <SocialLinks size="25px" color="#666666"/>
             </div>
         </footer>
     );
