@@ -5,6 +5,7 @@
     z-index: 3;
     top: 50px;
 }
+
 .hamburgerIcon div{
     width: 30px;
     height: 4px;
@@ -60,13 +61,11 @@
 
 .menuList {
     font-family:'Segoe UI';
-    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     list-style:none;
     font-weight: bold;
     padding-left:35px;
     color: aliceblue;
     font-size: larger;
-    /* font-weight: bold; */
 }
 
 .detailLists {
@@ -75,7 +74,6 @@
     color: aliceblue;
     padding-left:20px;
     font-size: 17px;
-    /* font-weight: lighter; */
 }
 
 .list{
@@ -90,6 +88,23 @@
     padding-top: 20px;
     padding-left:35px;
     font-weight:normal;
+}
+
+.search > input[type=search]{
+    width: 150px;
+    height: 30px;
+}
+
+.search > input[type=submit]{
+    width: 50px;
+    height: 30px;
+    display: inline;
+    background-color: #04488C;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3px;
+    /* border: none; */
 }
 
 .user {
