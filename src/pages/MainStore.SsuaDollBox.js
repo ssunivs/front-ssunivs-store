@@ -1,22 +1,38 @@
 import styles from "pages/MainStore_Product.module.css"; 
-import store_box from "assets/store_box.png"//박스 이미지 삽입
+import store_box from "assets/store_box.png"
 
 function SsuaDollBox(){
     return(
-        <div>
-            <div className={styles.store_product}>
+        <div >
             <img
-            className={styles.store_product_box}
-            src={store_box}
-            align="left"
-            alt="store_product_box"/> 박스 이미지 삽입
-        <p>
-            배송료 추가ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ 인형 3개 추가
-        </p>
-        </div>
-            
+                className={styles.store_box}
+                src={store_box}
+                alt="store_product_box" />
+            <p className={styles.store_comment}>
+                <strong>배송료 추가 | 인형 3개 이상</strong><br></br>
+                <br></br>
+                3개 이상 추가 배송료 결제<br></br>
+                <br></br>
+                PRICE &emsp;&emsp;&emsp;&emsp;  0원~5,500원<br></br>
+                <br></br>인형 수량 &emsp;&emsp;&emsp;
+                <form id={styles.check_box}>
+                <select name="">
+                    <option value="1"> [필수] 옵션을 선택하세요 </option>
+                    <option value="2">3-4개</option>
+                    <option value="3">5-6개</option>
+                    <option value="4">그 이상 구매시 문의</option>
+                </select>
+            </form>
+            </p>
+            <form>
+                <br></br>
+                <input id={styles.store_buy} 
+                type="button" value="BUY NOW"></input>
+                <br></br> <br></br>
+                <input id={styles.store_buy} 
+                type="button" value="CART"></input>
+            </form>
             </div>
-
     );
 }
 export default SsuaDollBox;

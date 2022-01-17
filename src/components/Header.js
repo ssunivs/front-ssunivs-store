@@ -7,6 +7,9 @@ import Menu from "components/Menu";
 
 import styles from "components/Header.module.css";
 
+//Detect LogInState
+import { connect } from "react-redux";
+
 import {
     IoMdPerson,
     IoMdCart
@@ -14,7 +17,7 @@ import {
 
 
 
-function Header(){ //메뉴 & 로고  & mypage,cart
+function Header({logInState}){ //메뉴 & 로고  & mypage,cart
 
     //Detect pathname
     const location = useLocation();
@@ -45,12 +48,19 @@ function Header(){ //메뉴 & 로고  & mypage,cart
             </div>
 
             <div className={styles.rnb}>
-                <Link to="/MyPage"><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
-                <Link to="/Cart"><IoMdCart size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
+                <Link to={(logInState)?"/MyPage":"/LogIn"}><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
+                <Link to={(logInState)?"/Cart":"/LogIn"}><IoMdCart size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
             </div>
             
         </div>
     );
 }
 
-export default Header;
+//Detect LogInState
+const mapStateToProps = (state) => {
+    return{
+        logInState: state.logInOut.logInState
+    };
+}; 
+
+export default connect(mapStateToProps)(Header);

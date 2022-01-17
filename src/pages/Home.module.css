@@ -7,18 +7,24 @@
     width: 300px;
     position: relative;
     bottom: 20px;
+
+    animation: fadein 3s;
 }
 
 .mainSsua2{
     width: 300px;
     position: relative;
     top : 40px;
+
+    animation: fadein 3s;
 }
 
 .mainSsua3{
     width: 300px;
     position: relative;
     bottom: 20px;
+    
+    animation: fadein 3s;
 }
 
 @media screen and (max-width:1799px){
@@ -105,3 +111,7 @@
         }
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
