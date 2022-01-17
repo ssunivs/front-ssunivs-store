@@ -8,10 +8,10 @@ function LogIn(){
             <h1 className={headTitle.head}>Log In</h1>
             <form id={styles.userLogInForm}>
                 <input id ={styles.userID}
-                type="text" placeholder="ID" value="" autofocus></input>
+                type="text" placeholder="ID" autofocus></input>
                 <br></br>
                 <input id ={styles.userPW}
-                type="text" placeholder="Password" value="" autofocus></input>
+                type="password" placeholder="Password" autofocus></input>
                 <p id={styles.findPW}> 비밀번호찾기</p>
                 <br></br>
                 <LogInOut id={styles.logInBtn}/>
