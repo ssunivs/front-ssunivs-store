@@ -1,6 +1,6 @@
 import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
-import styles from "pages/FAQ.module.css";
+import styles from "pages/Notice.module.css";
 
 function Notice(){
     return (

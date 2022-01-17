@@ -1,24 +1,22 @@
-details > summary{
-    font-size: 25px;
-    cursor: pointer;
-    list-style-image: url("assets/flower_open.png");    
+.faq{
+    list-style: none;
 }
-.details >li {
-    font-size:18px;
+.faqDetails > summary{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style-image: url("assets/flower_open.png");
+}
+.faqDetails p{
+    display: block;
+    font-size:15px;
     padding : 20px;
     padding-left : 30px;
     background-color :aliceblue ;
     list-style-position: inside;
 }
-.notice_table {
-    width : 95%;
-    height : 40px;
-    border-collapse: collapse;
-    text-align: center;
-    border-bottom: 1px solid rgb(231, 231, 231) ;
-    margin : auto;
-}
-.notice_table > th{
-    background-color :rgb(231, 231, 231) ;
 
-}
+
+
+
