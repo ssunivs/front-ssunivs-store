@@ -1,7 +1,9 @@
 import styles from "pages/LogIn.module.css"
 import headTitle from "pages/headTitle.module.css";
+
 import LogInOut from "../redux/logInOut/LogInOut";
 import {Link} from "react-router-dom";
+
 
 function LogIn(){
     return (

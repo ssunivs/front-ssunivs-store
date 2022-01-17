@@ -6,6 +6,12 @@
     font-size: 14px;
     font-family: "Roboto Slab", Arial, sans-serif;
     font-weight: 110;
+
+    color: #666666;
+}
+
+#footer a{
+    color: #444444;
 }
 
 #footerLogo{

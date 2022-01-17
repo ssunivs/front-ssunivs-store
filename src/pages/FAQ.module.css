@@ -6,7 +6,7 @@
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    list-style-image: url("assets/flower_open.png");
+    list-style-type:disc;
 }
 .faqDetails p{
     display: block;

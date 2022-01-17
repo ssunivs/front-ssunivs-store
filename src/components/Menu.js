@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import {Link} from "react-router-dom";
 
 import SocialLinks from "components/SocialLinks";
+// import {SearchIcon} from "react-icons/fi";
 import styles from "components/Menu.module.css";
 
 //Detect LogInState
@@ -39,7 +40,10 @@ function Menu({logInState}){
             <div className={open? styles.menuOpend : styles.menuClosed}
                 style={{backgroundColor: "#04488C"}}>
             
-            <div className = {styles.search}>Search</div>
+            <div  className = {styles.search}>
+                <input type="search" name="q"></input>
+                <input type="submit" value="검색"></input>
+            </div>
             
             <ul className={styles.menuList}>
                 <li>ABOUT US</li>
@@ -63,9 +67,9 @@ function Menu({logInState}){
                 <li>BOARD</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Notice"><li className={styles.list}
-                                       style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
+                                    style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
                 <Link to="/FAQ"><li className={styles.list}
-                                       style={{color: (path==="/FAQ")? "#A5D1FC" : ""}}>FAQ</li></Link>
+                                    style={{color: (path==="/FAQ")? "#A5D1FC" : ""}}>FAQ</li></Link>
                     <br></br>
                 </ul>
 
@@ -83,11 +87,11 @@ function Menu({logInState}){
 
                 <ul className={styles.user}>
                     <Link to="/LogIn"><li className={styles.list}
-                                          style={{color: (path==="/LogIn")? "#A5D1FC" : ""}}>LOG IN</li></Link>
+                                        style={{color: (path==="/LogIn")? "#A5D1FC" : ""}}>LOG IN</li></Link>
                     <Link to={(logInState)?"/MyPage":"/LogIn"}><li className={styles.list}
-                                          style={{color: (path==="/MyPage")? "#A5D1FC" : ""}}>MY PAGE</li></Link>
+                                        style={{color: (path==="/MyPage")? "#A5D1FC" : ""}}>MY PAGE</li></Link>
                     <Link to={(logInState)?"/Cart":"/LogIn"}><li className={styles.list}
-                                          style={{color: (path==="/Cart")? "#A5D1FC" : ""}}>CART</li></Link>    
+                                        style={{color: (path==="/Cart")? "#A5D1FC" : ""}}>CART</li></Link>    
                 </ul>
             </div>
         </div>

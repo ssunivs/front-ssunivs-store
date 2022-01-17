@@ -15,6 +15,7 @@ import Notice from "pages/Notice";
 import FAQ from "pages/FAQ";
 import LogIn from "pages/LogIn";
 import Join from "pages/Join";
+import Welcome from "pages/Welcome";
 import MyPage from "pages/MyPage";
 import Cart from "pages/Cart";
 import EditProfile from "pages/EditProfile";
@@ -52,6 +53,7 @@ function App() {
 
             <Route path="/LogIn" component={LogIn} />
             <Route path="/Join" component={Join} />
+            <Route path="/Welcome" component={Welcome} />
             <Route path="/MyPage" component={MyPage} />
             <Route path="/Cart" component={Cart} />
 

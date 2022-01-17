@@ -11,23 +11,6 @@ function MyPage(){
                 <div id={styles.myPageMiniTitle}>나의 주문처리 현황
                     <span id={styles.recentlyThreeMonth}>(최근 3개월 기준)</span>
                 </div>
-                {/* <div className={styles.stateLayer}>
-                    <div className={styles.stateLayerInner}>
-                        <div  className={styles.stateBox}>
-                            <div id={styles.state1}>배송준비중
-                                <div>0</div>
-                            </div>
-                            <div id={styles.state2}>배송중
-                                <div>0</div>
-                            </div>
-                            <div id={styles.state3}>배송완료
-                                <div>0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
-
                 <table id={styles.stateBox}>
                     <thead>
                         <tr>
@@ -59,7 +42,9 @@ function MyPage(){
                             <Link to="/EditProfile">
                             <td>Profile<br></br>회원정보</td>
                             </Link>
+                            <Link to="/Coupon">
                             <td>Coupon<br></br>쿠폰</td>
+                            </Link>
                         </tr>
                     </tbody>
                 </table>
