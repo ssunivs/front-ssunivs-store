@@ -19,6 +19,7 @@ import Welcome from "pages/Welcome";
 import MyPage from "pages/MyPage";
 import Cart from "pages/Cart";
 import EditProfile from "pages/EditProfile";
+import Coupon from "pages/Coupon";
 
 import SsuaDollBox from "pages/MainStore.SsuaDollBox";
 import SsuaDollGoods from "pages/MainStore.SsuaDollGoods";
@@ -56,6 +57,7 @@ function App() {
             <Route path="/Welcome" component={Welcome} />
             <Route path="/MyPage" component={MyPage} />
             <Route path="/Cart" component={Cart} />
+            <Route path="/Coupon" component={Coupon} />
 
             <Route path="/EditProfile" component={EditProfile} />
 
