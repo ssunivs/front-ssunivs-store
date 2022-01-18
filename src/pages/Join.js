@@ -7,7 +7,8 @@ function Join(){
     return (
         <div>
             <h1 className={headTitle.head}>Join</h1>
-            <form>
+            <form action="" 
+                  acceptCharset="utf-8" name="personInfo" method="get">
             <table border="0" summary
                 className={formStyles.userTable} align="center">
                 {/* <caption>회원 기본정보</caption> */}
