@@ -12,7 +12,7 @@ function EditProfile(){
                 className={styles.userTable} align="center">
                 {/* <caption>회원 기본정보</caption> */}
                     <tbody>
-                        <tr>
+                        {/*<tr>
                             <th scope="row" id={styles.userTableHead} className={styles.userTableLine}>
                                 아이디
                                 <img src={required} alt="필수"></img>
@@ -21,7 +21,7 @@ function EditProfile(){
                                 <input id={styles.user_id} name="user_id" type="text" required pattern="^([a-z0-9]){4,16}$"/>
                                 &nbsp;(영문소문자/숫자, 4~16자)
                             </td>
-                        </tr>
+                        </tr>*/}
                         
                         <tr>
                             <th scope="row" id={styles.userTableHead} className={styles.userTableLine}>

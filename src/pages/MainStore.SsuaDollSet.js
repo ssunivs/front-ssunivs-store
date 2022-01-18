@@ -30,6 +30,15 @@ function SsuaDollSet(){
                 <input id={styles.store_buy} 
                 type="button" value="CART"></input>
             </form>
+            <br></br> <br></br> <br></br> <br></br>
+            <br></br> <br></br> <br></br> <br></br>
+            <hr></hr>
+            <input id={styles.store_explain_1} 
+            type="button" value="설명"></input>
+            <input id={styles.store_explain_2} 
+            type="button" value="추가정보"></input>
+            <input id={styles.store_explain_3} 
+            type="button" value="상품평"></input>
 
         </div>
     );

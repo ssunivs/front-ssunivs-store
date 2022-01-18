@@ -1,0 +1,46 @@
+#container{
+    margin: auto;
+    /* padding-bottom: 10px; */
+    margin-bottom: 20px;
+
+    max-width: 550px;
+
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.cartTitle{
+    font-size: 14px;
+}
+
+#recentlyThreeMonth{
+    color: #a5a5a5;
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+.cartBox{
+    border:rgb(231, 231, 231) 1px solid;
+    text-align: center;
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 10px;
+}
+
+#mypageBnt {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

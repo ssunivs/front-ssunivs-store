@@ -1,8 +1,9 @@
 import styles from "pages/MainStore_Product.module.css"; 
 import store_ssua1 from "assets/store_ssua1.png"
 import store_ssua2 from "assets/store_ssua2.png"
-//슈아 사진에 대한 이미지 추가 부분 작성 
-// 슈아 상품 관련한 구현 작성 부분
+// import product_head from "assets/product_head.png"
+
+// 상품 디테일에 관하여 추가 이미지 첨부 필요
 function SsuaDollGoods(){
     return(
         <div>
@@ -39,10 +40,18 @@ function SsuaDollGoods(){
                 <br></br> <br></br>
                 <input id={styles.store_buy} 
                 type="button" value="CART"></input>
-                
             </form>
-
+            <br></br>
+            <br></br>
+            <hr></hr>
+            <input id={styles.store_explain_1} 
+            type="button" value="설명"></input>
+            <input id={styles.store_explain_2} 
+            type="button" value="추가정보"></input>
+            <input id={styles.store_explain_3} 
+            type="button" value="상품평"></input>
         </div>
     );
 }
+
 export default SsuaDollGoods;
