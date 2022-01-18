@@ -13,10 +13,10 @@ function EditProfile(){
                 {/* <caption>회원 기본정보</caption> */}
                     <tbody>
                         <tr>
-                            <th scope="row" id={styles.userTableHead} className={styles.userTableLine}>
+                            {/*<th scope="row" id={styles.userTableHead} className={styles.userTableLine}>
                                 아이디
                                 <img src={required} alt="필수"></img>
-                            </th>
+                            </th>*/}
                             <td id={styles.userTableData} className={styles.userTableLine}>
                                 <input id={styles.user_id} name="user_id" type="text" required pattern="^([a-z0-9]){4,16}$"/>
                                 &nbsp;(영문소문자/숫자, 4~16자)

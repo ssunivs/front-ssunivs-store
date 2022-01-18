@@ -38,13 +38,14 @@ function MyPage(){
                 <table id={styles.mypageBnt}>
                     <tbody>
                         <tr>
-                            <td>Order<br></br>주문내역조회</td>
-                            <Link to="/EditProfile">
-                            <td>Profile<br></br>회원정보</td>
-                            </Link>
-                            <Link to="/Coupon">
-                            <td>Coupon<br></br>쿠폰</td>
-                            </Link>
+                            <td><Link to="/Order">Order
+                            <br></br>주문내역조회</Link></td>
+
+                            <td><Link to="/EditProfile">Profile
+                            <br></br>회원정보</Link></td>
+
+                            <td><Link to="/Coupon">
+                            Coupon<br></br>쿠폰</Link></td>
                         </tr>
                     </tbody>
                 </table>

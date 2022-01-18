@@ -9,8 +9,9 @@ import styles from "components/Menu.module.css";
 
 //Detect LogInState
 import { connect } from "react-redux";
+import { setLogOut } from "redux/logInOut/actions";
 
-function Menu({logInState}){
+function Menu({logInState, setLogOut}){
     const [open, setOpen] = useState(false);
     const onMenuClick = () =>{
         setOpen((current) => !current);
@@ -87,7 +88,11 @@ function Menu({logInState}){
 
                 <ul className={styles.user}>
                     <Link to="/LogIn"><li className={styles.list}
-                                        style={{color: (path==="/LogIn")? "#A5D1FC" : ""}}>LOG IN</li></Link>
+                                        style={{color: (path==="/LogIn")? "#A5D1FC" : "",
+                                                display: (logInState)? "none": ""}}>LOG IN</li></Link>
+                    <Link to="/"><li className={styles.list}
+                                        style={{display: (logInState)? "": "none"}}
+                                        onClick={setLogOut}>LOG OUT</li></Link>
                     <Link to={(logInState)?"/MyPage":"/LogIn"}><li className={styles.list}
                                         style={{color: (path==="/MyPage")? "#A5D1FC" : ""}}>MY PAGE</li></Link>
                     <Link to={(logInState)?"/Cart":"/LogIn"}><li className={styles.list}
@@ -105,4 +110,10 @@ const mapStateToProps = (state) => {
     };
 }; 
 
-export default connect(mapStateToProps)(Menu);
+const mapDispatchToProps = (dispatch)=>{
+    return {
+        setLogOut: ()=>dispatch(setLogOut())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
