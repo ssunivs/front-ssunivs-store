@@ -26,6 +26,13 @@ import SsuaDollBox from "pages/MainStore.SsuaDollBox";
 import SsuaDollGoods from "pages/MainStore.SsuaDollGoods";
 import SsuaDollSet from "pages/MainStore.SsuaDollSet";
 
+import Deliver from "pages/Notice.Deliver";
+import Exchange from "pages/Notice.Exchange";
+import Refund from "pages/Notice.Refund";
+import Payment from "pages/Notice.Payment";
+import Event from "pages/Notice.Event"
+
+
 //Common components
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -67,6 +74,12 @@ function App() {
             <Route path="/MainStore.SsuaDollGoods" component={SsuaDollGoods} />
             <Route path="/MainStore.SsuaDollSet" component={SsuaDollSet} />
             <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />
+
+            <Route path="/Notice.Deliver" component={Deliver} />
+            <Route path="/Notice.Exchange" component={Exchange} />
+            <Route path="/Notice.Refund" component={Refund} />
+            <Route path="/Notice.Payment" component={Payment} />
+            <Route path="/Notice.Event" component={Event} />
 
           </Switch>   
 
