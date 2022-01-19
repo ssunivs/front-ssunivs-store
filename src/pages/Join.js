@@ -1,14 +1,13 @@
 import formStyles from "pages/EditProfile.module.css";
 import headTitle from "pages/headTitle.module.css";
 import required from "../assets/ico_required_blue.gif";
-import {Link} from "react-router-dom";
 
 import { useState } from "react";
 
 import {useDispatch} from 'react-redux';
 import { registerUser } from "redux/profile/action";
 
-function Join(){
+function Join({history}){
 
     const dispatch = useDispatch();
 
@@ -22,6 +21,7 @@ function Join(){
     const [email, setEmail] = useState('');
     const [receive, consentToReceive] = useState('');
     
+    //id 중복시 오류 만들기
     const onChangeId = (e) => {
         setId(e.target.value);
       }
@@ -61,7 +61,7 @@ function Join(){
         id: id,
         password: password,
         name: name,
-        phoneNumber: phoneNumber1 + setPhoneNumber2 + phoneNumber3,
+        phoneNumber: phoneNumber1 + phoneNumber2 + phoneNumber3,
         email: email,
         receive: receive
       };
@@ -69,8 +69,9 @@ function Join(){
       dispatch(registerUser(data)
         .then(res => {
             if(res.payload.success) {
+                history.push('/Login');
           } else {
-            alert('회원가입에 실패했습니다.');
+                alert('회원가입에 실패했습니다.');
           }     
         }))
     }
@@ -181,8 +182,8 @@ function Join(){
                         </tr>
                     </tbody>
                 </table>
-                <Link to="/Welcome">
-                    <input id={formStyles.userSubmit} type="submit" value="회원가입하기"></input></Link>
+                
+                <input id={formStyles.userSubmit} type="submit" value="회원가입하기"></input>
                 </form>
             
         </div>
