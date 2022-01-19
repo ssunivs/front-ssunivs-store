@@ -1,5 +1,9 @@
+import { useState } from "react";
 import styles from "pages/MainStore_Product.module.css"; 
 import store_box from "assets/store_box.png"
+import Product_comment from "components/Product_comment.js";
+import Product_img from "components/Product_img.js";
+import Product_review from "components/Product_review.js";
 
 function SsuaDollBox(){
     return(
@@ -35,6 +39,10 @@ function SsuaDollBox(){
             <br></br> <br></br> <br></br> <br></br>
             <br></br> <br></br> <br></br>
             <hr></hr>
+            <Product_comment/>
+            <Product_review/>
+            <Product_img/>
+
             <input id={styles.store_explain_1} 
             type="button" value="설명"></input>
             <input id={styles.store_explain_2} 
