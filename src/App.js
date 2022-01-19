@@ -58,6 +58,7 @@ function App() {
             <Route path="/Welcome" component={Welcome} />
             <Route path="/MyPage" component={MyPage} />
             <Route path="/Cart" component={Cart} />
+            <Route path="/Coupon" component={Coupon} />
 
             <Route path="/Order" component={Order} />
             <Route path="/EditProfile" component={EditProfile} />
