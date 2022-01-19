@@ -13,18 +13,27 @@
     to   { opacity: 1; }
 }
 
-.cartTitle{
+#cartMiniTitle{
+    background-color: rgb(231, 231, 231);
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cartTableHead{
     font-size: 14px;
 }
 
-#recentlyThreeMonth{
-    color: #a5a5a5;
-    padding-left: 5px;
-    font-size: 10px;
+.sortColumn{
+    display: flex;
 }
+
 
 .cartBox{
     border:rgb(231, 231, 231) 1px solid;
+    font-size: 12px;
+
     text-align: center;
     width: 100%;
 
@@ -36,11 +45,54 @@
     margin-bottom: 10px;
 }
 
-#mypageBnt {
-    text-align: center;
+.CouponShippingBox{
+    border-bottom:rgb(231, 231, 231) 1px solid;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+.addressBox{
+    border-bottom:rgb(231, 231, 231) 1px solid;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    animation: slidedown 0.8s;
+
+}
+
+@keyframes slidedown {
+    from { opacity: 0; transform: translateY(-20%);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
+.addressTable{
+    border-collapse : collapse;
+    text-align: left;
+}
+
+#addressTableHead{
+    padding: 11px 0px 10px 18px;
+}
+
+#addressTableData{
+    padding: 16px 26px;
+    height: 40px;
+}
+
+.addressTableLine{ 
+    border-bottom:1px solid  rgb(231, 231, 231);
 }
