@@ -9,13 +9,13 @@ const logInOutReducer = (state=initialState,action)=>{
         case SET_LOGIN:
             return{
                 ...state,
-                logInState: !state.logInState
+                logInState: state.logInState = true
             }
         
         case SET_LOGOUT:
             return{
                 ...state,
-                logInState: !state.logInState
+                logInState: state.logInState = false
             }
         default: return state
     }
