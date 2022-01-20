@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 
 const List = ({ id, title, postClickHandler,
             writer, division, onDelete, className }) => {
-                const link = "/Notice." + id;
+
+    const link = "/Notice." + id;
+    
     return(
             <tr className={className}>
                 <td>{division}</td>
