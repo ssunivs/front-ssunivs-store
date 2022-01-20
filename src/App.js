@@ -37,7 +37,6 @@ import Event from "pages/Notice.Event"
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FloatingMenu from "components/FloatingMenu";
-
 import Wrap from "components/Wrap";
 
 function App() {
@@ -73,6 +72,9 @@ function App() {
 
             <Route path="/MainStore.SsuaDollGoods" component={SsuaDollGoods} />
             <Route path="/MainStore.SsuaDollSet" component={SsuaDollSet} />
+
+            <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />        
+
             <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />
 
             <Route path="/Notice.Deliver" component={Deliver} />
@@ -82,7 +84,6 @@ function App() {
             <Route path="/Notice.Event" component={Event} />
 
           </Switch>   
-
         </Wrap>
           <Footer />
       </Router>
