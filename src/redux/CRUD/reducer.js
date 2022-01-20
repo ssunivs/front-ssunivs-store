@@ -3,19 +3,32 @@ import { SAVE, SELECTED, DELETE } from "./types";
 const initialState = {
     boards: [
         {
-          id: 1, title: '안녕하세요',
-          content: '반갑습니다', postDate: new Date()
+          id: 1, title: '이벤트 쿠폰 발급',
+          content: '이벤트 쿠폰 발급',  division: 'shop',
+          writer: '관리자', postDate: new Date(),
         },
         {
-          id: 2, title: 'Hi',
-          content: 'Nice to meet you', postDate: new Date()
+          id: 2, title: '주문 결제 방법',
+          content: '주문 결제 방법',  division: 'shop',
+          writer: '관리자', postDate: new Date(),
         },
         {
-          id: 3, title: '오하요',
-          content: '하지메마시떼', postDate: new Date()
+          id: 3, title: '배송 안내',
+          content: '배송 안내',  division: 'shop',
+          writer: '관리자', postDate: new Date(),
+        },
+        {
+          id: 4, title: '주문 변경/취소/환불',
+          content: '주문 변경/취소/환불',  division: 'shop',
+          writer: '관리자', postDate: new Date(),
+        },
+        {
+          id: 5, title: '제품 교환/반품',
+          content: '제품 교환/반품',  division: 'shop',
+          writer: '관리자', postDate: new Date(),
         },
       ],
-    ids: 3, //id 기준, 새로 추가되는 id가 있다면 하나 늘리기
+    ids: 5, //id 기준, 새로 추가되는 id가 있다면 하나 늘리기
     selected : {} //find함수를 통해서 boards에서 선택된 데이터를 넣을 예정
 }
 

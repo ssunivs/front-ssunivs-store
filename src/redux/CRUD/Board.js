@@ -5,11 +5,13 @@ import { boardSave, boardDelete, boardSelected } from "./action";
 import List from "./List";
 import RichTextEditor from "./RichTextEditor";
 
-const Board = () => {
+const Board = ({className}) => {
     const [post, setPost] = useState({
         id: '',
         title: '',
         content: '',
+        division: '',
+        writer: '',
         postDate: ''
     });
 
@@ -40,48 +42,43 @@ const Board = () => {
 
     const resetForm = () => {
         setPost({
-            id: '', title: '', content: '', postDate: ''
+            id: '',
+            title: '',
+            content: '',
+            division: '',
+            writer: '',
+            postDate: ''
         })
     }
 
     return(
         <div>
-            <div>
-                <table>
-                    <tbody>
-                        <tr align="center">
-                            <td width="50">번호</td>
-                            <td width="100">제목</td>
-                            <td width="200">내용</td>
-                            <td width="100">날짜</td>
-                        </tr>
-                        {
-                            boards.map(post =>
+            <table className={className}
+            border="0">
+                <thead>
+                    <tr className={className}>
+                        <th>분류</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                        {boards.map(post =>
                             (
                                 <List
-                                    id={post.id}
+                                    className={className}
                                     title={post.title}
-                                    content={post.content}
+                                    writer={post.writer}
+                                    division={post.division}
                                     postClickHandler={postClickHandler}
-                                    postDate={post.postDate}
                                     onDelete={onDelete}
-                                    post={post}
                                 />
                             ))
                         }
-                    </tbody>
-                </table>
-            </div>
-            <div>
-                <RichTextEditor 
-                    changeInput={changeInput}
-                    onSave={onSave}
-                    resetForm={resetForm}
-                />
-            </div>
-            <div>
+                </tbody>
 
-            </div>
+            </table>  
+                <RichTextEditor/>
         </div>
     );
 };

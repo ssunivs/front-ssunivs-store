@@ -1,10 +1,14 @@
-const List = ({ id, title, content, postClickHandler, postDate, onDelete }) => {
+import { Link } from "react-router-dom";
+
+const List = ({ title, postClickHandler,
+            writer, division, onDelete, className }) => {
     return(
-            <tr>
-                <td>{id}</td>
-                <td><button onClick={postClickHandler}>{title}</button></td>
-                <td>{content}</td>
-                <td>{postDate.toLocaleDateString('ko-KR')}</td>
+            <tr className={className}>
+                <td>{division}</td>
+                <Link to="/Notice.Event" onClick={postClickHandler}>
+                <td>{title}</td>
+                </Link>
+                <td>{writer}</td>
                 <td><button onClick={onDelete}>X</button></td>
             </tr>
     );
