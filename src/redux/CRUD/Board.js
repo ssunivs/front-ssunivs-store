@@ -66,6 +66,7 @@ const Board = ({className}) => {
                         {boards.map(post =>
                             (
                                 <List
+                                    id={post.id}
                                     className={className}
                                     title={post.title}
                                     writer={post.writer}
