@@ -4,6 +4,7 @@ import headTitle from "pages/headTitle.module.css";
 function AboutSsunivers(){
     return (
         <div>
+            <br></br>
             <NavBar />
             <br></br>
             <br></br>

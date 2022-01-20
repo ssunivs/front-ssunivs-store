@@ -17,6 +17,7 @@ function Reservation(){
     );
     return (
         <div>
+            <br></br>
             <NavBar />
             <br></br>
             <br></br>

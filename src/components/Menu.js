@@ -52,41 +52,35 @@ function Menu({logInState, setLogOut}){
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
                 <Link to="/AboutSsunivers"><li className={styles.list}
-                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssuniverse</li></Link>
+                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>
+                <Link to="/News"><li className={styles.list}
+                                            style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link>                            
                     <br></br>
                 </ul>
-
-                <li>STORE</li>
-                <ul className={styles.detailLists}>
-                <Link to="/MainStore"><li className={styles.list}
-                                        style={{color: (path==="/MainStore")? "#A5D1FC" : ""}}>All</li></Link>
-                <Link to={(logInState)?"/Reservation":"/LogIn"}><li className={styles.list}
-                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>
-                    <br></br>
-                </ul>
-
                 <li>BOARD</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Notice"><li className={styles.list}
                                     style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
-                <Link to="/FAQ"><li className={styles.list}
-                                    style={{color: (path==="/FAQ")? "#A5D1FC" : ""}}>FAQ</li></Link>
                     <br></br>
                 </ul>
 
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
-                <a  href="mailto:ssua@ssunivs.com"
+                <Link to="/Reservation"><li className={styles.list}
+                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>
+                <Link to="/Contact"><li className={styles.list}
+                                        style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>                        
+                {/* <a  href="mailto:ssua@ssunivs.com"
                     target="_blank"
                     rel="noopener noreferrer">
                     <li className={styles.list}>ssua@ssunivs.com</li>
-                </a>
+                </a> */}
                 </ul>
             </ul>
 
             <SocialLinks size="30px" color="white"/>
 
-                <ul className={styles.user}>
+                {/* <ul className={styles.user}>
                     <Link to="/LogIn"><li className={styles.list}
                                         style={{color: (path==="/LogIn")? "#A5D1FC" : "",
                                                 display: (logInState)? "none": ""}}>LOG IN</li></Link>
@@ -97,7 +91,7 @@ function Menu({logInState, setLogOut}){
                                         style={{color: (path==="/MyPage")? "#A5D1FC" : ""}}>MY PAGE</li></Link>
                     <Link to={(logInState)?"/Cart":"/LogIn"}><li className={styles.list}
                                         style={{color: (path==="/Cart")? "#A5D1FC" : ""}}>CART</li></Link>    
-                </ul>
+                </ul> */}
             </div>
         </div>
     );

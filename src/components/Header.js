@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 import {Link} from "react-router-dom";
-import store_logo from "assets/store_logo.png";
+// import store_logo from "assets/store_logo.png";
+import ssunivers_logo from "assets/ssunivers_logo.png";
 import Menu from "components/Menu";
 
 import styles from "components/Header.module.css";
@@ -10,14 +11,14 @@ import styles from "components/Header.module.css";
 //Detect LogInState
 import { connect } from "react-redux";
 
-import {
-    IoMdPerson,
-    IoMdCart
-} from "react-icons/io";
+// import {
+//     IoMdPerson,
+//     IoMdCart
+// } from "react-icons/io";
 
 
 
-function Header({logInState}){ //메뉴 & 로고  & mypage,cart
+function Header(){ //메뉴 & 로고  & mypage,cart
 
     //Detect pathname
     const location = useLocation();
@@ -38,20 +39,21 @@ function Header({logInState}){ //메뉴 & 로고  & mypage,cart
                 style={{color: (path==="/")? "white" : "#b2b2b2"}}>
                 <Link to="/">
                 <img 
-                className={styles.storeMainLogo}
-                src={store_logo}
-                alt="SSUNIVERSE Store main logo" 
+                className={styles.mainLogo}
+                // src={store_logo}
+                src={ssunivers_logo}
+                alt="SSUNIVERSE main logo" 
                 />
                 </Link>
                 <div className={styles.logoFence}>|</div>
-                <div className={styles.moveToPage}>ssuniverse</div>
+                <div className={styles.moveToPage}>
+                    <a href="https://www.ssunivs.com/">store</a>
+                </div>
             </div>
-
-            <div className={styles.rnb}>
+            {/* <div className={styles.rnb}>
                 <Link to={(logInState)?"/MyPage":"/LogIn"}><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
                 <Link to={(logInState)?"/Cart":"/LogIn"}><IoMdCart size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
-            </div>
-            
+            </div> */}
         </div>
     );
 }

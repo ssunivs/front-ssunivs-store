@@ -18,15 +18,15 @@
     align-items: center;
     position: absolute;
     left: 44%;
-    
+    padding-top: 40px;
     transition: all 1.5s;
 
     font-size: 19px;
     word-spacing: 20px;
 }
 
-.storeMainLogo{
-    width: 90px;
+.mainLogo{
+    width: 230px;
 }
 
 .logoFence{
@@ -38,6 +38,10 @@
     font-size: 22px;
 }
 
+.moveToPage a{
+    color: white;
+}
+
 @media screen and (max-width:599px) {
     /*모바일세로크기*/
     .logoFence{
@@ -46,17 +50,17 @@
     .moveToPage{
     /*ssunivers가 logo밑으로 오게*/
     position: absolute;
-    top: 40%;
-    transform: translate(0%,170%);
+    transform: translate(0%,230%);
     width: 100%;
+    top: 30%;
     height: auto;
     }
 }
 
-.rnb{
+/* .rnb{
     float: right;
-}
+} */
 
-.rnb IoMdPerson{
+/* .rnb IoMdPerson{
     transition: all 2s;
-}
+} */
