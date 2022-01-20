@@ -1,3 +1,4 @@
+import {React} from "react";
 import { useState } from "react";
 import styles from "pages/MainStore_Product.module.css"; 
 import store_box from "assets/store_box.png"
@@ -5,9 +6,18 @@ import Product_comment from "components/Product_comment.js";
 import Product_img from "components/Product_img.js";
 import Product_review from "components/Product_review.js";
 
+//버튼을 클릭했을 때 각 해당하는 컴포넌트들만 띄울 수 있도록 작업 필요
+// react 와 useState를 import 해서 사용해야할 듯
+//클릭이 일어났을 때 연결해줄 링크 설정  
+// const clickMe =() =>{
+//     return( document.location.href('componenets/Product_review'));
+// }
 function SsuaDollBox(){
+    // const clickMe =() =>{
+    //     document.location.href("components/Product_comment");
+    // }
     return(
-        <div >
+        <div>
             <img
                 className={styles.store_box}
                 src={store_box}
@@ -39,17 +49,17 @@ function SsuaDollBox(){
             <br></br> <br></br> <br></br> <br></br>
             <br></br> <br></br> <br></br>
             <hr></hr>
-            <Product_comment/>
-            <Product_review/>
-            <Product_img/>
 
-            <input id={styles.store_explain_1} 
-            type="button" value="설명"></input>
-            <input id={styles.store_explain_2} 
-            type="button" value="추가정보"></input>
-            <input id={styles.store_explain_3} 
-            type="button" value="상품평"></input>
+            {/* <Product_comment/>
+            <Product_review/>
+            <Product_img/> */}
+
+            <button id={styles.store_explain_1} 
+            onclick="alert('클릭은 잘 먹나요?')">설명</button>
+            <button id={styles.store_explain_1} >추가정보</button>
+            <button id={styles.store_explain_1} >상품평</button>
             </div>
     );
 }
+
 export default SsuaDollBox;
