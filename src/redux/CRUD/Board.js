@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected } from "./action";
 
 import List from "./List";
+import RichTextEditor from "./RichTextEditor";
 
-const Board = ({  }) => {
+const Board = () => {
     const [post, setPost] = useState({
         id: '',
         title: '',
-        content: ''
+        content: '',
+        postDate: ''
     });
 
     const dispatch = useDispatch();
@@ -23,6 +25,7 @@ const Board = ({  }) => {
     const postClickHandler = (postId) => 
     {
         dispatch(boardSelected(postId));
+
         if(JSON.stringify(selected) !== '{}') {
             setPost(selected);
         }
@@ -37,7 +40,7 @@ const Board = ({  }) => {
 
     const resetForm = () => {
         setPost({
-            id: '', title: '', content: ''
+            id: '', title: '', content: '', postDate: ''
         })
     }
 
@@ -50,6 +53,7 @@ const Board = ({  }) => {
                             <td width="50">번호</td>
                             <td width="100">제목</td>
                             <td width="200">내용</td>
+                            <td width="100">날짜</td>
                         </tr>
                         {
                             boards.map(post =>
@@ -58,13 +62,10 @@ const Board = ({  }) => {
                                     id={post.id}
                                     title={post.title}
                                     content={post.content}
-                                    /*onDelete={onDelete}
                                     postClickHandler={postClickHandler}
-
-                                    onSave={onSave} 
-                                    changeInput={changeInput} 
+                                    postDate={post.postDate}
+                                    onDelete={onDelete}
                                     post={post}
-                                    resetForm={resetForm}*/
                                 />
                             ))
                         }
@@ -72,6 +73,14 @@ const Board = ({  }) => {
                 </table>
             </div>
             <div>
+                <RichTextEditor 
+                    changeInput={changeInput}
+                    onSave={onSave}
+                    resetForm={resetForm}
+                />
+            </div>
+            <div>
+
             </div>
         </div>
     );

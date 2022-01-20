@@ -7,7 +7,8 @@ export const boardSave = (dataToSave) =>{
         dataToSave: {
             id: dataToSave.id,
             title: dataToSave.title,
-            content: dataToSave.content
+            content: dataToSave.content,
+            postDate: dataToSave.postDate
           }
     }
 }

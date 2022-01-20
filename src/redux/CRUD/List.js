@@ -1,15 +1,12 @@
-const List = ({ id, title, content, onDelete, postClickHandler,
-                onSave, changeInput, post, resetForm }) => {
+const List = ({ id, title, content, postClickHandler, postDate, onDelete }) => {
     return(
-        <div>
-            <div>
-            {id}s/{title}/{content}/{onDelete}/{postClickHandler}
-            </div>
-            <div>
-            {onSave}/{changeInput}/{post}/{resetForm}
-            </div>
-        </div>
-        
+            <tr>
+                <td>{id}</td>
+                <td><button onClick={postClickHandler}>{title}</button></td>
+                <td>{content}</td>
+                <td>{postDate.toLocaleDateString('ko-KR')}</td>
+                <td><button onClick={onDelete}>X</button></td>
+            </tr>
     );
 };
 
