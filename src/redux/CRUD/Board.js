@@ -18,7 +18,9 @@ const Board = ({className}) => {
     const dispatch = useDispatch();
 
     const onDelete = (postId) => dispatch(boardDelete(postId));
-    const onSave = (dataToSave) => dispatch(boardSave(dataToSave));
+    const onSave = (dataToSave) => {
+        dispatch(boardSave(dataToSave));
+    }
 
     const {selected} = useSelector(state => state.board);
 
@@ -38,6 +40,7 @@ const Board = ({className}) => {
             ...post,
             [e.target.name]: e.target.value
         })
+        console.log(post);
     }
 
     const resetForm = () => {
@@ -49,6 +52,17 @@ const Board = ({className}) => {
             writer: '',
             postDate: ''
         })
+    }
+
+    const test =  {
+        
+            id: '123',
+            title: '23',
+            content: '2',
+            division: '2',
+            writer: '33',
+            postDate: 'dd'
+        
     }
 
     return(
@@ -79,7 +93,16 @@ const Board = ({className}) => {
                 </tbody>
 
             </table>  
-                <RichTextEditor/>
+                <form>
+                    <input type="text" name="title" value={post.title} 
+                    placeholder="title" onChange={changeInput}/>
+                    <RichTextEditor/>
+                    <input type="text" name="division" value={post.division}
+                    placeholder="division" onChange={changeInput}/>
+                    <input type="text" name="writer" value={post.writer}
+                    placeholder="writer" onChange={changeInput}/>
+                    <button onClick={onSave} >Save</button>
+                </form>
         </div>
     );
 };

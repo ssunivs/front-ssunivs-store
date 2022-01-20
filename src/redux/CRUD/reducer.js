@@ -40,9 +40,11 @@ const boardReducer = (state=initialState,action)=>{
           let dataToSave = action.dataToSave;
           let ids = state.ids;
             if(!dataToSave.id){ //id가 없으면
+              console.log(dataToSave);
                 return {
                   ids: state.ids + 1,
-                  boards: boards.concat({...action.dataToSave, id: ids, postDate: new Date()}),
+                  boards: boards.concat({...action.dataToSave, id: ids + 1,
+                          title: dataToSave.title, postDate: new Date()}),
                   selected: {}
                 }
               }
