@@ -77,11 +77,11 @@ function App() {
 
             <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />
 
-            <Route path="/Notice.Deliver" component={Deliver} />
-            <Route path="/Notice.Exchange" component={Exchange} />
-            <Route path="/Notice.Refund" component={Refund} />
-            <Route path="/Notice.Payment" component={Payment} />
-            <Route path="/Notice.Event" component={Event} />
+            <Route path="/Notice.3" component={Deliver} />
+            <Route path="/Notice.5" component={Exchange} />
+            <Route path="/Notice.4" component={Refund} />
+            <Route path="/Notice.2" component={Payment} />
+            <Route path="/Notice.1" component={Event} />
 
           </Switch>   
         </Wrap>
