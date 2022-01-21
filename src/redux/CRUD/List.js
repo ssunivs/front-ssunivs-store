@@ -7,12 +7,12 @@ const List = ({ id, title, postClickHandler,
     
     return(
             <tr className={className}>
-                <td>{division}</td>
-                <Link to={link} onClick={postClickHandler}>
-                <td>{title}</td>
+                <td onClick={()=>postClickHandler(id)}>{division}</td>
+                <Link to={link}>
+                <td onClick={()=>postClickHandler(id)}>{title}</td>
                 </Link>
-                <td>{writer}</td>
-                <td><button onClick={onDelete}>X</button></td>
+                <td onClick={()=>postClickHandler(id)}>{writer}</td>
+                <td><button onClick={() => onDelete(id)}>X</button></td>
             </tr>
     );
 };

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected } from "./action";
 
 import List from "./List";
-import RichTextEditor from "./RichTextEditor";
+import BoardNew from "./BoardNew";
 
 const Board = ({className}) => {
     const [post, setPost] = useState({
@@ -24,25 +24,31 @@ const Board = ({className}) => {
 
     const {selected} = useSelector(state => state.board);
 
-    const {boards} = useSelector(state => state.board);
-
+    
     const postClickHandler = (postId) => 
     {
         dispatch(boardSelected(postId));
-
+        
         if(JSON.stringify(selected) !== '{}') {
-            setPost(selected);
+            setPost({
+                id: selected.id,
+                title: selected.title,
+                content: selected.content,
+                division: selected.division,
+                writer: selected.writer,
+                postDate: selected.postDate
+            });
         }
     }
-
+    
     const changeInput = (e) => {
+        
         setPost({
             ...post,
             [e.target.name]: e.target.value
         })
-        console.log(post);
     }
-
+    
     const resetForm = () => {
         setPost({
             id: '',
@@ -53,17 +59,9 @@ const Board = ({className}) => {
             postDate: ''
         })
     }
+    
+    const {boards} = useSelector(state => state.board);
 
-    const test =  {
-        
-            id: '123',
-            title: '23',
-            content: '2',
-            division: '2',
-            writer: '33',
-            postDate: 'dd'
-        
-    }
 
     return(
         <div>
@@ -93,16 +91,13 @@ const Board = ({className}) => {
                 </tbody>
 
             </table>  
-                <form>
-                    <input type="text" name="title" value={post.title} 
-                    placeholder="title" onChange={changeInput}/>
-                    <RichTextEditor/>
-                    <input type="text" name="division" value={post.division}
-                    placeholder="division" onChange={changeInput}/>
-                    <input type="text" name="writer" value={post.writer}
-                    placeholder="writer" onChange={changeInput}/>
-                    <button onClick={onSave} >Save</button>
-                </form>
+
+            <BoardNew
+                onSave={onSave}
+                changeInput={changeInput}
+                post={post}
+                resetForm={resetForm}
+            />
         </div>
     );
 };

@@ -6,6 +6,7 @@ import './RichTextEditor.css';
 import "../../../node_modules/draft-js/dist/Draft.css";
 
 class RichTextEditor extends React.Component {
+
     constructor(props) {
       super(props);
       this.state = {editorState: EditorState.createEmpty()};
@@ -85,7 +86,7 @@ class RichTextEditor extends React.Component {
             onToggle={this.toggleInlineStyle}
           />
           <div className={className} onClick={this.focus}>
-            <Editor
+            <Editor //Ediotor
               blockStyleFn={getBlockStyle}
               customStyleMap={styleMap}
               editorState={editorState}
@@ -97,6 +98,7 @@ class RichTextEditor extends React.Component {
               spellCheck={true}
             />
           </div>
+            
         </div>
       );
     }
