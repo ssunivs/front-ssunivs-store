@@ -21,7 +21,7 @@ export default function HomeModal() {
       <button onClick={() => setDisplayModal(true)}>모달창 버튼</button>
       {displayModal && (
         <div className={styles.modalImg}>
-            <Link to="/Notice.Event">
+            <Link to="/Notice.1">
             <img src={img} alt="쿠폰발급방법"/>
             </Link> 
         </div>
