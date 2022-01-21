@@ -47,7 +47,8 @@ function Header(){ //메뉴 & 로고  & mypage,cart
                 </Link>
                 <div className={styles.logoFence}>|</div>
                 <div className={styles.moveToPage}>
-                    <a href="https://www.ssunivs.com/">store</a>
+                        <a style={{color: (path==="/")? "white" : "#b2b2b2"}}
+                        href="https://www.ssunivs.com/">store</a>
                 </div>
             </div>
             {/* <div className={styles.rnb}>

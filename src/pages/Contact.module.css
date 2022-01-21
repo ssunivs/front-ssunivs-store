@@ -1,0 +1,12 @@
+/* .form > fieldset{
+    
+} */
+.contactForm{
+    display:block;
+    padding: 10px;
+}
+
+.contactForm input {
+    margin-top: 10px;
+    width: 600px;
+}

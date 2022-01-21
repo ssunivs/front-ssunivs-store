@@ -1,0 +1,15 @@
+.modalImg{
+        position: absolute;
+        border: 1px solid gray;
+        background-color: #f0f8ff;
+        z-index: 3;
+        width: 520px;
+        height: 293px;
+        margin-top: 50px;
+        margin-left: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* msTransform: translate(-50%, -50%);
+        webkitTransform: translate(-50%, -50%); */
+}
