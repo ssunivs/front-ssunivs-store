@@ -7,28 +7,28 @@ function NavBar (){
     return (
         <div id={styles.navBar}>
             <ul>
-                <li><a href="/AboutSsua">
+                <li><a href="/News">
                     ABOUT US<i><BiChevronDown /></i></a>
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
+                                <li><Link to="/News">News</Link></li>
                                 <li><Link to="/AboutSsua">ssua</Link></li>
                                 <li><Link to="/AboutSsunivers">ssunivers</Link></li>
                             </ul>
                 </li>
-                <li><a href="/MainStore">
-                    SHOP <i><BiChevronDown /></i></a>
-                        <span className={styles.accent}></span>
-                            <ul className={styles.dropdown}>
-                                <li><Link to="/MainStore">All</Link></li>
-                                <li><Link to="/Reservation">Reservation</Link></li>
-                            </ul>
-                </li>
                 <li><a href="/Notice">
-                    BOARD<i><BiChevronDown /></i></a>
+                    BOARD <i><BiChevronDown /></i></a>
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
                                 <li><Link to="/Notice">Notice</Link></li>
-                                <li><Link to="/FAQ">FAQ</Link></li>
+                            </ul>
+                </li>
+                <li><a href="/Contact">
+                    CONTACT<i><BiChevronDown /></i></a>
+                        <span className={styles.accent}></span>
+                            <ul className={styles.dropdown}>
+                                <li><Link to="/Contact">Conatct Us</Link></li>
+                                <li><Link to="/Reservation">Reservation</Link></li>
                             </ul>
                 </li>
             </ul>

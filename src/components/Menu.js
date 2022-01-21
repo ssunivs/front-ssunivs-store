@@ -41,20 +41,20 @@ function Menu({logInState, setLogOut}){
             <div className={open? styles.menuOpend : styles.menuClosed}
                 style={{backgroundColor: "#04488C"}}>
             
-            <div  className = {styles.search}>
+            {/* <div  className = {styles.search}>
                 <input type="search" name="q"></input>
                 <input type="submit" value="검색"></input>
-            </div>
+            </div> */}
             
             <ul className={styles.menuList}>
                 <li>ABOUT US</li>
                 <ul className={styles.detailLists}>
+                <Link to="/News"><li className={styles.list}
+                                            style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link> 
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
                 <Link to="/AboutSsunivers"><li className={styles.list}
-                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>
-                <Link to="/News"><li className={styles.list}
-                                            style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link>                            
+                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>                           
                     <br></br>
                 </ul>
                 <li>BOARD</li>
@@ -66,10 +66,10 @@ function Menu({logInState, setLogOut}){
 
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
-                <Link to="/Reservation"><li className={styles.list}
-                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>
                 <Link to="/Contact"><li className={styles.list}
-                                        style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>                        
+                                        style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>
+                <Link to="/Reservation"><li className={styles.list}
+                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>                        
                 {/* <a  href="mailto:ssua@ssunivs.com"
                     target="_blank"
                     rel="noopener noreferrer">
