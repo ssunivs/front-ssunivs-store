@@ -9,23 +9,10 @@ import {
 import Home from "pages/Home";
 import AboutSsua from "pages/AboutSsua";
 import AboutSsunivers from "pages/AboutSsunivers";
-import MainStore from "pages/MainStore";
+import News from "pages/News";
 import Reservation from "pages/Reservation";
 import Notice from "pages/Notice";
-import FAQ from "pages/FAQ";
-import LogIn from "pages/LogIn";
-import Join from "pages/Join";
-import Welcome from "pages/Welcome";
-import MyPage from "pages/MyPage";
-import Cart from "pages/Cart";
-import Order from "pages/Order";
-import EditProfile from "pages/EditProfile";
-import Coupon from "pages/Coupon";
-
-import SsuaDollBox from "pages/MainStore.SsuaDollBox";
-import SsuaDollGoods from "pages/MainStore.SsuaDollGoods";
-import SsuaDollSet from "pages/MainStore.SsuaDollSet";
-
+import Contact from "pages/Contact";
 import Deliver from "pages/Notice.Deliver";
 import Exchange from "pages/Notice.Exchange";
 import Refund from "pages/Notice.Refund";
@@ -49,34 +36,12 @@ function App() {
           <FloatingMenu />
           <Switch>
             <Route exact path="/" component={Home} />
-
             <Route path="/AboutSsua" component={AboutSsua} />
             <Route path="/AboutSsunivers" component={AboutSsunivers} />
-
-            <Route path="/MainStore" component={MainStore} />
+            <Route path="/News" component={News}/>
             <Route path="/Reservation" component={Reservation} />
-
             <Route path="/Notice" component={Notice} />
-            <Route path="/FAQ" component={FAQ} />
-
-            <Route path="/LogIn" component={LogIn} />
-            <Route path="/Join" component={Join} />
-            <Route path="/Welcome" component={Welcome} />
-            <Route path="/MyPage" component={MyPage} />
-            <Route path="/Cart" component={Cart} />
-            <Route path="/Coupon" component={Coupon} />
-
-            <Route path="/Order" component={Order} />
-            <Route path="/EditProfile" component={EditProfile} />
-            <Route path="/Coupon" component={Coupon} />
-
-            <Route path="/MainStore.SsuaDollGoods" component={SsuaDollGoods} />
-            <Route path="/MainStore.SsuaDollSet" component={SsuaDollSet} />
-
-            <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />        
-
-            <Route path="/MainStore.SsuaDollBox" component={SsuaDollBox} />
-
+            <Route path="/Contact" component={Contact}/>
             <Route path="/Notice.3" component={Deliver} />
             <Route path="/Notice.5" component={Exchange} />
             <Route path="/Notice.4" component={Refund} />

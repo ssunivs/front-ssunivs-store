@@ -1,16 +1,18 @@
-import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
+import NavBar from "components/NavBar.js";
+// import styles from "pages/Order.module.css";
 
-function AboutSsua(){
+function News(){
     return (
         <div>
             <br></br>
             <NavBar />
             <br></br>
             <br></br>
-            <h1 className={headTitle.head}>슈아(ssu-a)를 소개합니다 !</h1>
+            <h1  className={headTitle.head}>News</h1>
+
         </div>
     );
 }
 
-export default AboutSsua;
+export default News;

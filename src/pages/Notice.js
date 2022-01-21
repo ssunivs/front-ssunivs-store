@@ -7,6 +7,7 @@ import Board from "redux/CRUD/Board";
 function Notice(){
     return (
         <div>
+            <br></br>
             <NavBar />
             <br></br>
             <br></br>
