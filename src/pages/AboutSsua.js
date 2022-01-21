@@ -1,9 +1,11 @@
 import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
+import modal from "pages/modal.module.css";
 
 function AboutSsua(){
     return (
         <div>
+            <br></br>
             <NavBar />
             <br></br>
             <br></br>

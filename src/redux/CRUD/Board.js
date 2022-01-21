@@ -3,12 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected } from "./action";
 
 import List from "./List";
+import RichTextEditor from "./RichTextEditor";
 
-const Board = ({  }) => {
+const Board = ({className}) => {
     const [post, setPost] = useState({
         id: '',
         title: '',
-        content: ''
+        content: '',
+        division: '',
+        writer: '',
+        postDate: ''
     });
 
     const dispatch = useDispatch();
@@ -23,6 +27,7 @@ const Board = ({  }) => {
     const postClickHandler = (postId) => 
     {
         dispatch(boardSelected(postId));
+
         if(JSON.stringify(selected) !== '{}') {
             setPost(selected);
         }
@@ -37,42 +42,44 @@ const Board = ({  }) => {
 
     const resetForm = () => {
         setPost({
-            id: '', title: '', content: ''
+            id: '',
+            title: '',
+            content: '',
+            division: '',
+            writer: '',
+            postDate: ''
         })
     }
 
     return(
         <div>
-            <div>
-                <table>
-                    <tbody>
-                        <tr align="center">
-                            <td width="50">번호</td>
-                            <td width="100">제목</td>
-                            <td width="200">내용</td>
-                        </tr>
-                        {
-                            boards.map(post =>
+            <table className={className}
+            border="0">
+                <thead>
+                    <tr className={className}>
+                        <th>분류</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                        {boards.map(post =>
                             (
                                 <List
                                     id={post.id}
+                                    className={className}
                                     title={post.title}
-                                    content={post.content}
-                                    /*onDelete={onDelete}
+                                    writer={post.writer}
+                                    division={post.division}
                                     postClickHandler={postClickHandler}
-
-                                    onSave={onSave} 
-                                    changeInput={changeInput} 
-                                    post={post}
-                                    resetForm={resetForm}*/
+                                    onDelete={onDelete}
                                 />
                             ))
                         }
-                    </tbody>
-                </table>
-            </div>
-            <div>
-            </div>
+                </tbody>
+
+            </table>  
+                <RichTextEditor/>
         </div>
     );
 };
