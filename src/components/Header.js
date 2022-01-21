@@ -8,9 +8,6 @@ import Menu from "components/Menu";
 
 import styles from "components/Header.module.css";
 
-//Detect LogInState
-import { connect } from "react-redux";
-
 // import {
 //     IoMdPerson,
 //     IoMdCart
@@ -59,11 +56,4 @@ function Header(){ //메뉴 & 로고  & mypage,cart
     );
 }
 
-//Detect LogInState
-const mapStateToProps = (state) => {
-    return{
-        logInState: state.logInOut.logInState
-    };
-}; 
-
-export default connect(mapStateToProps)(Header);
+export default Header;

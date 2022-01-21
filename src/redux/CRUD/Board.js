@@ -17,6 +17,9 @@ const Board = ({className}) => {
 
     const dispatch = useDispatch();
 
+    //Detect AdminMode
+    const {adminState} = useSelector(state => state.adminMode);
+
     const onDelete = (postId) => dispatch(boardDelete(postId));
     const onSave = (dataToSave) => {
         dispatch(boardSave(dataToSave));
@@ -85,6 +88,7 @@ const Board = ({className}) => {
                                     division={post.division}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
+                                    adminState={adminState}
                                 />
                             ))
                         }
@@ -97,6 +101,7 @@ const Board = ({className}) => {
                 changeInput={changeInput}
                 post={post}
                 resetForm={resetForm}
+                adminState={adminState}
             />
         </div>
     );

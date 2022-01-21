@@ -1,6 +1,7 @@
 import RichTextEditor from "./RichTextEditor";
 
-const BoardNew = ({ onSave, changeInput, post, resetForm }) => {
+const BoardNew = ({ onSave, changeInput, post, resetForm
+                    , adminState }) => {
     const onSubmit = (e) =>{
         e.preventDefault();
         onSave(post);
@@ -8,7 +9,7 @@ const BoardNew = ({ onSave, changeInput, post, resetForm }) => {
     }
 
     return(
-        <div>
+        <div style={{display: (adminState)? "":"none"}}>
             <form onSubmit={onSubmit}>
                 <input type="text" name="title" value={post.title} required
                             placeholder="title" onChange={changeInput}/>

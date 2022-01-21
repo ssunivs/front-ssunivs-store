@@ -7,11 +7,13 @@ import SocialLinks from "components/SocialLinks";
 // import {SearchIcon} from "react-icons/fi";
 import styles from "components/Menu.module.css";
 
+/*
 //Detect LogInState
 import { connect } from "react-redux";
-import { setLogOut } from "redux/logInOut/actions";
+import { setLogOut } from "redux/setAdmin/actions";
+*/
 
-function Menu({logInState, setLogOut}){
+function Menu(){
     const [open, setOpen] = useState(false);
     const onMenuClick = () =>{
         setOpen((current) => !current);
@@ -97,6 +99,7 @@ function Menu({logInState, setLogOut}){
     );
 }
 
+/*
 //Detect LogInState
 const mapStateToProps = (state) => {
     return{
@@ -110,4 +113,6 @@ const mapDispatchToProps = (dispatch)=>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default connect(mapStateToProps)(Menu);
+*/
+export default Menu;
