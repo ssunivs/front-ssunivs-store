@@ -38,9 +38,9 @@
     font-size: 22px;
 }
 
-.moveToPage a{
+/* .moveToPage a{
     color: white;
-}
+} */
 
 @media screen and (max-width:599px) {
     /*모바일세로크기*/
