@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const List = ({ id, title, postClickHandler,
             writer, division, onDelete, className
-            , adminState }) => {
+            , adminState, content }) => {
 
     const link = "/Notice." + id;
     
@@ -15,6 +15,8 @@ const List = ({ id, title, postClickHandler,
                 <td onClick={()=>postClickHandler(id)}>{writer}</td>
                 <td><button onClick={() => onDelete(id)}
                 style={{display: (adminState)? "":"none"}}>X</button></td>
+
+                <td style={{display: "none"}}>{content}</td>
             </tr>
     );
 };

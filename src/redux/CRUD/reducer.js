@@ -53,9 +53,9 @@ const boardReducer = (state=initialState,action)=>{
               post.id === dataToSave.id ? {...dataToSave} : post), selected: {}}
 
         case DELETE:
-            return {
-              ...state, boards: boards.filter( post => post.id !== action.postId), selected: {}
-            }
+              return {
+                ...state, boards: boards.filter( post => post.id !== action.postId), selected: {}
+              }
             
         case SELECTED:
             return {

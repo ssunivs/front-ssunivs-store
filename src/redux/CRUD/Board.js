@@ -20,7 +20,11 @@ const Board = ({className}) => {
     //Detect AdminMode
     const {adminState} = useSelector(state => state.adminMode);
 
-    const onDelete = (postId) => dispatch(boardDelete(postId));
+    const onDelete = (postId) => {
+        if(window.confirm("영구히 삭제합니다. 정말 삭제하시겠습니까?")===true){
+            alert("삭제되었습니다.");
+            dispatch(boardDelete(postId))};
+        }
     const onSave = (dataToSave) => {
         dispatch(boardSave(dataToSave));
     }
@@ -89,6 +93,7 @@ const Board = ({className}) => {
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
                                     adminState={adminState}
+                                    content={post.content}
                                 />
                             ))
                         }

@@ -96,6 +96,7 @@ class RichTextEditor extends React.Component {
               placeholder="Need to Plugin..."
               ref="editor"
               spellCheck={true}
+              //readOnly={()?"":""}
             />
           </div>
             
