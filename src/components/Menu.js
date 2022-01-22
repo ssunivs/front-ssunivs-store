@@ -53,23 +53,26 @@ function Menu(){
                 <ul className={styles.detailLists}>
                 <Link to="/News"><li className={styles.list}
                                             style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link> 
+                    <br></br>
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
+                    <br></br>
                 <Link to="/AboutSsunivers"><li className={styles.list}
                                             style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>                           
-                    <br></br>
                 </ul>
+                    <br></br>
                 <li>BOARD</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Notice"><li className={styles.list}
                                     style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
-                    <br></br>
                 </ul>
+                    <br></br>
 
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Contact"><li className={styles.list}
                                         style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>
+                    <br></br>
                 <Link to="/Reservation"><li className={styles.list}
                                         style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>                        
                 {/* <a  href="mailto:ssua@ssunivs.com"

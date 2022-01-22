@@ -74,11 +74,15 @@
     color: aliceblue;
     padding-left:20px;
     font-size: 17px;
+
 }
 
 .list{
     color: aliceblue;
 
+    display: inline-block;
+    width: 100px;
+    
     transition: all 0.8s;
 }
 
