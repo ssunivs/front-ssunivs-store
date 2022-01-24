@@ -13,8 +13,6 @@ import styles from "components/Header.module.css";
 //     IoMdCart
 // } from "react-icons/io";
 
-
-
 function Header(){ //메뉴 & 로고  & mypage,cart
 
     //Detect pathname
@@ -42,11 +40,11 @@ function Header(){ //메뉴 & 로고  & mypage,cart
                 alt="SSUNIVERSE main logo" 
                 />
                 </Link>
-                <div className={styles.logoFence}>|</div>
+                {/* <div className={styles.logoFence}>|</div>
                 <div className={styles.moveToPage}>
                         <a style={{color: (path==="/")? "white" : "#b2b2b2"}}
                         href="https://www.ssunivs.com/">store</a>
-                </div>
+                </div> */}
             </div>
             {/* <div className={styles.rnb}>
                 <Link to={(logInState)?"/MyPage":"/LogIn"}><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
