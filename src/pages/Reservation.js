@@ -21,7 +21,7 @@ function Reservation(){
             <NavBar />
             <br></br>
             <br></br>
-            <h1 className={headTitle.head}>방문 수령 예약</h1>
+            <h1 className={headTitle.head}>방문수령 예약</h1>
             <p id={styles.reservationNotice}>
             <br></br>
             방문가능시간 : 평일 1시 ~ 5시<br></br>

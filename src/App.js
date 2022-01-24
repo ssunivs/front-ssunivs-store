@@ -12,6 +12,7 @@ import AboutSsunivers from "pages/AboutSsunivers";
 import News from "pages/News";
 import Reservation from "pages/Reservation";
 import Notice from "pages/Notice";
+import FAQ from "pages/FAQ";
 import Contact from "pages/Contact";
 import Deliver from "pages/Notice.Deliver";
 import Exchange from "pages/Notice.Exchange";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/News" component={News}/>
             <Route path="/Reservation" component={Reservation} />
             <Route path="/Notice" component={Notice} />
+            <Route path="/FAQ" component={FAQ} />
             <Route path="/Contact" component={Contact}/>
             <Route path="/Notice.3" component={Deliver} />
             <Route path="/Notice.5" component={Exchange} />
