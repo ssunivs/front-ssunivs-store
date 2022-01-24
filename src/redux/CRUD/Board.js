@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected } from "./action";
 
+import styles from "./Board.module.css";
+import SetAdmin from "redux/setAdmin/SetAdmin";
 import List from "./List";
 import BoardNew from "./BoardNew";
 
@@ -71,14 +73,18 @@ const Board = ({className}) => {
 
 
     return(
-        <div>
+        <div id={styles.container}>
             <table className={className}
             border="0">
                 <thead>
                     <tr className={className}>
+                        <th>No.</th>
                         <th>분류</th>
                         <th>제목</th>
                         <th>작성자</th>
+                        <th>작성일</th>
+                        <th style={{
+                            display: (adminState)? "" : "none"}}></th>
                     </tr> 
                 </thead>
                 <tbody>
@@ -90,6 +96,7 @@ const Board = ({className}) => {
                                     title={post.title}
                                     writer={post.writer}
                                     division={post.division}
+                                    postDate={post.postDate}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
                                     adminState={adminState}
@@ -100,6 +107,8 @@ const Board = ({className}) => {
                 </tbody>
 
             </table>  
+
+            <SetAdmin />
 
             <BoardNew
                 onSave={onSave}
