@@ -47,7 +47,7 @@ function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑
                 style={{fontSize : size,
                     color: color}}><RiGithubFill /></a>
             
-            <a title="emial"
+            <a title="email"
                 href="mailto:ssua@ssunivs.com"
                 target="_blank"
                 rel="noopener noreferrer"
