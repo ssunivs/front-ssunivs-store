@@ -4,7 +4,7 @@ import styles from "components/FloatingMenu.module.css";
 import fixSsuaIcon from "../assets/fix_ssua.png";
 import {GrMail,GrInstagram} from "react-icons/gr"
 import {RiKakaoTalkFill} from "react-icons/ri"
-import {AiTwotoneShop, AiFillShopping} from "react-icons/ai";
+import {AiFillShopping} from "react-icons/ai";
 
 function FloatingMenu() {
     const [open, setOpen] = useState(false);
