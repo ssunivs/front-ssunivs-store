@@ -5,7 +5,7 @@ import {
     RiTwitterFill,
     RiGithubFill} from "react-icons/ri";
 
-import { IoPaperPlaneOutline } from "react-icons/io5";
+import { HiOutlineMail } from "react-icons/hi";
 
 import styles from "components/SocialLinks.module.css";
 
@@ -57,7 +57,7 @@ function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{fontSize : size,
-                    color: color}}><IoPaperPlaneOutline /></a>
+                    color: color}}><HiOutlineMail /></a>
 
         </div>
     );
