@@ -5,6 +5,8 @@ import {
     RiTwitterFill,
     RiGithubFill} from "react-icons/ri";
 
+import { IoPaperPlaneOutline } from "react-icons/io5";
+
 import styles from "components/SocialLinks.module.css";
 
 function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑니다
@@ -49,6 +51,14 @@ function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑
                 rel="noopener noreferrer"
                 style={{fontSize : size,
                     color: color}}><RiGithubFill /></a>
+            
+            <a title="emial"
+                href="mailto:ssua@ssunivs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontSize : size,
+                    color: color}}><IoPaperPlaneOutline /></a>
+
         </div>
     );
 }
