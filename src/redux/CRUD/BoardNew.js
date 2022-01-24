@@ -19,6 +19,7 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
 
                 <select name="division" 
                     onChange={changeInput} required>
+                    <option value="">분류</option>
                     <option>shop</option>
                     <option>ssua</option>
                     <option>etc</option>
@@ -26,11 +27,9 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
 
                 <select name="writer"
                     onChange={changeInput} required>
-                    <option>관리자 C</option>
+                    <option value="">작성자</option>
+                    <option>관리자 F</option>
                     <option>관리자 J</option>
-                    <option>관리자 K</option>
-                    <option>관리자 S</option>
-                    <option>관리자 P</option>
                 </select>
 
                 <button type="submit">Save</button>

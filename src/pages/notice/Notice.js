@@ -1,6 +1,6 @@
 import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
-import styles from "pages/Notice.module.css";
+import styles from "pages/notice/Notice.module.css";
 
 import Board from "redux/CRUD/Board";
 

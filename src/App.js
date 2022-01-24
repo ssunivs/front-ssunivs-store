@@ -11,14 +11,10 @@ import AboutSsua from "pages/AboutSsua";
 import AboutSsunivers from "pages/AboutSsunivers";
 import News from "pages/News";
 import Reservation from "pages/Reservation";
-import Notice from "pages/Notice";
+import Notice from "pages/notice/Notice";
 import FAQ from "pages/FAQ";
 import Contact from "pages/Contact";
-import Deliver from "pages/Notice.Deliver";
-import Exchange from "pages/Notice.Exchange";
-import Refund from "pages/Notice.Refund";
-import Payment from "pages/Notice.Payment";
-import Event from "pages/Notice.Event"
+import NoticePost from "pages/notice/NoticePost";
 
 
 //Common components
@@ -44,11 +40,7 @@ function App() {
             <Route path="/Notice" component={Notice} />
             <Route path="/FAQ" component={FAQ} />
             <Route path="/Contact" component={Contact}/>
-            <Route path="/Notice.3" component={Deliver} />
-            <Route path="/Notice.5" component={Exchange} />
-            <Route path="/Notice.4" component={Refund} />
-            <Route path="/Notice.2" component={Payment} />
-            <Route path="/Notice.1" component={Event} />
+            <Route path="/Notice.post" component={NoticePost} />
 
           </Switch>   
         </Wrap>

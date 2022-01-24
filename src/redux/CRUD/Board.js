@@ -51,11 +51,10 @@ const Board = ({className}) => {
     }
     
     const changeInput = (e) => {
-        
-        setPost({
-            ...post,
-            [e.target.name]: e.target.value
-        })
+            setPost({
+                ...post,
+                [e.target.name]: e.target.value
+            })
     }
     
     const resetForm = () => {

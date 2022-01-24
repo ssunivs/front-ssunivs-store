@@ -4,15 +4,13 @@ const List = ({ id, title, postClickHandler,
             writer, division, postDate, onDelete, className
             , adminState, content }) => {
 
-    const link = "/Notice." + id;
-
     const  writeDate = postDate; //수정필요
     
     return(
             <tr className={className}>
                 <td>{id}</td>
                 <td>{division}</td>
-                <Link to={link}>
+                <Link to="/Notice.post">
                 <td onClick={()=>postClickHandler(id)}>{title}</td>
                 </Link>
                 <td>{writer}</td>

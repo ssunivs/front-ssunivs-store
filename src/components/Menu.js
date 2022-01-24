@@ -63,7 +63,8 @@ function Menu(){
                     <br></br>
                 <li>STORE</li>
                 <ul className={styles.detailLists}>
-                    <a href="https://www.ssunivs.com/">GO !</a><br></br>
+                    <a href="https://www.ssunivs.com/"><li className={styles.list}>GO !</li></a>
+                    <br></br>
                     <Link to="/Reservation"><li className={styles.list}
                                         style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>방문수령 예약</li></Link>
 
