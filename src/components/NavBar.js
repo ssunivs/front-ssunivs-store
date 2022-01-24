@@ -2,7 +2,6 @@ import styles from "components/NavBar.module.css"
 import {Link} from "react-router-dom";
 import {BiChevronDown} from "react-icons/bi"
 
-
 function NavBar (){
     return (
         <div id={styles.navBar}>
