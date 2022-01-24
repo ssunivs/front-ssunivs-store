@@ -4,12 +4,10 @@ import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
 import Modal from "components/HomeModal";
 
-import SetAdmin from "redux/setAdmin/SetAdmin";
-
 function Home(){
     return (
         <div id={styles.home}>
-            <Modal /> <SetAdmin />
+            <Modal />
             <img 
             className={styles.mainSsua1}
             src={main_ssua1}
