@@ -39,6 +39,15 @@
     border: none;
 }
 
+#reservationOtherTimeBnt{
+    color: #fff;
+    margin-top: 20px;
+    padding : 10px 20px;
+    background-color: #aaaaaa;
+    cursor: pointer;
+    border: none;
+}
+
 #map{
     width : 100%;
     height : 300px;

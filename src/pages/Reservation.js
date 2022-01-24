@@ -6,15 +6,31 @@ import DatePicker from "react-datepicker";
 import ko from "date-fns/locale/ko";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "pages/Reservation.module.css";
-import userForm from "pages/EditProfile.module.css"
+import userForm from "pages/EditProfile.module.css";
+import setHours from "date-fns/setHours";
+import setMinutes from "date-fns/setMinutes";
+import getDay from "date-fns/getDay";
 
 function Reservation(){
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(
+        setHours(setMinutes(new Date(), 30), 16)
+    );
+    const isWeekday = (date) => {
+        const day = getDay(date);
+        return day !== 0 && day !== 6 && day!==5;
+      };
     const ExampleCustomInput = ({ value, onClick }) => (
         <button className={styles.reservationDateBnt} onClick={onClick}>
         {value}
         </button>
     );
+    var minTime = new Date();
+    minTime.setMinutes(0);
+    minTime.setHours(9);
+
+    var maxTime = new Date();
+    maxTime.setMinutes(0);
+    maxTime.setHours(18);
     return (
         <div>
             <br></br>
@@ -24,13 +40,10 @@ function Reservation(){
             <h1 className={headTitle.head}>방문수령 예약</h1>
             <p id={styles.reservationNotice}>
             <br></br>
-            방문가능시간 : 평일 1시 ~ 5시<br></br>
-            등등 기타사항 ..   <br></br><br></br>
-
-            방문자 성함 :&nbsp;&nbsp;
+            성함 :&nbsp;&nbsp;
             <input id="user_name" name="user_name" type="text" required></input>
             <br></br>
-            방문자 연락처 : &nbsp;&nbsp;
+            연락처 : &nbsp;&nbsp;
             <select id="mobile1" className={userForm.userMobile}>
                                     <option value="010">010</option>
                                     <option value="011">011</option>
@@ -41,6 +54,9 @@ function Reservation(){
                                 </select>
                                 &nbsp;-&nbsp;<input className={userForm.userMobile} id="mobile2" type="text" maxLength="4" pattern="\d*"></input>
                                 &nbsp;-&nbsp;<input className={userForm.userMobile} id="mobile3" type="text" maxLength="4" pattern="\d*"></input>
+            <br></br>
+            이메일 : &nbsp;&nbsp;
+            <input id="user_email" name="user_email" type="text" required></input>
             <br></br>
             <br></br>
             <span>방문 가능 한 날짜와 시간을 선택해주세요</span>
@@ -55,9 +71,50 @@ function Reservation(){
             // popperPlacement="auto"
             showTimeSelect
             timeFormat=" H시 mm분"
-            timeIntervals={30}
+            timeIntervals={15}
+            filterDate={isWeekday}
+            minTime={minTime}
+            maxTime={maxTime}
+            excludeTimes={[
+                setHours(setMinutes(new Date(), 45), 9),
+                setHours(setMinutes(new Date(), 0), 10),
+                setHours(setMinutes(new Date(), 15), 10),
+                setHours(setMinutes(new Date(), 30), 10),
+                setHours(setMinutes(new Date(), 45), 10),
+                setHours(setMinutes(new Date(), 0), 11),
+                setHours(setMinutes(new Date(), 15), 11),
+                setHours(setMinutes(new Date(), 30), 11),
+                setHours(setMinutes(new Date(), 45), 11),
+                setHours(setMinutes(new Date(), 0), 12),
+                setHours(setMinutes(new Date(), 15), 12),
+                setHours(setMinutes(new Date(), 30), 12),
+                setHours(setMinutes(new Date(), 45), 12),
+                setHours(setMinutes(new Date(), 30), 13),
+                setHours(setMinutes(new Date(), 45), 13),
+                setHours(setMinutes(new Date(), 0), 14),
+                setHours(setMinutes(new Date(), 15), 14),
+                setHours(setMinutes(new Date(), 30), 14),
+                setHours(setMinutes(new Date(), 45), 14),
+                setHours(setMinutes(new Date(), 0), 15),
+                setHours(setMinutes(new Date(), 15), 15),
+                setHours(setMinutes(new Date(), 30), 15),
+                setHours(setMinutes(new Date(), 45), 15),
+                setHours(setMinutes(new Date(), 0), 16),
+                setHours(setMinutes(new Date(), 15), 16),
+                setHours(setMinutes(new Date(), 30), 16),
+                setHours(setMinutes(new Date(), 45), 16),
+                setHours(setMinutes(new Date(), 0), 17)
+            ]}
             />
+            <span>10분이상 지각 시 담당자가 기다리지 않을 수 있습니다. 방문에 유의해 주세요🙂</span>
+            <br></br>
+            <span>방문 수령 변경 예약은 카카오톡 채널로 문의 바랍니다!</span>
+            <br></br>
             <button id={styles.reservationFinBnt}>예약하기</button>
+            <br></br>
+                <a href="https://pf.kakao.com/_JNgis/chat"
+                    target="_blank" rel="noreferrer">
+                    <button id={styles.reservationOtherTimeBnt}>그 외 시간 문의하기</button></a>
             <br></br>
             <br></br>
             </p>
