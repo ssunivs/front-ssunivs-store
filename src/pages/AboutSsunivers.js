@@ -1,6 +1,7 @@
 import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
 
+
 function AboutSsunivers(){
     return (
         <div>

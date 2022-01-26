@@ -17,7 +17,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    left: 44%;
+    left: 50%;
+    transform: translateX(-40%); /* 로고 중앙 맞추기 위해*/
+
     padding-top: 40px;
     transition: all 1.5s;
 
@@ -50,7 +52,8 @@
     .moveToPage{
     /*ssunivers가 logo밑으로 오게*/
     position: absolute;
-    transform: translate(0%,230%);
+    left: 50%;
+    transform: translate(-20%,230%);
     width: 100%;
     top: 30%;
     height: auto;

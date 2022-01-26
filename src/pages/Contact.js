@@ -1,11 +1,11 @@
-import headTitle from "pages/headTitle.module.css";
+// import headTitle from "pages/headTitle.module.css";
 import styles from "pages/Contact.module.css";
 import mapStyles from "pages/Reservation.module.css";
 
 function Contact(){
     return (
         <div>
-            <h1  className={headTitle.head}>Contact Us</h1>
+            <h1  className={styles.contact_head}>Contact Us</h1>
             <form className={styles.form} method="post" action="">
                 <fieldset>
                     <label className={styles.contactForm}>

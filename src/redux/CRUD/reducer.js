@@ -41,18 +41,21 @@ const boardReducer = (state=initialState,action)=>{
           let ids = state.ids;
             if(!dataToSave.id){ //id가 없으면
                 return {
-                  ids: state.ids + 1,
-                  boards: boards.concat({...action.dataToSave, id: ids, postDate: new Date()}),
+                  ids: ids + 1,
+                  boards: boards.concat({...dataToSave, id: ids + 1,
+                          title: dataToSave.title, content: dataToSave.content, 
+                          postDate: new Date(), division: dataToSave.division,
+                          writer: dataToSave.writer}), 
                   selected: {}
                 }
               }
             return {...state, boards: boards.map(post => 
-              post.id === action.dataToSave.id ? {...action.dataToSave} : post), selected: {}}
+              post.id === dataToSave.id ? {...dataToSave} : post), selected: {}}
 
         case DELETE:
-            return {
-              ...state, boards: boards.filter( post => post.id !== action.postId), selected: {}
-            }
+              return {
+                ...state, boards: boards.filter( post => post.id !== action.postId), selected: {}
+              }
             
         case SELECTED:
             return {

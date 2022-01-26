@@ -2,7 +2,6 @@ import styles from "components/NavBar.module.css"
 import {Link} from "react-router-dom";
 import {BiChevronDown} from "react-icons/bi"
 
-
 function NavBar (){
     return (
         <div id={styles.navBar}>
@@ -21,6 +20,7 @@ function NavBar (){
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
                                 <li><Link to="/Notice">Notice</Link></li>
+                                <li><Link to="/FAQ">자주 묻는 질문</Link></li>
                             </ul>
                 </li>
                 <li><a href="/Contact">
@@ -28,7 +28,7 @@ function NavBar (){
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
                                 <li><Link to="/Contact">Conatct Us</Link></li>
-                                <li><Link to="/Reservation">Reservation</Link></li>
+                                <li><Link to="/Reservation">방문수령 예약</Link></li>
                             </ul>
                 </li>
             </ul>

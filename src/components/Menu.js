@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import {Link} from "react-router-dom";
 
@@ -7,11 +7,13 @@ import SocialLinks from "components/SocialLinks";
 // import {SearchIcon} from "react-icons/fi";
 import styles from "components/Menu.module.css";
 
+/*
 //Detect LogInState
 import { connect } from "react-redux";
-import { setLogOut } from "redux/logInOut/actions";
+import { setLogOut } from "redux/setAdmin/actions";
+*/
 
-function Menu({logInState, setLogOut}){
+function Menu(){
     const [open, setOpen] = useState(false);
     const onMenuClick = () =>{
         setOpen((current) => !current);
@@ -51,25 +53,35 @@ function Menu({logInState, setLogOut}){
                 <ul className={styles.detailLists}>
                 <Link to="/News"><li className={styles.list}
                                             style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link> 
+                    <br></br>
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
+                    <br></br>
                 <Link to="/AboutSsunivers"><li className={styles.list}
                                             style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>                           
-                    <br></br>
                 </ul>
+                    <br></br>
+                <li>STORE</li>
+                <ul className={styles.detailLists}>
+                    <a href="https://www.ssunivs.com/">GO !</a>
+                </ul>
+                <br></br>
                 <li>BOARD</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Notice"><li className={styles.list}
                                     style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
                     <br></br>
+                <Link to="/FAQ"><li className={styles.list}
+                                    style={{color: (path==="/FAQ")? "#A5D1FC" : ""}}>자주 묻는 질문</li></Link>                    
                 </ul>
-
+                    <br></br>
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Contact"><li className={styles.list}
                                         style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>
+                    <br></br>
                 <Link to="/Reservation"><li className={styles.list}
-                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>Reservation</li></Link>                        
+                                        style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>방문수령 예약</li></Link>                        
                 {/* <a  href="mailto:ssua@ssunivs.com"
                     target="_blank"
                     rel="noopener noreferrer">
@@ -97,6 +109,7 @@ function Menu({logInState, setLogOut}){
     );
 }
 
+/*
 //Detect LogInState
 const mapStateToProps = (state) => {
     return{
@@ -110,4 +123,6 @@ const mapDispatchToProps = (dispatch)=>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default connect(mapStateToProps)(Menu);
+*/
+export default Menu;

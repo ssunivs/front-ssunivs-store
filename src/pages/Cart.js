@@ -66,10 +66,10 @@ function Cart(){
                     <div>
                         <input id="mail_receive0" onClick={onSetDelivery} 
                         name="mail_receive" type="radio"></input>
-                        <label>배송</label>
+                        <label>방문수령</label>
                         <input id="mail_receive1" onClick={onSetPickUp} 
                         name="mail_receive" type="radio"></input>
-                        <label>방문수령</label>
+                        <label>배송</label>
                     </div>
                 </div>
 
