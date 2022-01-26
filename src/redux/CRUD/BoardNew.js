@@ -2,6 +2,7 @@ import RichTextEditor from "./RichTextEditor";
 
 const BoardNew = ({ onSave, changeInput, post, resetForm
                     , adminState }) => {
+
     const onSubmit = (e) =>{
         e.preventDefault();
         onSave(post);
@@ -13,11 +14,24 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
             <form onSubmit={onSubmit}>
                 <input type="text" name="title" value={post.title} required
                             placeholder="title" onChange={changeInput}/>
+                
                 <RichTextEditor />
-                <input type="text" name="division" value={post.division} required
-                            placeholder="division" onChange={changeInput}/>
-                <input type="text" name="writer" value={post.writer} required
-                            placeholder="writer" onChange={changeInput}/>
+
+                <select name="division" 
+                    onChange={changeInput} required>
+                    <option value="">분류</option>
+                    <option>shop</option>
+                    <option>ssua</option>
+                    <option>etc</option>
+                </select>
+
+                <select name="writer"
+                    onChange={changeInput} required>
+                    <option value="">작성자</option>
+                    <option>관리자 F</option>
+                    <option>관리자 J</option>
+                </select>
+
                 <button type="submit">Save</button>
             </form>
         </div>

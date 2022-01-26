@@ -31,8 +31,6 @@
     /* transform: rotate(45deg) translate(-8px, -9px); */
 }
 
-
-
 .menuClosed{
     position: absolute;
     transform: translateX(-500px);
@@ -89,9 +87,15 @@
     color: aliceblue;
     font-size: 15px;
     display: inline-block;
-    width: 100px;
+    width: 110px;
     
-    transition: all 0.8s;
+    transition: all 0.4s;
+}
+
+.list:hover{
+    letter-spacing: 0.8px;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .search {

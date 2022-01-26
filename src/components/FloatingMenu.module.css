@@ -28,7 +28,7 @@
 	animation: scale-in 0.5s;	
 }
 
-#kakao,#insta,#mail{	
+#floatingDetailIcons{	
 	cursor: pointer;
 	margin-bottom: 5px;
 }
