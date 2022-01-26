@@ -10,6 +10,7 @@ function FAQ(){
             <br></br>
             <br></br>
             <h1 className={headTitle.head}>FAQ : 자주 묻는 질문</h1>
+            <div className={styles.faq}>
                 <details className={styles.faqDetails}>
                     <summary>인스타그램 팔로워 이벤트 1,000원 할인권은 어떻게 받아야 하나요?</summary>
                         <p>
@@ -30,6 +31,7 @@ function FAQ(){
                     기부는 숭실대학교 발전기금팀과 협의하여 진행됩니다.
                         </p>
                 </details>
+                </div>
         </div>
     );
 }
