@@ -90,6 +90,7 @@ const Board = ({className}) => {
                         {boards.map(post =>
                             (
                                 <List
+                                    no={(boards.indexOf(post))+1}
                                     id={post.id}
                                     className={className}
                                     title={post.title}

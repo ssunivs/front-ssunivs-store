@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const List = ({ id, title, postClickHandler,
+const List = ({ no, id, title, postClickHandler,
             writer, division, postDate, onDelete, className
             , adminState, content }) => {
 
@@ -8,7 +8,7 @@ const List = ({ id, title, postClickHandler,
     
     return(
             <tr className={className}>
-                <td>{id}</td>
+                <td>{no.toString().padStart(3,'0')}</td>
                 <td>{division}</td>
                 <Link to="/Notice.post">
                 <td onClick={()=>postClickHandler(id)}>{title}</td>
