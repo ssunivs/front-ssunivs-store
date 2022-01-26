@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected } from "./action";
 
 import styles from "./Board.module.css";
-import SetAdmin from "redux/setAdmin/SetAdmin";
 import List from "./List";
 import BoardNew from "./BoardNew";
 
@@ -70,11 +70,18 @@ const Board = ({className}) => {
     
     const {boards} = useSelector(state => state.board);
 
+    //writeMode State
+    const [writeMode, setWriteMode] = useState(false);
+    const onOffWriteMode = () =>{
+        setWriteMode(!writeMode);
+    }
+
 
     return(
-        <div id={styles.container}>
+        <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
             <table className={className}
-            border="0">
+                   style={{display: writeMode? 'none':''}}
+                   border="0">
                 <thead>
                     <tr className={className}>
                         <th>No.</th>
@@ -106,17 +113,24 @@ const Board = ({className}) => {
                         }
                 </tbody>
 
-            </table>  
+            </table>
 
-            <SetAdmin />
+            <div className={styles.writeButtonPositon}>
+                <Link to={adminState? '/Notice':'/LogIn'}>
+                <button className={styles.noticeButton}
+                        onClick={onOffWriteMode}>
+                            {writeMode? '게시판으로 가기':'글쓰기'}</button></Link>
+            </div>
 
-            <BoardNew
-                onSave={onSave}
-                changeInput={changeInput}
-                post={post}
-                resetForm={resetForm}
-                adminState={adminState}
-            />
+            <div style={{display: writeMode? '':'none'}}>
+                <BoardNew
+                    onSave={onSave}
+                    changeInput={changeInput}
+                    post={post}
+                    resetForm={resetForm}
+                    adminState={adminState}
+                />
+            </div>
         </div>
     );
 };

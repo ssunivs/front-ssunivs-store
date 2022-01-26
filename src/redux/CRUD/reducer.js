@@ -5,27 +5,27 @@ const initialState = {
         {
           id: 1, title: '이벤트 쿠폰 발급',
           content: '이벤트 쿠폰 발급',  division: 'shop',
-          writer: '관리자', postDate: '(임시) 01/25',
+          writer: '관리자', postDate: '01/25',
         },
         {
           id: 2, title: '주문 결제 방법',
           content: '주문 결제 방법',  division: 'shop',
-          writer: '관리자', postDate: '(임시) 01/25',
+          writer: '관리자', postDate: '01/25',
         },
         {
           id: 3, title: '배송 안내',
           content: '배송 안내',  division: 'shop',
-          writer: '관리자', postDate: '(임시) 01/25',
+          writer: '관리자', postDate: '01/25',
         },
         {
           id: 4, title: '주문 변경/취소/환불',
           content: '주문 변경/취소/환불',  division: 'shop',
-          writer: '관리자', postDate: '(임시) 01/25',
+          writer: '관리자', postDate: '01/25',
         },
         {
           id: 5, title: '제품 교환/반품',
           content: '제품 교환/반품',  division: 'shop',
-          writer: '관리자', postDate: '(임시) 01/25',
+          writer: '관리자', postDate: '01/25',
         },
       ],
     ids: 5, //id 기준, 새로 추가되는 id가 있다면 하나 늘리기

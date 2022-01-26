@@ -1,5 +1,5 @@
 // 반응형은 아직은 안됩니다... 전체 화면일때만 우선 .....
-//import { useState } from "react";
+// import { useState } from "react";
 import {Link} from "react-router-dom";
 import styles from "pages/MainStore.module.css";
 import store_ssua1 from "assets/store_ssua1.png"; //store이미지
