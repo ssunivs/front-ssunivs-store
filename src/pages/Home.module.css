@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+.couponPost{
+    position: fixed;
+    cursor: pointer;
+    width: 300px;
+    left: 90%;
+}
+
 /* 빅데스크탑 */
 .mainSsua1{
     width: 300px;

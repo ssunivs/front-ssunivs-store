@@ -1,34 +1,35 @@
-import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { setAdmin, setOutAdmin } from "./actions";
 
-const SetAdmin = ({ id, setAdmin, setOutAdmin, adminState}) => {
+const SetAdmin = ({ id }) => {
+    //Detect AdminMode
+    const {adminState} = useSelector(state => state.adminMode);
+
+    const dispatch = useDispatch();
+
+    const onAdmin = () => {
+        dispatch(setAdmin())
+    }
+
+    const OutAdmin = () => {
+        dispatch(setOutAdmin())
+    }
+
     return(
         <div>{/*id는 css적용용 */}
-            <button id = {id} 
+            <Link to='/'><button id = {id} 
                     style={{display: (adminState)? "" : "none"}}
-                    onClick={setOutAdmin}>
-                (임시) 관리자 모드입니다
-            </button>
-            <button id = {id} 
+                    onClick={OutAdmin}>
+                Admin LogOut
+            </button></Link>
+            <Link to='/Notice'><button id = {id} 
                     style={{display: (adminState)? "none" : ""}}
-                    onClick={setAdmin}>
-                (임시) 사용자 모드입니다
-            </button>
+                    onClick={onAdmin}>
+                (임시) 관리자 모드로 전환
+            </button></Link>
         </div>
     );
 };
 
-const mapStateToProps = (state) => {
-    return{
-        adminState: state.adminMode.adminState
-    };
-}; 
-
-const mapDispatchToProps = (dispatch)=>{
-    return {
-        setAdmin: ()=>dispatch(setAdmin()),
-        setOutAdmin: ()=>dispatch(setOutAdmin())
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SetAdmin);
+export default SetAdmin;

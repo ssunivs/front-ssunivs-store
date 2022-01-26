@@ -2,7 +2,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
 }
 
 .menu{
@@ -15,7 +15,7 @@
     align-items: center;
     left: 50%;
     transform: translateX(-40%); /* 로고 중앙 맞추기 위해*/
-    padding-top: 50px;
+    padding-top: 60px;
     /* transition: all 1.5s; */
 }
 
@@ -29,7 +29,12 @@
 }
 
 .helloSsunivs{
-    width: 70px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    width: 150px;
+    left: 375%;
+    bottom: 40%;
 }
 
 /* .logoFence{
