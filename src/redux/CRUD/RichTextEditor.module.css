@@ -1,0 +1,12 @@
+.wrapperClass{
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.editor {
+min-height: 400px;
+border: 1px solid #f1f1f1 !important;
+padding: 5px !important;
+border-radius: 2px !important;
+}

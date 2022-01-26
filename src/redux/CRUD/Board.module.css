@@ -1,9 +1,49 @@
-#container{
-    transition: all 0.5s;
-    /* animation: fadein 3s; */
+#containerSlideUp{
+    animation: slideUp 0.8s;
 }
 
-/* @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(+10%);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
+#containerSlideDown{
+    animation: slidedown 0.8s;
+}
+
+@keyframes slidedown {
+    from { opacity: 0; transform: translateY(-10%);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
+
+.writeButtonPositon{
+    width : 95%;
+    height : 40px;
+    margin : auto;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    max-width: 700px;
+}
+
+.noticeButton{
+    min-width: 80px;
+    min-height: 25px;
+}
+
+
+/* BoardNew */
+.editorElements{
+    max-width: 800px;
+    height : 40px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
