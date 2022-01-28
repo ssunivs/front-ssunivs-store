@@ -11,9 +11,11 @@ function Home(){
             {/* <Modal /> */}
             <div>
                 <img
+                title="쿠폰 발급 하러 가기"
                 className={styles.couponTag}
                 src={coupon_tag}
-                alt="coupon_tag"></img>
+                alt="coupon_tag">
+                </img>
             </div>
             <div  id={styles.home}>
                 <img 
