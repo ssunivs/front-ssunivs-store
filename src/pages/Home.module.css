@@ -2,11 +2,13 @@
     text-align: center;
 }
 
-.couponPost{
+.couponTag{
     position: fixed;
     cursor: pointer;
-    width: 300px;
-    left: 90%;
+    z-index: 5;
+    width: 130px;
+    right: 0%;
+    transition: all 0.5s;
 }
 
 /* 빅데스크탑 */

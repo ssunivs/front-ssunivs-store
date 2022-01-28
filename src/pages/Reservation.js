@@ -17,7 +17,7 @@ function Reservation(){
     const isWeekday = (date) => {
         const day = getDay(date);
         return day !== 0 && day !== 6 && day!==5;
-      };
+    };
     const ExampleCustomInput = ({ value, onClick }) => (
         <button className={styles.reservationDateBnt} onClick={onClick}>
         {value}
@@ -47,17 +47,7 @@ function Reservation(){
                 <hr></hr>
                 <label>
                     <span>연락처</span>
-                    <input id="user_num" name="user_num" type="text" required></input>
-                    {/* <select id="mobile1" className={userForm.userMobile}>
-                                            <option value="010">010</option>
-                                            <option value="011">011</option>
-                                            <option value="016">016</option>
-                                            <option value="017">017</option>
-                                            <option value="018">018</option>
-                                            <option value="019">019</option>
-                                        </select>
-                                        &nbsp;-&nbsp;<input className={userForm.userMobile} id="mobile2" type="text" maxLength="4" pattern="\d*"></input>
-                                        &nbsp;-&nbsp;<input className={userForm.userMobile} id="mobile3" type="text" maxLength="4" pattern="\d*"></input> */}
+                    <input id="user_num" name="user_num" type="text" pattern="[0-9]+" required></input>
                 </label>
                 <hr></hr>
                 <label>
