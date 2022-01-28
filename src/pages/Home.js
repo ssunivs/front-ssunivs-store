@@ -2,7 +2,7 @@ import styles from "pages/Home.module.css";
 import main_ssua1 from "assets/main_ssua1.png";
 import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
-import coupon_post from "assets/coupon_post.png";
+import coupon_tag from "assets/coupon_tag.png";
 // import Modal from "components/HomeModal";
 
 function Home(){
@@ -11,9 +11,9 @@ function Home(){
             {/* <Modal /> */}
             <div>
                 <img
-                className={styles.couponPost}
-                src={coupon_post}
-                alt="coupon_post"></img>
+                className={styles.couponTag}
+                src={coupon_tag}
+                alt="coupon_tag"></img>
             </div>
             <div  id={styles.home}>
                 <img 
