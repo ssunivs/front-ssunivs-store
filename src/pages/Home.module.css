@@ -8,6 +8,7 @@
     z-index: 5;
     width: 130px;
     right: 0%;
+    transition: all 0.5s;
 }
 
 /* 빅데스크탑 */
