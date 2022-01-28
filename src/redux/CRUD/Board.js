@@ -28,7 +28,11 @@ const Board = ({className}) => {
             dispatch(boardDelete(postId))};
         }
     const onSave = (dataToSave) => {
-        dispatch(boardSave(dataToSave));
+        if(window.confirm("저장하시겠습니까?")===true){
+            alert("저장되었습니다.");
+            dispatch(boardSave(dataToSave));
+            onOffWriteMode();
+        }
     }
 
     const {selected} = useSelector(state => state.board);
@@ -53,7 +57,7 @@ const Board = ({className}) => {
     const changeInput = (e) => {
             setPost({
                 ...post,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value,
             })
     }
     
@@ -76,6 +80,12 @@ const Board = ({className}) => {
         setWriteMode(!writeMode);
     }
 
+    const setContent = (contentRaw) => {
+        setPost({
+            ...post,
+            content: contentRaw,
+        })
+    }
 
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
@@ -129,6 +139,7 @@ const Board = ({className}) => {
                     post={post}
                     resetForm={resetForm}
                     adminState={adminState}
+                    setContent={setContent}
                 />
             </div>
         </div>

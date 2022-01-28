@@ -37,6 +37,7 @@
 
 /* BoardNew */
 .editorElements{
+    width : 95%;
     max-width: 800px;
     height : 40px;
     margin: auto;

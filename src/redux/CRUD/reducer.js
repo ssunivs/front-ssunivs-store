@@ -1,4 +1,5 @@
 import { SAVE, SELECTED, DELETE } from "./types";
+// import axios from "axios";
 
 const initialState = {
     boards: [
@@ -28,11 +29,25 @@ const initialState = {
           writer: '관리자', postDate: '01/25',
         },
       ],
-    ids: 5, //id 기준, 새로 추가되는 id가 있다면 하나 늘리기
+    ids: 5, //ids 빼주기
     selected : {} //find함수를 통해서 boards에서 선택된 데이터를 넣을 예정
 }
 
 const boardReducer = (state=initialState,action)=>{
+  // axios.get('')
+  // // 성공한 경우 실행
+  // .then((response) => {
+  //   boards = ...response.boards;
+  // })
+  // // 에러인 경우 실행
+  // .catch((error) => {
+  //   console.log(error);
+  // })
+  // // 항상 실행
+  // .then(() => {
+  // });
+
+
   let boards = state.boards;
 
   const saveRawDate = new Date();
@@ -41,16 +56,19 @@ const boardReducer = (state=initialState,action)=>{
                   +saveRawDate.getDate().toString().padStart(2,'0')
 
     switch(action.type){
-        case SAVE:
+        case SAVE: //저장할 때 날짜랑 id빼주기
           let dataToSave = action.dataToSave;
           let ids = state.ids;
             if(!dataToSave.id){ //id가 없으면
+              
                 return {
                   ids: ids + 1,
                   boards: boards.concat({...dataToSave, id: ids + 1,
                           title: dataToSave.title, content: dataToSave.content, 
                           postDate: saveDate, division: dataToSave.division,
-                          writer: dataToSave.writer}), 
+                          writer: dataToSave.writer}),
+                  // boards: boards.concat({...dataToSave, })
+                  
                   selected: {}
                 }
               }

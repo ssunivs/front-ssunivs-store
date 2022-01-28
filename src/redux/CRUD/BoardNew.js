@@ -1,8 +1,59 @@
-import RichTextEditor from "./RichTextEditor";
 import SetAdmin from "redux/setAdmin/SetAdmin";
 import styles from "./Board.module.css";
 
-const BoardNew = ({ onSave, changeInput, post, resetForm
+//import TextEditor's module
+import { useState } from 'react';
+import { Editor } from 'react-draft-wysiwyg';
+import { EditorState,
+         convertToRaw } from 'draft-js';
+
+import editorStyles from './RichTextEditor.module.css';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
+const RichTextEditor = ({ setContent, post }) => {
+    const [editorState, setEditorState] = useState(EditorState.createEmpty());
+
+    //보낼값(convertToRaw(editorState.getCurrentContent())))
+    const contentRaw = JSON.stringify(convertToRaw(editorState.getCurrentContent()));
+    
+    const onEditorStateChange = (editorState) => {
+      setEditorState(editorState);
+      setContent(contentRaw);
+    };
+
+  
+    return (
+      <div>
+        <Editor
+          // 에디터와 툴바 모두에 적용되는 클래스
+          wrapperClassName={editorStyles.wrapperClass}
+          // 에디터 주변에 적용된 클래스
+          editorClassName={editorStyles.editor}
+          // 툴바 설정
+          toolbar={{
+            // inDropdown: 해당 항목과 관련된 항목을 드롭다운으로 나타낼것인지
+            list: { inDropdown: true },
+            textAlign: { inDropdown: true },
+            link: { inDropdown: true },
+            history: { inDropdown: false },
+          }} 
+          placeholder="내용을 작성해주세요."
+          // 한국어 설정
+          localization={{
+            locale: 'ko',
+          }}
+          // 초기값 설정
+          editorState={editorState}
+          // 에디터의 값이 변경될 때마다 onEditorStateChange 호출
+          onEditorStateChange={onEditorStateChange}
+        />
+       </div>
+    );
+  };
+
+
+
+const BoardNew = ({ onSave, changeInput, setContent, post, resetForm
                     , adminState }) => {
 
     const onSubmit = (e) =>{
@@ -10,7 +61,6 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
         onSave(post);
         resetForm();
     }
-
     return(
         <div style={{display: (adminState)? "":"none"}}>
             <form onSubmit={onSubmit}>
@@ -37,7 +87,8 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
                     </div>
                 </div>
 
-                <RichTextEditor />
+                <RichTextEditor setContent={setContent}
+                                post={post}/>
                 <div className={styles.editorElements}>
                     <SetAdmin />
                     <button className={styles.noticeButton}

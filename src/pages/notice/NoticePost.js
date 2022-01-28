@@ -1,12 +1,13 @@
-// 공지사항에서 누르면 링크가 연결될 수 있게끔 링크연결
-// store product 에서 링크 연결시켜서 공지사항 누르면 나올 수 있게끔 조절해놓기
 import { useSelector } from "react-redux";
+
+import draftToHtml from 'draftjs-to-html';
 
 import headTitle from "pages/headTitle.module.css";
 import NavBar from "components/NavBar.js";
 
 function NoticePost(){
     const {selected} = useSelector(state => state.board);
+    const contentRawToHtml = draftToHtml(JSON.parse(selected.content));
 
     return (
         <div>
@@ -16,7 +17,7 @@ function NoticePost(){
             <br></br>
             <h1 className={headTitle.head}>{selected.title}</h1>
             
-            <div>{selected.content}</div>
+            <div dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
         </div>
     );
 }
