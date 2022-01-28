@@ -17,7 +17,7 @@ function Reservation(){
     const isWeekday = (date) => {
         const day = getDay(date);
         return day !== 0 && day !== 6 && day!==5;
-      };
+    };
     const ExampleCustomInput = ({ value, onClick }) => (
         <button className={styles.reservationDateBnt} onClick={onClick}>
         {value}
