@@ -44,6 +44,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    
+.editorTitle{
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.editorSelects{
+    height: 30px;
+    font-size: 14px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 5px;
 }

@@ -15,11 +15,12 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
         <div style={{display: (adminState)? "":"none"}}>
             <form onSubmit={onSubmit}>
                 <div className={styles.editorElements}>
-                    <input type="text" name="title" value={post.title} required
-                                placeholder="title" onChange={changeInput}/>
+                    <input type="text" className={styles.editorTitle}
+                           name="title" value={post.title} required
+                           placeholder="title" onChange={changeInput}/>
                     
                     <div>
-                        <select name="division" 
+                        <select name="division" className={styles.editorSelects}
                             onChange={changeInput} required>
                             <option value="">분류</option>
                             <option>shop</option>
@@ -27,7 +28,7 @@ const BoardNew = ({ onSave, changeInput, post, resetForm
                             <option>etc</option>
                         </select>
 
-                        <select name="writer"
+                        <select name="writer" className={styles.editorSelects}
                             onChange={changeInput} required>
                             <option value="">작성자</option>
                             <option>관리자 F</option>
