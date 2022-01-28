@@ -14,7 +14,7 @@ function FloatingMenu() {
     return (
         <div className={styles.floatingMenu}>
             <ul className={open? styles.openDetailMenu : styles.floatingDetailMenu}>
-                    <a title="Mail"
+                    <a title="Shop"
                     href="https://www.ssunivs.com/"
                     target="_blank"
                     rel="noopener noreferrer">

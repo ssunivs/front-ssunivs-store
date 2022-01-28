@@ -1,12 +1,14 @@
-.faq{
-    list-style: none;
+.faq > details {
+    user-select: none;
 }
+
 .faqDetails > summary{
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
 }
+
 .faqDetails p{
     display: block;
     font-size:15px;
@@ -22,6 +24,3 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-
-
