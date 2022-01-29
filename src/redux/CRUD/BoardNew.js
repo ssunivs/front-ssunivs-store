@@ -1,25 +1,36 @@
+import { useSelector } from "react-redux";
 import SetAdmin from "redux/setAdmin/SetAdmin";
 import styles from "./Board.module.css";
 
 //import TextEditor's module
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState,
-         convertToRaw } from 'draft-js';
+         convertToRaw,
+         convertFromRaw } from 'draft-js';
 
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-const RichTextEditor = ({ setContent, post }) => {
-    const [editorState, setEditorState] = useState(EditorState.createEmpty());
-
-    //보낼값(convertToRaw(editorState.getCurrentContent())))
-    const contentRaw = JSON.stringify(convertToRaw(editorState.getCurrentContent()));
+const RichTextEditor = ({ setContent }) => {
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const {selected} = useSelector(state => state.board);
+  
+  useEffect(() => {
+    //기존 값 가져오기
+    const initialEditorState = selected.content
+      ? EditorState.createWithContent(convertFromRaw(JSON.parse(selected.content)))
+      : EditorState.createEmpty();
+      setEditorState(initialEditorState);
+  }, [selected]);
+  
+    //보낼 값
+  const contentRaw = JSON.stringify(convertToRaw(editorState.getCurrentContent()));
     
-    const onEditorStateChange = (editorState) => {
-      setEditorState(editorState);
-      setContent(contentRaw);
-    };
+  const onEditorStateChange = (editorState) => {
+    setEditorState(editorState);
+    setContent(contentRaw);
+  };
 
   
     return (
@@ -55,19 +66,28 @@ const RichTextEditor = ({ setContent, post }) => {
 
 const BoardNew = ({ onSave, changeInput, setContent, post, resetForm
                     , adminState }) => {
+  
+    const {selected} = useSelector(state => state.board);
+
+    //Detect reviseState
+    const {reviseState} = useSelector(state => state.revise);
+    if(reviseState){
+      post.id = selected.id;
+    }
 
     const onSubmit = (e) =>{
-        e.preventDefault();
-        onSave(post);
-        resetForm();
+      e.preventDefault();
+      onSave(post);
+      resetForm();
     }
     return(
-        <div style={{display: (adminState)? "":"none"}}>
+        <div style={{display: (adminState)? '':'none'}}>
             <form onSubmit={onSubmit}>
                 <div className={styles.editorElements}>
                     <input type="text" className={styles.editorTitle}
                            name="title" value={post.title} required
-                           placeholder="title" onChange={changeInput}/>
+                           placeholder={reviseState? selected.title : 'title'}
+                           onChange={changeInput}/>
                     
                     <div>
                         <select name="division" className={styles.editorSelects}
@@ -87,12 +107,11 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm
                     </div>
                 </div>
 
-                <RichTextEditor setContent={setContent}
-                                post={post}/>
+                <RichTextEditor setContent={setContent}/>
                 <div className={styles.editorElements}>
                     <SetAdmin />
                     <button className={styles.noticeButton}
-                    type="submit">Save</button>
+                    type="submit">{reviseState? '수정하기' : 'Save'}</button>
                 </div>
             </form>
         </div>

@@ -1,13 +1,40 @@
 .notice_table {
     width : 95%;
+    max-width: 800px;
     height : 40px;
+    margin : auto;
+
     border-collapse: collapse;
     text-align: center;
     border-bottom: 1px solid rgb(231, 231, 231) ;
-    margin : auto;
-
-    max-width: 800px;
 }
 .notice_table > th{
     background-color :rgb(231, 231, 231) ;
+}
+
+/* NoticePost */
+#container{
+    width : 95%;
+    max-width: 800px;
+    min-height: 400px;
+    margin : auto;
+}
+
+.postInformation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+
+.postInformation div{
+    border-bottom: 2px solid rgb(231, 231, 231) ;
+}
+
+#underContainer{
+    width : 95%;
+    max-width: 800px;
+    min-height: 400px;
+    margin : auto;
 }

@@ -1,4 +1,4 @@
-import { SAVE, SELECTED, DELETE } from "./types";
+import { SAVE, SELECTED, DELETE, UNSELECTED } from "./types";
 
 
 export const boardSave = (dataToSave) =>{
@@ -25,6 +25,13 @@ export const boardDelete = (postId) =>{
 export const boardSelected = (postId) =>{
     return{
         type: SELECTED,
+        postId
+    }
+}
+
+export const boardUnSelected = (postId) =>{
+    return{
+        type: UNSELECTED,
         postId
     }
 }

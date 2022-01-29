@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { boardSave, boardDelete, boardSelected } from "./action";
+import { boardSave, boardDelete, boardSelected, boardUnSelected } from "./action";
+import { unsetRevise } from "./revise/action";
 
 import styles from "./Board.module.css";
 import List from "./List";
@@ -31,7 +32,7 @@ const Board = ({className}) => {
         if(window.confirm("저장하시겠습니까?")===true){
             alert("저장되었습니다.");
             dispatch(boardSave(dataToSave));
-            onOffWriteMode();
+            offWriteMode();
         }
     }
 
@@ -74,10 +75,24 @@ const Board = ({className}) => {
     
     const {boards} = useSelector(state => state.board);
 
+    //Detect reviseState => 여기서부터 다시... revise시 writemode해주기
+    const {reviseState} = useSelector(state => state.revise);
+    const offRevise = () => {
+        dispatch(unsetRevise());
+    }
     //writeMode State
     const [writeMode, setWriteMode] = useState(false);
-    const onOffWriteMode = () =>{
-        setWriteMode(!writeMode);
+
+    const onWriteMode = () =>{
+        dispatch(boardUnSelected());
+        setWriteMode(true);
+    }
+
+    const offWriteMode = () =>{
+        if(reviseState === true){
+            offRevise();
+        }
+        setWriteMode(false);
     }
 
     const setContent = (contentRaw) => {
@@ -90,7 +105,7 @@ const Board = ({className}) => {
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
             <table className={className}
-                   style={{display: writeMode? 'none':''}}
+                   style={{display:(writeMode||reviseState)? 'none':''}}
                    border="0">
                 <thead>
                     <tr className={className}>
@@ -104,6 +119,7 @@ const Board = ({className}) => {
                     </tr> 
                 </thead>
                 <tbody>
+        {/* 지금은 boards지만 */}
                         {boards.map(post =>
                             (
                                 <List
@@ -128,11 +144,11 @@ const Board = ({className}) => {
             <div className={styles.writeButtonPositon}>
                 <Link to={adminState? '/Notice':'/LogIn'}>
                 <button className={styles.noticeButton}
-                        onClick={onOffWriteMode}>
-                            {writeMode? '게시판으로 가기':'글쓰기'}</button></Link>
+                        onClick={(writeMode||reviseState)? offWriteMode : onWriteMode}>
+                            {(writeMode||reviseState)? '게시판으로 가기':'글쓰기'}</button></Link>
             </div>
 
-            <div style={{display: writeMode? '':'none'}}>
+            <div style={{display: (writeMode||reviseState)? '':'none'}}>
                 <BoardNew
                     onSave={onSave}
                     changeInput={changeInput}

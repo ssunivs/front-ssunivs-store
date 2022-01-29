@@ -1,4 +1,4 @@
-import { SAVE, SELECTED, DELETE } from "./types";
+import { SAVE, SELECTED, DELETE, UNSELECTED } from "./types";
 // import axios from "axios";
 
 const initialState = {
@@ -73,7 +73,7 @@ const boardReducer = (state=initialState,action)=>{
                 }
               }
             return {...state, boards: boards.map(post => 
-              post.id === dataToSave.id ? {...dataToSave} : post), selected: {}}
+              post.id === dataToSave.id ? {...dataToSave, postDate: saveDate} : post), selected: {}}
 
         case DELETE:
               return {
@@ -83,6 +83,11 @@ const boardReducer = (state=initialState,action)=>{
         case SELECTED:
             return {
               ...state, selected: boards.find(post => post.id === action.postId)
+            }
+
+        case UNSELECTED:
+            return {
+              ...state, selected: {}
             }
         default: return state
     }
