@@ -9,6 +9,9 @@ import headTitle from "pages/headTitle.module.css";
 import NavBar from "components/NavBar.js";
 
 function NoticePost(){
+    //Detect AdminMode
+    const {adminState} = useSelector(state => state.adminMode);
+
     const {selected} = useSelector(state => state.board);
     const contentRawToHtml = draftToHtml(JSON.parse(selected.content));
     
@@ -36,7 +39,7 @@ function NoticePost(){
             </div>
                 <div id={styles.underContainer}
                      className={styles.postInformation}>
-                    <Link to='/Notice'><div onClick={onRevise}>수정하기</div></Link>
+                    <Link to={adminState?'/Notice':'/LogIn'}><div onClick={onRevise}>수정하기</div></Link>
                     <Link to='/Notice'><div>게시판으로 가기</div></Link>
                 </div>
             

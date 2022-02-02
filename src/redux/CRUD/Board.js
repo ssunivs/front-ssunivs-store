@@ -154,7 +154,6 @@ const Board = ({className}) => {
                     changeInput={changeInput}
                     post={post}
                     resetForm={resetForm}
-                    adminState={adminState}
                     setContent={setContent}
                 />
             </div>

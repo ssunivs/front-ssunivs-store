@@ -64,10 +64,12 @@ const RichTextEditor = ({ setContent }) => {
 
 
 
-const BoardNew = ({ onSave, changeInput, setContent, post, resetForm
-                    , adminState }) => {
+const BoardNew = ({ onSave, changeInput, setContent, post, resetForm }) => {
   
     const {selected} = useSelector(state => state.board);
+
+    //Detect AdminMode
+    const {adminState} = useSelector(state => state.adminMode);
 
     //Detect reviseState
     const {reviseState} = useSelector(state => state.revise);
