@@ -4,17 +4,20 @@ import persistReducer from 'redux-persist/es/persistReducer';
 
 import setAdminReducer from './setAdmin/reducer';
 import boardReducer from './CRUD/reducer';
+import reviseReducer from './CRUD/revise/reducer';
 
 const persistConfig = {
-    key: "root",
+    key: 'root',
     storage: storage,
-    whitelist: ["adminMode",
-                "board"], // 보안 문제 고려
+    whitelist: ['adminMode',
+                'board', // 보안 문제 고려
+                'revise'],
 };
 
 const rootReducer = combineReducers({
     adminMode: setAdminReducer,
-    board: boardReducer
+    board: boardReducer,
+    revise: reviseReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);
