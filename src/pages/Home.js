@@ -4,7 +4,8 @@ import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
 import coupon_tag from "assets/coupon_tag.png";
 // import coupon_tag_open from "assets/coupon_tag_open.png";
-import coupon_tag2 from "assets/fix_ssua.png"; //임시
+import coupon_tag2 from "assets/coupon_tag_long.png"; //임시
+import click from "assets/click.png";
 import { useState } from "react";
 // import Modal from "components/HomeModal";
 // href='javascript:void(0);'
@@ -17,6 +18,13 @@ function Home(){
     return (
         <div>
             {/* <Modal /> */}
+            <div>
+                <img
+                className={styles.clickStore}
+                src={click}
+                alt="click"
+                />
+            </div>
             <div>
                 <a
                 // href="https://www.ssunivs.com/2021/09/19/event-coupon/"
