@@ -65,11 +65,25 @@
     height: auto;
     }
 }
-
-/* .rnb{
+/* 
+.rnb{
     float: right;
 } */
 
 /* .rnb IoMdPerson{
     transition: all 2s;
 } */
+
+.storeLogo {
+    /* position: absolute;
+    top: 30;
+    right: 0; */
+    position: absolute;
+    top: 30px;
+	right: 20px;
+}
+
+#storeLogoImage {
+    height: 40px;
+    cursor: pointer;
+}

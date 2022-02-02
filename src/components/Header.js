@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 import {Link} from "react-router-dom";
 import ssunivers_logo from "assets/ssunivers_logo.png";
-// import store_logo from "assets/store_logo.png";
+import store_logo from "assets/store_logo.png";
 import Menu from "components/Menu";
 
 import styles from "components/Header.module.css";
@@ -51,6 +51,18 @@ function Header(){ //메뉴 & 로고  & mypage,cart
                             <img src={store_logo} alt="store logo" className={styles.helloSsunivs}></img>
                         </a>
                 </div> */}
+            </div>
+            <div className={styles.storeLogo}>
+                <a
+                href="https://www.ssunivs.com/"
+                target="_blank"
+                rel="noreferrer">
+                    <img 
+                    id={styles.storeLogoImage}
+                    src={store_logo}
+                    alt="store_logo" 
+                    />
+                </a>
             </div>
                 {/* <div className={styles.rnb}>
                 <Link to={(logInState)?"/MyPage":"/LogIn"}><IoMdPerson size="40px" color={(path==="/")? "white" : "#b2b2b2"}/></Link>
