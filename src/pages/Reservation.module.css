@@ -7,7 +7,11 @@
 }
 
 #reservationNotice > p{
-    font-weight: bolder;
+    font-weight: 500;
+}
+
+#reservationNotice > span{
+    font-weight:900;
 }
 
 .reservationDateBnt{
@@ -80,7 +84,6 @@
     outline:none;
 }
 
-.reservationForm p{
+.reservationForm p, .reservationForm span{
     font-weight: 500;
 }
-
