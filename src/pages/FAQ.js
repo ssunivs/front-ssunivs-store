@@ -6,16 +6,30 @@ import styles from "pages/FAQ.module.css";
 function FAQ(){
     return (
         <div>
+            <br></br>
             <NavBar />
-            <br></br>
-            <br></br>
             <h1 className={headTitle.head}>FAQ : 자주 묻는 질문</h1>
             <div className={styles.faq}>
                 <details className={styles.faqDetails}>
-                    <summary>인스타그램 팔로워 이벤트 1,000원 할인권은 어떻게 받아야 하나요?</summary>
+                    <summary>슈니버스는 어떤 종류의 단체인가요?</summary>
                         <p>
-                        슈니버스 공식 인스타그램 (@snvs.official) 을 팔로우 하신 후, 팔로잉 아이디를 카카오톡 채널로 보내주시면 관리자 확인 후 쿠폰을 발급해 드립니다.<br></br>
-                쿠폰과 관련한 자세한 사항은 이벤트 쿠폰 발급 방법 🎫 게시글을 확인해 주시기 바랍니다.
+                        슈니버스는 숭실대학교 학부생들로 구성된 팀이자,
+                        숭실대학교 창업지원단 캠퍼스타운 소속으로 서울시 동작구 캠퍼스타운에 입주한 창업 기업입니다🙂<br></br>
+                        나름 학교 뒤편에 사무실도 있는 어엿한 병아리(?) 창업팀입니다🐣
+                        </p>
+                </details>
+                <hr></hr>
+                <details className={styles.faqDetails}>
+                    <summary>어떤 계기로 슈아를 만들게 되었나요?</summary>
+                        <p>
+                        단순히 시작된 계기를 말씀 드리자면 졸업 인형을 갖고 싶어서인데. 
+                        </p>
+                </details>
+                <hr></hr>
+                <details className={styles.faqDetails}>
+                    <summary>슈아의 컨셉이나 탄생 비화가 있을까요?</summary>
+                        <p>
+                        슈아의 컨셉이나 탄생 비화
                         </p>
                 </details>
                 <hr></hr>
@@ -31,6 +45,21 @@ function FAQ(){
                     기부는 숭실대학교 발전기금팀과 협의하여 진행됩니다.
                         </p>
                 </details>
+                <hr></hr>
+                <details className={styles.faqDetails}>
+                    <summary>수익 기부를 결정하게 된 이유가 무엇인가요?</summary>
+                        <p>
+                        수익 기부를 결정하게 된 이유
+                        </p>
+                </details>
+                <hr></hr>
+                <details className={styles.faqDetails}>
+                    <summary>인스타그램 팔로워 이벤트 1,000원 할인권은 어떻게 받아야 하나요?</summary>
+                        <p>
+                        슈니버스 공식 인스타그램 (@snvs.official) 을 팔로우 하신 후, 팔로잉 아이디를 카카오톡 채널로 보내주시면 관리자 확인 후 쿠폰을 발급해 드립니다.<br></br>
+                쿠폰과 관련한 자세한 사항은 이벤트 쿠폰 발급 방법 🎫 게시글을 확인해 주시기 바랍니다.
+                        </p>
+                </details>               
                 </div>
         </div>
     );

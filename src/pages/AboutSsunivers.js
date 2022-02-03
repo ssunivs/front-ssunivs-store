@@ -7,8 +7,6 @@ function AboutSsunivers(){
         <div>
             <br></br>
             <NavBar />
-            <br></br>
-            <br></br>
             <h1 className={headTitle.head}>슈니버스를 소개합니다 !</h1>
         </div>
     );

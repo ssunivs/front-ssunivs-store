@@ -3,12 +3,12 @@
 	display:block;
 	/*화면 전체에서 얼마나 떨어져서 floating*/
 	bottom: 30px;
-	right: 30px;
+	right: 50px;
 }
 
 .fixSsuaIcon{
 	/*슈아 크기*/
-	width: 70px;
+	width: 80px;
 	cursor: pointer;
 }
 
@@ -36,4 +36,22 @@
 @keyframes scale-in {
     from {transform: scale(0); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
+}
+
+
+@media screen and (max-width:599px) {
+	/* 모바일 세로 */
+	.fixSsuaIcon{
+		/*슈아 크기*/
+		width: 70px;
+		cursor: pointer;
+	}
+	.floatingMenu{
+		/*화면 전체에서 얼마나 떨어져서 floating*/
+		bottom: 30px;
+		right: 30px;
+	}
+	.openDetailMenu{
+		padding-inline-start: 18px;
+	}
 }

@@ -34,8 +34,6 @@ function Reservation(){
         <div>
             <br></br>
             <NavBar />
-            <br></br>
-            <br></br>
             <h1 className={headTitle.head}>방문수령 예약</h1>
             <p id={styles.reservationNotice}>
             <br></br>

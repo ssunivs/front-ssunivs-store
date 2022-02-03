@@ -7,8 +7,6 @@ function News(){
         <div>
             <br></br>
             <NavBar />
-            <br></br>
-            <br></br>
             <h1  className={headTitle.head}>News</h1>
 
         </div>

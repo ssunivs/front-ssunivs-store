@@ -18,25 +18,25 @@ function FloatingMenu() {
                     href="https://www.ssunivs.com/"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.floatingDetailIcons}><AiFillShopping size="30" color="#04488C"/></li>
+                        <li id={styles.floatingDetailIcons}><AiFillShopping size="35" color="#04488C"/></li>
                     </a>
                     <a title="KakaoTalk"
                     href="https://pf.kakao.com/_JNgis/chat"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.floatingDetailIcons}><RiKakaoTalkFill size="30" color="#04488C"/></li>
+                        <li id={styles.floatingDetailIcons}><RiKakaoTalkFill size="35" color="#04488C"/></li>
                     </a>
                     <a title="Instagram"
                     href="https://www.instagram.com/snvs.official/"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.floatingDetailIcons}><GrInstagram size="30" color="#04488C"/></li>
+                        <li id={styles.floatingDetailIcons}><GrInstagram size="35" color="#04488C"/></li>
                     </a>
                     <a title="Mail"
                     href="mailto:ssua@ssunivs.com"
                     target="_blank"
                     rel="noopener noreferrer">
-                        <li id={styles.floatingDetailIcons}><GrMail size="30" color="#04488C"/></li>
+                        <li id={styles.floatingDetailIcons}><GrMail size="35" color="#04488C"/></li>
                     </a>
             </ul>
                 <img 
