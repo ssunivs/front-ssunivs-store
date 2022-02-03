@@ -6,9 +6,8 @@ import styles from "pages/FAQ.module.css";
 function FAQ(){
     return (
         <div>
+            <br></br>
             <NavBar />
-            <br></br>
-            <br></br>
             <h1 className={headTitle.head}>FAQ : 자주 묻는 질문</h1>
             <div className={styles.faq}>
                 <details className={styles.faqDetails}>

@@ -37,43 +37,6 @@
     bottom: 40%;
 }
 
-/* .logoFence{
-    margin-left: 5px;
-    margin-right: 10px;
-}
-
-.moveToPage{
-    font-size: 22px;
-} */
-
-/* .moveToPage a{
-    color: white;
-} */
-
-@media screen and (max-width:599px) {
-    /*모바일세로크기*/
-    .logoFence{
-        visibility: hidden;
-    }
-    .moveToPage{
-    /*ssunivers가 logo밑으로 오게*/
-    position: absolute;
-    left: 50%;
-    transform: translate(-20%,230%);
-    width: 100%;
-    top: 30%;
-    height: auto;
-    }
-}
-/* 
-.rnb{
-    float: right;
-} */
-
-/* .rnb IoMdPerson{
-    transition: all 2s;
-} */
-
 .storeLogo {
     /* position: absolute;
     top: 30;
@@ -86,4 +49,20 @@
 #storeLogoImage {
     height: 80px;
     cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+    /*모바일세로크기*/
+    .mainLogo{
+        align-items: center;
+        width: 130px;
+    }
+    .Logos{
+        left: 50%;
+        transform: translateX(-50%); /* 로고 중앙 맞추기 위해*/
+        padding-top: 40px;
+    }
+    #storeLogoImage {
+        height: 50px;
+    }
 }

@@ -7,7 +7,7 @@
     top: 110px;
 	right: 30px;
     height: 70px;
-    z-index: 3;
+    /* z-index: 1; */
 }
 
 /* 빅데스크탑 */
@@ -101,21 +101,28 @@
 @media screen and (max-width:599px) {
         /* 모바일 세로 */
         .mainSsua1{
-            width: 115px;
+            width: 98px;
             position: relative;
             bottom: 20px;
         }
         
         .mainSsua2{
-            width: 115px;
+            width: 98px;
             position: relative;
             top : 40px;
         }
         
         .mainSsua3{
-            width: 115px;
+            width: 98px;
             position: relative;
             bottom: 20px;
+        }
+        .clickStore{
+            position: absolute;
+            top: 80px;
+            right: 30px;
+            height: 40px;
+            /* z-index: 3; */
         }
 }
 

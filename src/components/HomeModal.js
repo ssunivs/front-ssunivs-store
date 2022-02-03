@@ -50,7 +50,7 @@ export default function HomeModal() {
             target="_blank"
             rel="noreferrer"
             >
-            <img src={img} alt="쿠폰발급방법"/> 
+            <img className={styles.couponImg} src={img} alt="쿠폰발급방법"/> 
             </a>
         </div>
       )}

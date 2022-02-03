@@ -29,7 +29,6 @@ function App() {
   return (
       <Router>
         <Wrap>
-    
           <Header />
           <FloatingMenu />
           <Switch>
@@ -43,7 +42,6 @@ function App() {
             <Route path="/Contact" component={Contact}/>
             <Route path="/Notice.post" component={NoticePost} />
             <Route path="/LogIn" component={LogIn}/>
-
           </Switch>   
         </Wrap>
           <Footer />

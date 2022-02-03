@@ -87,3 +87,26 @@
 .reservationForm p, .reservationForm span{
     font-weight: 500;
 }
+
+@media screen and (max-width:599px) {
+    /* 모바일 세로 */
+    #reservationNotice{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .reservationForm span{
+        padding-right: 20px;
+    }
+    .reservationForm hr{
+        width: 250px;
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .reservationForm input{
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+    }
+}
