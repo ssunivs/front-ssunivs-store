@@ -11,3 +11,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
 }
+
+.couponTag{
+        position: fixed;
+        cursor: pointer;
+        z-index: 5;
+        /* width: 130px; */
+        height: 70px;
+        top: 200px;
+        right: 0%;
+        transition: all 0.5s;
+}

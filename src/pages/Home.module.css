@@ -2,17 +2,6 @@
     text-align: center;
 }
 
-.couponTag{
-    position: fixed;
-    cursor: pointer;
-    z-index: 5;
-    /* width: 130px; */
-    height: 70px;
-    top: 200px;
-    right: 0%;
-    transition: all 0.5s;
-}
-
 .clickStore{
     position: absolute;
     top: 110px;
