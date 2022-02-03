@@ -16,6 +16,7 @@ import FAQ from "pages/FAQ";
 import Contact from "pages/Contact";
 import NoticePost from "pages/notice/NoticePost";
 import LogIn from "pages/LogIn";
+import Privacy from "pages/Privacy"
 
 
 //Common components
@@ -43,6 +44,7 @@ function App() {
             <Route path="/Contact" component={Contact}/>
             <Route path="/Notice.post" component={NoticePost} />
             <Route path="/LogIn" component={LogIn}/>
+            <Route path="/Privacy" component={Privacy}/>
 
           </Switch>   
         </Wrap>

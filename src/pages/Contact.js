@@ -1,6 +1,6 @@
-// import headTitle from "pages/headTitle.module.css";
 import styles from "pages/Contact.module.css";
 import mapStyles from "pages/Reservation.module.css";
+import {Link} from "react-router-dom";
 
 function Contact(){
     return (
@@ -38,6 +38,7 @@ function Contact(){
                     <br></br><br></br>
                     <hr id={styles.contactLine2}></hr>
                     <br></br>
+                    <label className={styles.contactBox}><input type="checkbox"></input>개인정보동의서에 동의합니다.<span id={styles.contactLink}><Link to="/Privacy"> (약관보기)</Link></span></label>
                     <input className={styles.contactSend}
                     type="submit" value="Send"></input>
                     <br></br>

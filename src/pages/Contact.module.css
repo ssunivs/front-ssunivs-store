@@ -49,3 +49,10 @@
     /* display:block; */
     margin : auto;
 }
+.contactBox input{
+    margin-left : 9%;
+}
+#contactLink{
+    text-underline-position: under;
+    text-decoration: underline;
+}
