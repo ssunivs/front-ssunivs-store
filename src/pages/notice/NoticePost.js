@@ -38,7 +38,7 @@ function NoticePost(){
             <div dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
             </div>
                 <div id={styles.underContainer}
-                     className={styles.postInformation}>
+                    className={styles.postInformation}>
                     <Link to={adminState?'/Notice':'/LogIn'}><div onClick={onRevise}>수정하기</div></Link>
                     <Link to='/Notice'><div>게시판으로 가기</div></Link>
                 </div>
