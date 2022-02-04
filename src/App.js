@@ -43,11 +43,7 @@ function App() {
             <Route path="/Contact" component={Contact}/>
             <Route path="/Notice.post" component={NoticePost} />
             <Route path="/LogIn" component={LogIn}/>
-<<<<<<< HEAD
             <Route path="/Privacy" component={Privacy}/>
-
-=======
->>>>>>> 10dd9a6aad3dcbdaae161c2fd1b29674f6c33b4c
           </Switch>   
         </Wrap>
           <Footer />
