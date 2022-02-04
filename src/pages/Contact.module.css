@@ -56,3 +56,69 @@
     text-underline-position: under;
     text-decoration: underline;
 }
+
+/*모바일 세로 구현*/
+@media screen and (max-width:599px) {
+    .contact_head{
+        font-size:200%;
+        margin-left:0%;
+    }
+    .contactForm{
+        display:inline-block; 
+        padding-left:0%;
+    }
+    .contactForm input{
+        width:100px;
+        border:none; 
+    }
+    .contactForm textarea{
+        border : none;
+    }
+    .contactForm input:focus, .contactForm{
+        outline: none;
+    }
+    #contactLine{
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #2c2c2c;
+        width : 300px;
+    }
+    .contactSend{
+        border-radius: 100px;
+        display :block;
+        margin : auto;
+        width : 90px;
+        height : 40px;
+        font-size : 20px;
+        color : white;
+        border-color:  #6e96ec;
+        background-color: #6e96ec;  
+    }
+    #contactLine2{
+        margin-left:0%;
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #2c2c2c;
+        width : 300px;
+    }
+    .contactCenter {
+        /* display:block; */
+        margin : auto;
+    }
+    .contactBox input{
+        font-size:1px;
+        margin-left : 0%;
+    }
+    #contactLink{
+        font-size:15px;
+        text-underline-position: under;
+        text-decoration: underline;
+    }
+    #contactagree{
+        font-size:15px;
+    }
+}
+
+
