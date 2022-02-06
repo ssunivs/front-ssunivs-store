@@ -18,7 +18,7 @@ function Home(){
                 />
             </div>
             <Modal />
-            <div  id={styles.home}>
+            <div id={styles.home}>
                 <img 
                 className={styles.mainSsua1}
                 src={main_ssua1}

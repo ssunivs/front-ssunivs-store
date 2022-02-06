@@ -7,8 +7,10 @@
     font-family: "Roboto Slab", Arial, sans-serif;
     font-weight: 110;
 
-    border: dashed 10px #A5D1FC;
-    border-radius: 5px;
+    border-style:dashed;
+    border-width: 10px;
+    border-color: #A5D1FC;
+    /* border-radius: 5px; */
     color: #666666;
 }
 
