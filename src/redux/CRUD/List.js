@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const List = ({ no, id, title, postClickHandler,
             writer, division, postDate, onDelete, className
             , adminState, content }) => {
-    
     return(
             <tr className={className}>
                 <td>{no.toString().padStart(3,'0')}</td>

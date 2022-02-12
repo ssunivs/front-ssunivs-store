@@ -58,6 +58,7 @@ const RichTextEditor = ({ setContent }) => {
           // 에디터의 값이 변경될 때마다 onEditorStateChange 호출
           onEditorStateChange={onEditorStateChange}
         />
+        <div>{contentRaw}</div>
        </div>
     );
   };

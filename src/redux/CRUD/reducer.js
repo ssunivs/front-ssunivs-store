@@ -1,5 +1,5 @@
 import { SAVE, SELECTED, DELETE, UNSELECTED } from "./types";
-// import axios from "axios";
+import axios from "axios";
 
 const initialState = {
     boards: [
@@ -8,20 +8,27 @@ const initialState = {
     selected : {} //find함수를 통해서 boards에서 선택된 데이터를 넣을 예정
 }
 
-const boardReducer = (state=initialState,action)=>{
-  // axios.get('')
-  // // 성공한 경우 실행
-  // .then((response) => {
-  //   boards = ...response.boards;
-  // })
-  // // 에러인 경우 실행
-  // .catch((error) => {
-  //   console.log(error);
-  // })
-  // // 항상 실행
-  // .then(() => {
-  // });
+const axiosPost = (dataToSave) => {
 
+  axios.post('/api/v1/post',
+  {
+    "title": dataToSave.title,
+    "content": dataToSave.content
+  })
+  // 성공한 경우 실행
+  .then((response) => {
+    console.log(response.data);
+  })
+  // 에러인 경우 실행
+  .catch((error) => {
+    console.log(error);
+  })
+  // 항상 실행
+  .then(() => {
+  });
+}
+
+const boardReducer = (state=initialState,action)=>{
 
   let boards = state.boards;
 
@@ -35,7 +42,7 @@ const boardReducer = (state=initialState,action)=>{
           let dataToSave = action.dataToSave;
           let ids = state.ids;
             if(!dataToSave.id){ //id가 없으면
-              
+              axiosPost(dataToSave);
                 return {
                   ids: ids + 1,
                   boards: boards.concat({...dataToSave, id: ids + 1,
