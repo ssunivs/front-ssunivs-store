@@ -4,7 +4,6 @@ import styles from "pages/Privacy.module.css";
 function Privacy(){
     return (
         <div>
-            <br></br>
             <h1 className={styles.Privacy_head}>개인정보처리방침</h1>
             <p className={styles.PrivacyContent}>
             'OOO'은 (이하 '회사'는)<br></br>
