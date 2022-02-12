@@ -1,0 +1,61 @@
+.homeModalBnt {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  
+  .modalBackground {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.86);
+  }
+  
+  .modalCard {
+    margin: 0 auto;
+    display: block;
+    margin-top: 250px;
+    width: 500px;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  .couponImg{
+    width: 520px;
+    height: 300px;
+    position: relative;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.couponTag{
+    position: fixed;
+    cursor: pointer;
+    /* width: 130px; */
+    height: 70px;
+    top: 200px;
+    right: 0%;
+    z-index: 3;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width:599px) {
+    /* 모바일 세로 */
+    .couponTag{
+            height: 50px;
+            top: 300px;
+    }
+    .couponImg{
+            width: 280px;
+            height: 200px;
+    }
+    .modalCard{
+            width: 280px;
+            height: 200px;
+    }
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import img from "assets/coupon_img.png";
 import styles from "components/HomeModal.module.css";
 // import {Link} from "react-router-dom";
+import img from "assets/coupon_img.png";
 import coupon_tag from "assets/coupon_tag.png";
 import coupon_tag2 from "assets/coupon_tag_long.png";
 
@@ -26,7 +26,7 @@ export default function HomeModal() {
   }, []);
 
   return (
-    <div className="HomeModal">
+    <div>
       <div  onClick={onTagClick}>
           <img
                       title="쿠폰 발급 하러 가기"
@@ -36,13 +36,6 @@ export default function HomeModal() {
                       onClick={() => setDisplayModal(true)}
           />
       </div>
-        {/* <img
-                    title="쿠폰 발급 하러 가기"
-                    className={styles.couponTag}
-                    src={coupon_tag} 
-                    alt="coupon_tag"
-                    onClick={() => setDisplayModal(true)}
-        /> */}
       {displayModal && (
         <div className={styles.modalImg}>
           <a

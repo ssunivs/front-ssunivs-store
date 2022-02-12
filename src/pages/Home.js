@@ -3,7 +3,8 @@ import main_ssua1 from "assets/main_ssua1.png";
 import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
 import click from "assets/click.png"; //수정
-import Modal from "components/HomeModal";
+// import Modal from "components/HomeModal";
+import Modal from "components/HomeModal2";
 
 
 function Home(){
@@ -17,7 +18,7 @@ function Home(){
                 alt="click"
                 />
             </div>
-            <Modal />
+            {/* <Modal /> */}
             <div id={styles.home}>
                 <img 
                 className={styles.mainSsua1}
@@ -35,6 +36,7 @@ function Home(){
                 alt="main_ssua3" 
                 />
             </div>
+            <Modal />
         </div>
     );
 }
