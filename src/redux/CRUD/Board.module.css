@@ -19,14 +19,13 @@
 
 .writeButtonPositon{
     width : 95%;
+    max-width: 800px;
     height : 40px;
     margin : auto;
     
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    max-width: 800px;
 }
 
 .noticeButton{
