@@ -7,6 +7,7 @@ import { unsetRevise } from "./revise/action";
 import styles from "./Board.module.css";
 import List from "./List";
 import BoardNew from "./BoardNew";
+import SetAdmin from "redux/setAdmin/SetAdmin";
 
 const Board = ({className}) => {
     const [post, setPost] = useState({
@@ -75,7 +76,7 @@ const Board = ({className}) => {
     
     const {boards} = useSelector(state => state.board);
 
-    //Detect reviseState => 여기서부터 다시... revise시 writemode해주기
+    //Detect reviseState
     const {reviseState} = useSelector(state => state.revise);
     const offRevise = () => {
         dispatch(unsetRevise());
@@ -124,16 +125,10 @@ const Board = ({className}) => {
                             (
                                 <List
                                     no={(boards.indexOf(post))+1}
-                                    id={post.id}
                                     className={className}
-                                    title={post.title}
-                                    writer={post.writer}
-                                    division={post.division}
-                                    postDate={post.postDate}
+                                    post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
-                                    adminState={adminState}
-                                    content={post.content}
                                 />
                             ))
                         }
@@ -141,11 +136,15 @@ const Board = ({className}) => {
 
             </table>
 
-            <div className={styles.writeButtonPositon}>
+            <div className={(writeMode||reviseState)? styles.writeButtonPositon:styles.editorElements}>
+                <div style={{display: (writeMode||reviseState)? 'none':''}}>
+                    <SetAdmin />
+                </div>
                 <Link to={adminState? '/Notice':'/LogIn'}>
-                <button className={styles.noticeButton}
-                        onClick={(writeMode||reviseState)? offWriteMode : onWriteMode}>
-                            {(writeMode||reviseState)? '게시판으로 가기':'글쓰기'}</button></Link>
+                    <button className={styles.noticeButton}
+                    onClick={(writeMode||reviseState)? offWriteMode : onWriteMode}>
+                    {(writeMode||reviseState)? '게시판으로 가기':'글쓰기'}</button>
+                </Link>
             </div>
 
             <div style={{display: (writeMode||reviseState)? '':'none'}}>

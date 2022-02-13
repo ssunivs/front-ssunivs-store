@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import SetAdmin from "redux/setAdmin/SetAdmin";
 import styles from "./Board.module.css";
 
 //import TextEditor's module
@@ -58,7 +57,6 @@ const RichTextEditor = ({ setContent }) => {
           // 에디터의 값이 변경될 때마다 onEditorStateChange 호출
           onEditorStateChange={onEditorStateChange}
         />
-        <div>{contentRaw}</div>
        </div>
     );
   };
@@ -112,9 +110,13 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm }) => {
 
                 <RichTextEditor setContent={setContent}/>
                 <div className={styles.editorElements}>
-                    <SetAdmin />
-                    <button className={styles.noticeButton}
-                    type="submit">{reviseState? '수정하기' : 'Save'}</button>
+                  <div>
+                   <div>분류 추가하기:</div>
+                   <input />
+                  </div>
+
+                  <button className={styles.noticeButton}
+                  type="submit">{reviseState? '수정하기' : 'Save'}</button>
                 </div>
             </form>
         </div>

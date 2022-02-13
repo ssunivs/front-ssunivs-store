@@ -1,22 +1,25 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const List = ({ no, id, title, postClickHandler,
-            writer, division, postDate, onDelete, className
-            , adminState, content }) => {
+const List = ({ no, className, post, postClickHandler, onDelete }) => {
+    //Detect AdminMode
+    const {adminState} = useSelector(state => state.adminMode);
+    
     return(
             <tr className={className}>
                 <td>{no.toString().padStart(3,'0')}</td>
-                <td>{division}</td>
-                <Link to="/Notice.post">
-                <td onClick={()=>postClickHandler(id)}>{title}</td>
-                </Link>
-                <td>{writer}</td>
-                <td>{postDate}</td>
+                <td>{post.division}</td>
+                <td
+                    onClick={()=>postClickHandler(post.id)}>
+                    <Link to="/Notice.post">{post.title}</Link>
+                </td>
+                <td>{post.writer}</td>
+                <td>{post.postDate}</td>
 
-                <td><button onClick={() => onDelete(id)}
+                <td><button onClick={() => onDelete(post.id)}
                 style={{display: (adminState)? "":"none"}}>X</button></td>
 
-                <td style={{display: "none"}}>{content}</td>
+                <td style={{display: "none"}}>{post.content}</td>
             </tr>
     );
 };
