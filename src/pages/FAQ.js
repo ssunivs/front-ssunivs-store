@@ -1,7 +1,6 @@
 import NavBar from "components/NavBar.js";
 import headTitle from "pages/headTitle.module.css";
 import styles from "pages/FAQ.module.css";
-// import {FiChevronDown, FiChevronUp} from "react-icons/fi";
 
 function FAQ(){
     return (
@@ -59,7 +58,8 @@ function FAQ(){
                         슈니버스 공식 인스타그램 (@snvs.official) 을 팔로우 하신 후, 팔로잉 아이디를 카카오톡 채널로 보내주시면 관리자 확인 후 쿠폰을 발급해 드립니다.<br></br>
                 쿠폰과 관련한 자세한 사항은 이벤트 쿠폰 발급 방법 🎫 게시글을 확인해 주시기 바랍니다.
                         </p>
-                </details>               
+                </details>  
+                <hr></hr>             
                 </div>
         </div>
     );
