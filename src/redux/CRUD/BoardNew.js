@@ -11,17 +11,27 @@ import { EditorState,
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-const RichTextEditor = ({ setContent }) => {
+const RichTextEditor = ({ setContent, setPost }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const {selected} = useSelector(state => state.board);
   
   useEffect(() => {
     //기존 값 가져오기
+    setPost({
+      id: selected.id,
+      title: selected.title,
+      content: selected.content,
+      division: selected.division,
+      writer: selected.writer,
+      postDate: selected.postDate
+    });
+
     const initialEditorState = selected.content
       ? EditorState.createWithContent(convertFromRaw(JSON.parse(selected.content)))
       : EditorState.createEmpty();
       setEditorState(initialEditorState);
-  }, [selected]);
+      // eslint-disable-next-line
+    }, [selected]);
   
     //보낼 값
   const contentRaw = JSON.stringify(convertToRaw(editorState.getCurrentContent()));
@@ -63,7 +73,7 @@ const RichTextEditor = ({ setContent }) => {
 
 
 
-const BoardNew = ({ onSave, changeInput, setContent, post, resetForm }) => {
+const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost }) => {
   
     const {selected} = useSelector(state => state.board);
 
@@ -111,7 +121,7 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm }) => {
                     </div>
                 </div>
 
-                <RichTextEditor setContent={setContent}/>
+                <RichTextEditor setContent={setContent} setPost={setPost}/>
                 <div className={styles.editorElements}>
                   {/* 작성자는 api 연결 후 다시 */}
                   <select name="writer" className={styles.editorSelects}

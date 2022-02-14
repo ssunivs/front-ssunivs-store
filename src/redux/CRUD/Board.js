@@ -81,6 +81,7 @@ const Board = ({className}) => {
     const offRevise = () => {
         dispatch(unsetRevise());
     }
+
     //writeMode State
     const [writeMode, setWriteMode] = useState(false);
 
@@ -154,6 +155,7 @@ const Board = ({className}) => {
                     post={post}
                     resetForm={resetForm}
                     setContent={setContent}
+                    setPost={setPost}
                 />
             </div>
         </div>
