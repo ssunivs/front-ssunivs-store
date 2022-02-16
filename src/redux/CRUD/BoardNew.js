@@ -87,7 +87,7 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
     }
 
     //React는 input value 초기값 설정시 useState필요
-    const [title, setTitle] = useState(selected.title);
+    const [title, setTitle] = useState(reviseState?selected.title:"");
     const onChangeTitle = (e) =>{
       setTitle(e.target.value);
       changeInput(e);

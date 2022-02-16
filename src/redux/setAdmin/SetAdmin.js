@@ -18,7 +18,7 @@ const SetAdmin = ({ id }) => {
 
     return(
         <div>{/*id는 css적용용 */}
-            <Link to='/'><button id = {id} 
+            <Link to='/Notice'><button id = {id} 
                     style={{display: (adminState)? "" : "none"}}
                     onClick={OutAdmin}>
                 Admin LogOut

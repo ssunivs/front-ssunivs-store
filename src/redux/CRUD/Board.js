@@ -72,6 +72,7 @@ const Board = ({className}) => {
             writer: '',
             postDate: ''
         })
+        dispatch(boardUnSelected());
     }
     
     const {boards} = useSelector(state => state.board);

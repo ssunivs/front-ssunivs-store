@@ -28,8 +28,8 @@ function NoticePost(){
             <br></br>
             <br></br>
             <h1 className={headTitle.head}
-                style={{marginBottom: '-30px'}}>{selected.title}</h1>
-            
+                style={{marginBottom: '-25px'}}>{selected.title}</h1>
+
             <div id={styles.container}>
                 <div className={styles.postInformation}>
                     <div className={styles.postInformationDiv}>분류: {selected.division}</div>
@@ -49,7 +49,7 @@ function NoticePost(){
                               className={styles.postInformationDiv}>수정하기</Link>
                         <Link to='/Notice'
                               style={{marginLeft: '10px'}}
-                              className={styles.postInformationDiv}>목록</Link>
+                              className={styles.postInformationDiv}>게시판으로 가기</Link>
                     </div>
                 </div>
             
