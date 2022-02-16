@@ -1,6 +1,6 @@
 .notice_table {
     width : 95%;
-    max-width: 800px;
+    max-width: 900px;
     height : 40px;
     margin : auto;
 
@@ -15,7 +15,7 @@
 /* NoticePost */
 #container{
     width : 95%;
-    max-width: 800px;
+    max-width: 900px;
     min-height: 400px;
     margin : auto;
 }
@@ -28,13 +28,13 @@
     margin-bottom: 50px;
 }
 
-.postInformation div{
+.postInformationDiv{
     border-bottom: 2px solid rgb(231, 231, 231) ;
 }
 
 #underContainer{
     width : 95%;
-    max-width: 800px;
+    max-width: 900px;
     min-height: 400px;
     margin : auto;
 }
