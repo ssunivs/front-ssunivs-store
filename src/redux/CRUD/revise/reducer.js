@@ -1,7 +1,7 @@
 import { SET_REVISE, UNSET_REVISE } from "./types";
 
 const initialState = {
-    reviseState : false
+    reviseState: false
 }
 
 const reviseReducer = (state=initialState,action)=>{
@@ -10,13 +10,13 @@ const reviseReducer = (state=initialState,action)=>{
         case SET_REVISE:
             return {
               ...state,
-              reviseState: state.reviseState = true
+              reviseState: true
             }
 
         case UNSET_REVISE:
             return {
               ...state,
-              reviseState: state.reviseState = false
+              reviseState: false
             }
         default: return state
     }

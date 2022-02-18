@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected, boardUnSelected } from "./action";
 import { unsetRevise } from "./revise/action";
+import { setOutAdmin } from "redux/setAdmin/actions";
 
 import styles from "./Board.module.css";
 import List from "./List";
 import BoardNew from "./BoardNew";
-import SetAdmin from "redux/setAdmin/SetAdmin";
 
 const Board = ({className}) => {
     const [post, setPost] = useState({
@@ -105,6 +105,10 @@ const Board = ({className}) => {
         })
     }
 
+    const offAdmin = () =>{
+        dispatch(setOutAdmin());
+    }
+
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
             <table className={className}
@@ -138,10 +142,12 @@ const Board = ({className}) => {
 
             </table>
 
-            <div className={(writeMode||reviseState)? styles.writeButtonPositon:styles.editorElements}>
-                <div style={{display: (writeMode||reviseState)? 'none':''}}>
-                    <SetAdmin />
-                </div>
+            <div className={(adminState)&&!(writeMode||reviseState)? styles.editorElements:styles.writeButtonPositon}>
+                <button style={{display: (adminState)&&!(writeMode||reviseState)? '':'none'}}
+                        onClick={offAdmin}>
+                    관리자 로그아웃
+                </button>
+
                 <Link to={adminState? '/Notice':'/LogIn'}>
                     <button className={styles.noticeButton}
                     onClick={(writeMode||reviseState)? offWriteMode : onWriteMode}>
