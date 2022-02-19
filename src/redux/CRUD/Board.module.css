@@ -19,7 +19,7 @@
 
 .writeButtonPositon{
     width : 95%;
-    max-width: 800px;
+    max-width: 900px;
     height : 40px;
     margin : auto;
     
@@ -43,7 +43,7 @@
 /* BoardNew */
 .editorElements{
     width : 95%;
-    max-width: 800px;
+    max-width: 900px;
     height : 40px;
     margin: auto;
 
@@ -69,5 +69,5 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    margin-left: 5px;
+    margin-right: 5px;
 }

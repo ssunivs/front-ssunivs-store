@@ -1,8 +1,22 @@
 import styles from "pages/Contact.module.css";
 import mapStyles from "pages/Reservation.module.css";
 import {Link} from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact(){
+    const Captcha = () => {
+    function onChange(value) {
+        console.log('Captcha value:', value);
+    }
+    return (
+        <div>
+        <ReCAPTCHA
+            sitekey="6LffFnceAAAAAC4QLkETG74jmni3w--UYiiHUaNl"
+            onChange={onChange}
+        />
+        </div>
+        );
+    };
     return (
         <div>
             <h1 className={styles.contact_head}>Contact</h1>
@@ -41,6 +55,7 @@ function Contact(){
                     <input type="checkbox" name="agree" required></input><span id={styles.contactagree}>개인정보동의서에 동의합니다.</span><span id={styles.contactLink}><Link to="/Privacy"> (약관보기)</Link></span>
                     </label>
                     <br></br><br></br>
+                    <Captcha/>
                     <input className={styles.contactSend} type="submit" value="Send" name="agreecheckbox"></input>
                     <br></br>
             </form>

@@ -21,11 +21,10 @@ const axiosPost = (dataToSave) => {
   })
   // 에러인 경우 실행
   .catch((error) => {
-    console.log(error);
+    alert(error.response.data.message);
   })
   // 항상 실행
-  .then(() => {
-  });
+  .then(() => {});
 }
 
 const boardReducer = (state=initialState,action)=>{
