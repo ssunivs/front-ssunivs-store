@@ -31,10 +31,11 @@ function LogIn(){
                 <input id ={styles.userID} type="email"
                 name='email'placeholder="Email" autofocus required/>
                 <br></br>
+                <input id ={styles.userPW}
+                type="password" placeholder="Password" autofocus></input>
                 <input id ={styles.userPW} type="password"
                 name='password' placeholder="Password" autofocus required/>
                 <br></br>
-
                 <button type='submit'>로그인</button>
             </form>
         </div>
