@@ -14,7 +14,6 @@ function LogIn(){
                 <br></br>
                 <input id ={styles.userPW}
                 type="password" placeholder="Password" autofocus></input>
-                {/* <p id={styles.findPW}> 비밀번호찾기</p> */}
                 <br></br>
                 <SetAdmin />
             </form>
