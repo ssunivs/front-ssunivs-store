@@ -35,7 +35,7 @@ const setAdminReducer = (state=initialState,action)=>{
             .then(() => {});
             return{
                 ...state,
-                adminState: false //일단 보류
+                adminState: true //일단 보류
             }
         
         case SET_OUT_ADMIN:
