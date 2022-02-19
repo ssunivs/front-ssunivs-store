@@ -10,5 +10,4 @@ function AboutSsua(){
         </div>
     );
 }
-
 export default AboutSsua;
