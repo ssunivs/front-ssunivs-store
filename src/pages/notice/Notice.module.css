@@ -28,6 +28,21 @@
     height: 50px;
 }
 
+.noticeButton{
+    min-width: 80px;
+    min-height: 25px;
+
+    border-bottom: 2px solid rgb(231, 231, 231) ;
+    transition: all 0.4s;
+}
+
+.noticeButton:hover{
+    letter-spacing: 0.8px;
+    transform: scale(1.1);
+    
+    border-bottom: 2px solid #A5D1FC ;
+}
+
 /* NoticePost */
 #container{
     width : 95%;

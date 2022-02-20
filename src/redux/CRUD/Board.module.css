@@ -37,6 +37,15 @@
     border-right: 0px;
     background-color: white;
     border-bottom: 2px solid rgb(231, 231, 231);
+
+    transition: all 0.4s;
+}
+
+.noticeButton:hover{
+    letter-spacing: 0.8px;
+    transform: scale(1);
+    
+    border-bottom: 2px solid #A5D1FC ;
 }
 
 
