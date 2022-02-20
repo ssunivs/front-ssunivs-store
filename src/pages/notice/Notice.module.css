@@ -6,10 +6,26 @@
 
     border-collapse: collapse;
     text-align: center;
-    border-bottom: 1px solid rgb(231, 231, 231) ;
+    border-bottom: 0.8px solid rgb(231, 231, 231);
 }
-.notice_table > th{
-    background-color :rgb(231, 231, 231) ;
+.notice_table th{
+    font-weight: normal;
+    font-size: 16px;
+    
+    border-collapse: collapse;
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+
+.notice_table th:nth-child(-n+2){
+    width: 90px;
+}
+
+.notice_table th:nth-child(n+4):nth-child(-n+5){
+    width: 90px;
+}
+
+.notice_table td{
+    height: 50px;
 }
 
 /* NoticePost */
@@ -37,4 +53,21 @@
     max-width: 900px;
     min-height: 400px;
     margin : auto;
+}
+
+@media screen and (max-width:750px) {
+    .notice_table th:nth-child(-n+2){
+        width: 60px;
+    }
+    
+    .notice_table th:nth-child(n+4):nth-child(-n+5){
+        width: 60px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    /* 모바일 세로 */
+    .notice_table {
+        font-size: 14px;
+    }
 }
