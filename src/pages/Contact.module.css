@@ -5,8 +5,10 @@
 }
 .contactForm{
     display:inline-block; 
-    padding-left:100px;
-    padding-right : 30px;
+    /* padding-left:100px;
+    padding-right : 30px; */
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 .contactForm input{
