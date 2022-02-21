@@ -7,8 +7,13 @@
     display:inline-block; 
     /* padding-left:100px;
     padding-right : 30px; */
+<<<<<<< HEAD
     margin-left:6%;
     margin-right:6%;
+=======
+    margin-left: 6%;
+    margin-right: 6%;
+>>>>>>> 4a06f1b64437bfea387357a1638fdd42eb4debf1
 }
 
 .contactForm input{
