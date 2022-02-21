@@ -124,7 +124,7 @@ const Board = () => {
                         <th>작성일</th>
                         <th style={{
                             display: (adminState)? "" : "none"}}></th>
-                    </tr> 
+                    </tr>
                 </thead>
                 <tbody>
         {/* 지금은 boards지만 */}
