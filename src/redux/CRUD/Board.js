@@ -6,10 +6,11 @@ import { unsetRevise } from "./revise/action";
 import { setOutAdmin } from "redux/setAdmin/actions";
 
 import styles from "./Board.module.css";
+import tableStyle from "../../pages/notice/Notice.module.css";
 import List from "./List";
 import BoardNew from "./BoardNew";
 
-const Board = ({className}) => {
+const Board = () => {
     const [post, setPost] = useState({
         id: '',
         title: '',
@@ -111,11 +112,11 @@ const Board = ({className}) => {
 
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
-            <table className={className}
+            <table className={tableStyle.notice_table}
                    style={{display:(writeMode||reviseState)? 'none':''}}
                    border="0">
                 <thead>
-                    <tr className={className}>
+                    <tr className={tableStyle.notice_table}>
                         <th>No.</th>
                         <th>분류</th>
                         <th>제목</th>
@@ -131,7 +132,7 @@ const Board = ({className}) => {
                             (
                                 <List
                                     no={(boards.indexOf(post))+1}
-                                    className={className}
+                                    className={tableStyle.notice_listTable}
                                     post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}

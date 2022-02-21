@@ -1,3 +1,4 @@
+/* 코드 정리필요... */
 .notice_table {
     width : 95%;
     max-width: 900px;
@@ -8,6 +9,7 @@
     text-align: center;
     border-bottom: 0.8px solid rgb(231, 231, 231);
 }
+
 .notice_table th{
     font-weight: normal;
     font-size: 16px;
@@ -24,10 +26,6 @@
     width: 90px;
 }
 
-.notice_table td{
-    height: 50px;
-}
-
 .noticeButton{
     min-width: 80px;
     min-height: 25px;
@@ -41,6 +39,28 @@
     transform: scale(1.1);
     
     border-bottom: 2px solid #A5D1FC ;
+}
+
+
+/* List */
+.notice_listTable {
+    width : 95%;
+    max-width: 900px;
+    height : 40px;
+    margin : auto;
+
+    border-collapse: collapse;
+    text-align: center;
+    border-bottom: 0.8px solid rgb(231, 231, 231);
+
+    transition: all 0.4s;
+}
+
+.notice_listTable:hover{
+    letter-spacing: 0.8px;
+    transform: scale(1.1);
+
+    background-color: #e3effe;
 }
 
 /* NoticePost */
