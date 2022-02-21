@@ -70,16 +70,7 @@
     list-style:none;
     font-weight:normal;
     color: aliceblue;
-    padding-left:20px;
-    font-size: 17px;
-
-}
-
-.detailLists > a{
-    list-style:none;
-    font-weight:normal;
-    color: aliceblue;
-    padding-left:20px;
+    padding-left:30px;
     font-size: 17px;
 }
 

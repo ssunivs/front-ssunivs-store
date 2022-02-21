@@ -1,11 +1,16 @@
 .socialIcons{
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 35px;
 
     transition: all 0.5s;
 }
 
 .icon{
     margin-right: 2px;
+
+    transition: all 0.4s;
+}
+
+.icon:hover{
+    transform: scale(1.3);
 }
