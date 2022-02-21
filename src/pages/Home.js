@@ -36,7 +36,9 @@ function Home(){
                 alt="main_ssua3" 
                 />
             </div>
-            <Modal />
+            <div>
+                <Modal />
+            </div>
         </div>
     );
 }
