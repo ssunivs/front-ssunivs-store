@@ -19,10 +19,6 @@ function LogIn(){
     //Detect AdminMode
     const {adminState} = useSelector(state => state.adminMode);
 
-    // if(adminState){
-    //     alert("이미 로그인되어 있습니다.")
-    // }
-
     return (
         <div style={{display: adminState?'none':''}}>
             <h1 className={headTitle.head}>Log In</h1>
@@ -31,8 +27,6 @@ function LogIn(){
                 <input id ={styles.userID} type="email"
                 name='email'placeholder="Email" autofocus required/>
                 <br></br>
-                <input id ={styles.userPW}
-                type="password" placeholder="Password" autofocus></input>
                 <input id ={styles.userPW} type="password"
                 name='password' placeholder="Password" autofocus required/>
                 <br></br>

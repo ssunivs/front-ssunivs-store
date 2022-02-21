@@ -46,10 +46,10 @@ function NoticePost(){
                         <Link to={adminState?'/Notice':'/LogIn'}
                               style={{display: adminState?'':'none'}}
                               onClick={onRevise}
-                              className={styles.postInformationDiv}>수정하기</Link>
+                              className={styles.noticeButton}>수정하기</Link>
                         <Link to='/Notice'
                               style={{marginLeft: '10px'}}
-                              className={styles.postInformationDiv}>게시판으로 가기</Link>
+                              className={styles.noticeButton}>게시판으로 가기</Link>
                     </div>
                 </div>
             
