@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "components/FloatingMenu.module.css";
-import fixSsuaIcon from "../assets/fix_ssua.png";
+import fixSsuaIcon from "../assets/ssua_floating_btn.png";
 import {GrMail,GrInstagram} from "react-icons/gr"
 import {RiKakaoTalkFill} from "react-icons/ri"
 import {AiFillShopping} from "react-icons/ai";
