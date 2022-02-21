@@ -1,16 +1,18 @@
 .contact_head{
     text-align: left;
     font-size: 300%;
-    margin-left:9%;
+    margin-left:6%;
 }
 .contactForm{
     display:inline-block; 
-    padding-left:100px;
-    padding-right : 30px;
+    /* padding-left:100px;
+    padding-right : 30px; */
+    margin-left:6%;
+    margin-right:6%;
 }
 
 .contactForm input{
-    width:300px;
+    width:450px;
     border:none; 
 }
 .contactForm textarea{
@@ -40,8 +42,10 @@
 
 }
 #contactLine2{
-    margin-left : 150px;
-    margin-right : 165px;
+    /* margin-left : 150px;
+    margin-right : 165px; */
+    margin-left:6%;
+    margin-right:16%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #2c2c2c;
 }
@@ -50,14 +54,14 @@
     margin : auto;
 }
 .contactBox input{
-    margin-left : 9%;
+    margin-left : 6%;
 }
 #contactLink{
     text-underline-position: under;
     text-decoration: underline;
 }
 .recaptcha{
-    margin-left:8%;
+    margin-left:5%;
     margin-right:10%;
     border: 0px solid #e3e3e3;
 }
