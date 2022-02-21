@@ -56,6 +56,11 @@
     text-underline-position: under;
     text-decoration: underline;
 }
+.recaptcha{
+    margin-left:8%;
+    margin-right:10%;
+    border: 0px solid #e3e3e3;
+}
 
 /*모바일 세로 구현*/
 @media screen and (max-width:599px) {
@@ -118,6 +123,11 @@
     }
     #contactagree{
         font-size:15px;
+    }
+    .recaptcha{
+        margin-left:-5%;
+        /* margin-right:-1%; */
+        border:0px solid #e3e3e3;
     }
 }
 
