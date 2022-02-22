@@ -58,7 +58,7 @@ function Menu(){
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
                     <br></br>
                 <Link to="/AboutSsunivers"><li className={styles.list}
-                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>                           
+                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssuniverse</li></Link>                           
                 </ul>
                     <br></br>
                 <li>STORE</li>

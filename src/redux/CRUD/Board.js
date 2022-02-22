@@ -143,14 +143,14 @@ const Board = () => {
 
             </table>
 
-            <div className={(adminState)&&!(writeMode||reviseState)? styles.editorElements:styles.writeButtonPositon}>
+            <div className={(adminState)&&!(writeMode||reviseState)? styles.editorElements:tableStyle.backToNoticeButton_positon}>
                 <button style={{display: (adminState)&&!(writeMode||reviseState)? '':'none'}}
                         onClick={offAdmin}>
                     관리자 로그아웃
                 </button>
 
                 <Link to={adminState? '/Notice':'/LogIn'}>
-                    <button className={styles.noticeButton}
+                    <button className={tableStyle.noticeButton}
                     onClick={(writeMode||reviseState)? offWriteMode : onWriteMode}>
                     {(writeMode||reviseState)? '게시판으로 가기':'글쓰기'}</button>
                 </Link>

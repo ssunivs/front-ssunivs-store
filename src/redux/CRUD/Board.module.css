@@ -17,38 +17,6 @@
 }
 
 
-.writeButtonPositon{
-    width : 95%;
-    max-width: 900px;
-    height : 40px;
-    margin : auto;
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.noticeButton{
-    min-width: 80px;
-    min-height: 25px;
-
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    background-color: white;
-    border-bottom: 2px solid rgb(231, 231, 231);
-
-    transition: all 0.4s;
-}
-
-.noticeButton:hover{
-    letter-spacing: 0.8px;
-    transform: scale(1);
-    
-    border-bottom: 2px solid #A5D1FC ;
-}
-
-
 /* BoardNew */
 .editorElements{
     width : 95%;
