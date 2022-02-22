@@ -51,9 +51,9 @@ function Menu(){
             <ul className={styles.menuList}>
                 <li>ABOUT US</li>
                 <ul className={styles.detailLists}>
-                <Link to="/News"><li className={styles.list}
+                {/* <Link to="/News"><li className={styles.list}
                                             style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link> 
-                    <br></br>
+                    <br></br> */}
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
                     <br></br>

@@ -10,7 +10,7 @@ function NavBar (){
                     ABOUT US<i><BiChevronDown /></i></a>
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
-                                <li><Link to="/News">News</Link></li>
+                                {/* <li><Link to="/News">News</Link></li> */}
                                 <li><Link to="/AboutSsua">ssua</Link></li>
                                 <li><Link to="/AboutSsunivers">ssunivers</Link></li>
                             </ul>
