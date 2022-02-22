@@ -45,7 +45,8 @@
 
 #reservationOtherTimeBnt{
     color: #fff;
-    margin-top: 20px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
     padding : 10px 20px;
     background-color: #aaaaaa;
     cursor: pointer;
@@ -60,7 +61,7 @@
 
 .reservationForm span{
     padding-right: 15px;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .reservationForm hr{
