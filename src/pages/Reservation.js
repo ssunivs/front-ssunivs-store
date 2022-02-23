@@ -10,6 +10,8 @@ import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import getDay from "date-fns/getDay";
 
+import {Link} from "react-router-dom";
+
 function Reservation(){
     const [startDate, setStartDate] = useState(
         setHours(setMinutes(new Date(), 30), 16)
@@ -62,7 +64,7 @@ function Reservation(){
                     onChange={date => setStartDate(date)}
                     withPortal
                     customInput={<ExampleCustomInput />}
-                    dateFormat="MM월 dd일(eee) H시 mm분"
+                    dateFormat="yyyy년 MM월 dd일(eee) H시 mm분"
                     minDate={new Date()}
                     // popperPlacement="auto"
                     showTimeSelect
@@ -113,7 +115,14 @@ function Reservation(){
             <span>주소</span>
             <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
             </p>
-                <button id={styles.reservationFinBnt} type="submit">
+            <label>
+            <input id={styles.privacyCheck} type="checkbox" name="rsv_agree" required></input>
+            <span id={styles.privacyAgree}>개인정보동의서에 동의합니다.</span>               
+            </label>
+            <span id={styles.privacyLink}><Link to="/Privacy">(약관보기)</Link></span>
+            <br></br>
+            
+            <button id={styles.reservationFinBnt} type="submit">
                     예약하기</button>
             </form>
 

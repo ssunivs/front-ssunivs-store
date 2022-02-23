@@ -14,6 +14,22 @@
     font-weight:900;
 }
 
+#privacyAgree{
+    text-align: center;
+    font-weight: normal;
+    font-size:15px;
+}
+
+#privacyLink{
+    font-size:13px;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+
+#privacyCheck{
+    width: 15px;
+    margin-top: 15px;
+}
 .reservationDateBnt{
     color: #fff;
     font-weight: bolder;
@@ -88,6 +104,7 @@
 .reservationForm p{
     font-weight: 500;
 }
+
 
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
