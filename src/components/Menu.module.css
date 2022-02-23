@@ -75,6 +75,10 @@
     font-size: 17px;
 }
 
+.detailLists #storeGo{
+    font-weight: bold;
+}
+
 .list{
     color: aliceblue;
     font-size: 15px;

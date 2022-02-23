@@ -11,8 +11,8 @@ function NavBar (){
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
                                 {/* <li><Link to="/News">News</Link></li> */}
-                                <li><Link to="/AboutSsua">ssua</Link></li>
-                                <li><Link to="/AboutSsunivers">ssuniverse</Link></li>
+                                <li><Link to="/AboutSsua">𝐒𝐒𝐔-𝐀</Link></li>
+                                <li><Link to="/AboutSsunivers">SSUNIVERSE</Link></li>
                             </ul>
                 </li>
                 <li><a href="https://www.ssunivs.com/">
