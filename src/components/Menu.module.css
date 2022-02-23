@@ -1,7 +1,6 @@
 .hamburgerIcon {
     position: absolute;
     cursor: pointer;
-
     z-index:5;
     top: 50px;
 }
@@ -125,7 +124,6 @@
     font-size: larger;
     list-style:none;
     padding-left: 30px; /*12 - margin기준*/
-
     display: flex;
 }
 

@@ -27,7 +27,7 @@ export default function HomeModal() {
 
   return (
     <div>
-      <div  onClick={onTagClick}>
+      <div onClick={onTagClick}>
           <img
                       title="쿠폰 발급 하러 가기"
                       className={styles.couponTag}

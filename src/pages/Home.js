@@ -4,7 +4,7 @@ import main_ssua2 from "assets/main_ssua2.png";
 import main_ssua3 from "assets/main_ssua3.png";
 import click from "assets/click.png"; //수정
 // import Modal from "components/HomeModal";
-import Modal from "components/HomeModal2";
+import Modal from "components/HomeModal";
 
 
 function Home(){

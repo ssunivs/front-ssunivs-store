@@ -3,7 +3,6 @@
         border: 1px solid gray;
         background-color: #f0f8ff;
         z-index: 3;
-
         width: 520px;
         height: 300px;
 
@@ -42,5 +41,6 @@
         .modalImg{
                 width: 280px;
                 height: 200px;
+                /* z-index: -5; */
         }
 }
