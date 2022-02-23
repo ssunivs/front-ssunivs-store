@@ -41,7 +41,13 @@ const RichTextEditor = ({ setContent, setPost }) => {
     setContent(contentRaw);
   };
 
-  
+  const styleMap = {
+    'customFont': {
+      fontFamily: 'sans-serif',
+      fontSize: 30
+    },
+  };
+
     return (
       <div>
         <Editor
@@ -51,13 +57,17 @@ const RichTextEditor = ({ setContent, setPost }) => {
           editorClassName={editorStyles.editor}
           // 툴바 설정
           toolbar={{
-            // inDropdown: 해당 항목과 관련된 항목을 드롭다운으로 나타낼것인지
+            options: ['inline', 'blockType', 'fontSize', 'fontFamily', 'list', 'textAlign', 'colorPicker', 'link', 'emoji', 'image', 'remove', 'history'],
+            fontFamily: {
+              options: ['Arial', 'Georgia', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'serif', 'Noto Sans KR'],
+            },
             list: { inDropdown: true },
             textAlign: { inDropdown: true },
             link: { inDropdown: true },
             history: { inDropdown: false },
           }} 
-          placeholder="내용을 작성해주세요."
+          customStyleMap={styleMap}
+          placeholder="내용을 작성해주세요.(Shift + Enter를 사용하셔야 여러 개행이 됩니다.)"
           // 한국어 설정
           localization={{
             locale: 'ko',

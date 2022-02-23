@@ -90,9 +90,10 @@ function Menu(){
                     <li className={styles.list}>ssua@ssunivs.com</li>
                 </a> */}
                 </ul>
+                    <br></br>
+                <SocialLinks size="30px" color="white"/>
             </ul>
 
-            <SocialLinks size="30px" color="white"/>
 
                 {/* <ul className={styles.user}>
                     <Link to="/LogIn"><li className={styles.list}
@@ -111,20 +112,4 @@ function Menu(){
     );
 }
 
-/*
-//Detect LogInState
-const mapStateToProps = (state) => {
-    return{
-        logInState: state.logInOut.logInState
-    };
-}; 
-
-const mapDispatchToProps = (dispatch)=>{
-    return {
-        setLogOut: ()=>dispatch(setLogOut())
-    };
-};
-
-export default connect(mapStateToProps)(Menu);
-*/
 export default Menu;
