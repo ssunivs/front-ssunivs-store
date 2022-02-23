@@ -42,17 +42,23 @@ function Reservation(){
             <form className={styles.reservationForm}
             action=" " name="reservationInfo" method="post">
                 <label>
-                    <span>성함&nbsp;&nbsp;&nbsp;</span>
+                    <div className={styles.reservationInput}>
+                        <span>성함&nbsp;&nbsp;&nbsp;</span>
+                    </div>
                     <input id="rsv_name" name="rsv_name" type="text" required></input>
                 </label>
                 <hr></hr>
                 <label>
-                    <span>연락처</span>
+                    <div className={styles.reservationInput}>
+                        <span>연락처</span>
+                    </div>
                     <input id="rsv_tel" type="tel" name="rsv_tel" pattern="[0-9]+" required></input>
                 </label>
                 <hr></hr>
                 <label>
-                    <span>이메일</span>
+                <div className={styles.reservationInput}>
+                        <span>이메일</span>
+                    </div>
                     <input id="rsv_email" type="email" name="rsv_email" required></input>
                 </label>
                 <hr></hr>
@@ -106,20 +112,24 @@ function Reservation(){
                         setHours(setMinutes(new Date(), 0), 17)
                     ]}
                 />
-            <span>유의사항</span>
-            <p>배송 메모에 “방문 수령”이라 잘 작성하셨을까요?<br></br>
+            <span className={styles.notice1}>유의사항</span>
+            <p className={styles.notice2}>배송 메모에 “방문 수령”이라 잘 작성하셨을까요?<br></br>
             10분이상 지각 시 담당자가 기다리지 않을 수 있습니다.<br></br>
             방문에 유의해 주세요🙂<br></br>
             방문 수령 변경 예약은 카카오톡 채널로 문의 바랍니다!
             </p>
-            <span>주소</span>
-            <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
+            <span className={styles.notice1}>주소</span>
+            <p className={styles.notice2}>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
             </p>
             <label>
-            <input id={styles.privacyCheck} type="checkbox" name="rsv_agree" required></input>
-            <span id={styles.privacyAgree}>개인정보동의서에 동의합니다.</span>               
+                <input id={styles.privacyCheck} type="checkbox" name="rsv_agree" required></input>
+            <div id={styles.privacyAgree}>
+                <span>개인정보동의서에 동의합니다.</span>   
+            </div>            
             </label>
-            <span id={styles.privacyLink}><Link to="/Privacy">(약관보기)</Link></span>
+            <div id={styles.privacyLink}>
+                <span><Link to="/Privacy">(약관보기)</Link></span>
+            </div>
             <br></br>
             
             <button id={styles.reservationFinBnt} type="submit">

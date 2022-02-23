@@ -15,12 +15,12 @@
 }
 
 #privacyAgree{
-    text-align: center;
-    font-weight: normal;
-    font-size:15px;
+    display: inline-block;
+    font-size:14px;
 }
 
 #privacyLink{
+    display: inline-block;
     font-size:13px;
     text-underline-position: under;
     text-decoration: underline;
@@ -28,7 +28,6 @@
 
 #privacyCheck{
     width: 15px;
-    margin-top: 15px;
 }
 .reservationDateBnt{
     color: #fff;
@@ -105,16 +104,25 @@
     font-weight: 500;
 }
 
-
+.reservationInput{
+    display: inline-block;
+}
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
     #reservationNotice{
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    .reservationForm span{
+    /* .reservationForm span{
         padding-left: 20px;
         padding-right: 0px;
+    } */
+
+    .reservationInput{
+        /* padding-left: 20px;
+        padding-right: 0px; */
+        font-size: 14px;
+        margin-left: 13px;
     }
     .reservationForm hr{
         width: 250px;
@@ -124,18 +132,22 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
     .reservationForm input{
-        width: 200px;
+        width: 160px;
         height: 30px;
         margin: 10px;
     }
     .reservationForm p{
         font-size: 13px;
-        margin: 20px;
+        margin: 10px;
     }
 
     #reservationNotice > p{
         font-size: 12px;
         margin: 10px;
+    }
+
+    .reservationForm .reservationNotice1{
+        padding: 0px;
     }
 }
 
