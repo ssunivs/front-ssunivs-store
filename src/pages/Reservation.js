@@ -38,7 +38,7 @@ function Reservation(){
             <p id={styles.reservationNotice}>
             <br></br>
             <form className={styles.reservationForm}
-            action=" " name="reservationInfo" method="get">
+            action=" " name="reservationInfo" method="post">
                 <label>
                     <span>성함&nbsp;&nbsp;&nbsp;</span>
                     <input id="rsv_name" name="rsv_name" type="text" required></input>
@@ -62,15 +62,17 @@ function Reservation(){
                     onChange={date => setStartDate(date)}
                     withPortal
                     customInput={<ExampleCustomInput />}
-                    dateFormat="yyyy년 MM월 dd일 H시 mm분"
+                    dateFormat="MM월 dd일(eee) H시 mm분"
                     minDate={new Date()}
                     // popperPlacement="auto"
                     showTimeSelect
                     timeFormat=" H시 mm분"
                     timeIntervals={15}
                     filterDate={isWeekday}
+                    // closeOnScroll={true}
                     minTime={minTime}
                     maxTime={maxTime}
+                    // showPopperArrow={false}
                     excludeTimes={[
                         setHours(setMinutes(new Date(), 45), 9),
                         setHours(setMinutes(new Date(), 0), 10),
