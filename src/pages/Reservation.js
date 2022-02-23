@@ -112,20 +112,20 @@ function Reservation(){
                         setHours(setMinutes(new Date(), 0), 17)
                     ]}
                 />
-            <span className={styles.notice1}>유의사항</span>
-            <p className={styles.notice2}>배송 메모에 “방문 수령”이라 잘 작성하셨을까요?<br></br>
+            <span>유의사항</span>
+            <p>배송 메모에 “방문 수령”이라 잘 작성하셨을까요?<br></br>
             10분이상 지각 시 담당자가 기다리지 않을 수 있습니다.<br></br>
             방문에 유의해 주세요🙂<br></br>
             방문 수령 변경 예약은 카카오톡 채널로 문의 바랍니다!
             </p>
-            <span className={styles.notice1}>주소</span>
-            <p className={styles.notice2}>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
+            <span>주소</span>
+            <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
             </p>
-            <label>
-                <input id={styles.privacyCheck} type="checkbox" name="rsv_agree" required></input>
-            <div id={styles.privacyAgree}>
-                <span>개인정보동의서에 동의합니다.</span>   
-            </div>            
+            <label id={styles.privacyCheck}>
+            <input type="checkbox" name="rsv_agree" required></input>
+            {/* <div id={styles.privacyAgree}> */}
+                <span id={styles.privacyAgree}>개인정보동의서에 동의합니다.</span>   
+            {/* </div >             */}
             </label>
             <div id={styles.privacyLink}>
                 <span><Link to="/Privacy">(약관보기)</Link></span>

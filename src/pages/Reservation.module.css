@@ -17,18 +17,22 @@
 #privacyAgree{
     display: inline-block;
     font-size:14px;
+    padding-top: 30px;
 }
 
 #privacyLink{
     display: inline-block;
-    font-size:13px;
+    font-size:12px;
     text-underline-position: under;
     text-decoration: underline;
 }
 
-#privacyCheck{
+#privacyCheck input{
+    display: inline-block;
     width: 15px;
+    height: 12px;
 }
+
 .reservationDateBnt{
     color: #fff;
     font-weight: bolder;
