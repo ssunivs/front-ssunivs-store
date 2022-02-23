@@ -51,19 +51,19 @@ function Menu(){
             <ul className={styles.menuList}>
                 <li>ABOUT US</li>
                 <ul className={styles.detailLists}>
-                <Link to="/News"><li className={styles.list}
+                {/* <Link to="/News"><li className={styles.list}
                                             style={{color: (path==="/News")? "#A5D1FC" : ""}}>News</li></Link> 
-                    <br></br>
+                    <br></br> */}
                 <Link to="/AboutSsua"><li className={styles.list}
-                                        style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>ssua</li></Link>
+                                        style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>𝐒𝐒𝐔-𝐀</li></Link>
                     <br></br>
                 <Link to="/AboutSsunivers"><li className={styles.list}
-                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>ssunivers</li></Link>                           
+                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>SSUNIVERSE</li></Link>                           
                 </ul>
                     <br></br>
                 <li>STORE</li>
                 <ul className={styles.detailLists}>
-                    <a href="https://www.ssunivs.com/"><li className={styles.list}>GO !</li></a>
+                    <a href="https://www.ssunivs.com/" id={styles.storeGo}><li className={styles.list}>GO !</li></a>
                     <br></br>
                     <Link to="/Reservation"><li className={styles.list}
                                         style={{color: (path==="/Reservation")? "#A5D1FC" : ""}}>방문수령 예약</li></Link>

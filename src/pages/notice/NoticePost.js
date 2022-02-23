@@ -31,6 +31,11 @@ function NoticePost(){
                 style={{marginBottom: '-25px'}}>{selected.title}</h1>
 
             <div id={styles.container}>
+                <div className={styles.backToNoticeButton_positon}>
+                    <Link to='/Notice'>
+                        <button className={styles.noticeButton}>게시판으로 가기</button>
+                    </Link>
+                </div>
                 <div className={styles.postInformation}>
                     <div className={styles.postInformationDiv}>분류: {selected.division}</div>
                     <div className={styles.postInformationDiv}>작성일: {selected.postDate}</div>
@@ -42,15 +47,11 @@ function NoticePost(){
                 <div id={styles.underContainer}
                      className={styles.postInformation}>
                     <div className={styles.postInformationDiv}>작성자: {selected.writer}</div>
-                    <div>
-                        <Link to={adminState?'/Notice':'/LogIn'}
-                              style={{display: adminState?'':'none'}}
-                              onClick={onRevise}
-                              className={styles.noticeButton}>수정하기</Link>
-                        <Link to='/Notice'
-                              style={{marginLeft: '10px'}}
-                              className={styles.noticeButton}>게시판으로 가기</Link>
-                    </div>
+                    <Link to={adminState?'/Notice':'/LogIn'}
+                        style={{display: adminState?'':'none'}}
+                        onClick={onRevise}>
+                        <button className={styles.noticeButton}>수정하기</button>
+                    </Link>
                 </div>
             
         </div>

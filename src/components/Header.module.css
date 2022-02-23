@@ -24,8 +24,19 @@
     width: 170px;
 }
 
-#storeLogo{
+/* #storeLogo{
     cursor: pointer;
+} */
+
+.storeLogo:hover{
+    animation: rotate 5s infinite ease-out;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate{
+	 100% {
+    	transform: rotate(360deg);
+    }
 }
 
 .helloSsunivs{

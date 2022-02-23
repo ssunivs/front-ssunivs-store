@@ -58,6 +58,7 @@
 }
 
 .menuList {
+    /* z-index:5; */
     font-family:'Segoe UI';
     list-style:none;
     font-weight: bold;
@@ -72,6 +73,10 @@
     color: aliceblue;
     padding-left:30px;
     font-size: 17px;
+}
+
+.detailLists #storeGo{
+    font-weight: bold;
 }
 
 .list{
