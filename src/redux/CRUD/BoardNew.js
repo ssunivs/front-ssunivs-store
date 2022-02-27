@@ -11,7 +11,7 @@ import { EditorState,
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-import SortModal from "redux/sortModal/SortModal";
+import SortModal from "redux/sortModal/sortModal";
 
 const RichTextEditor = ({ setContent, setPost }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
