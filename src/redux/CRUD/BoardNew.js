@@ -11,6 +11,8 @@ import { EditorState,
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
+import sortModal from "redux/sortModal/sortModal";
+
 const RichTextEditor = ({ setContent, setPost }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const {selected} = useSelector(state => state.board);
@@ -74,7 +76,6 @@ const RichTextEditor = ({ setContent, setPost }) => {
           }}
           // 초기값 설정
           editorState={editorState}
-          // 에디터의 값이 변경될 때마다 onEditorStateChange 호출
           onEditorStateChange={onEditorStateChange}
         />
        </div>
@@ -127,7 +128,9 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
                             <option selected={(selected.division==='etc')? true : false}>etc</option>
                         </select>
                         
-                        <button style={{fontSize: "11px"}}>그룹관리</button>
+                        <button type="button"
+                                
+                                style={{fontSize: "11px"}}>그룹관리</button>
                     </div>
                 </div>
 

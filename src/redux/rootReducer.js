@@ -5,6 +5,7 @@ import persistReducer from 'redux-persist/es/persistReducer';
 import setAdminReducer from './setAdmin/reducer';
 import boardReducer from './CRUD/reducer';
 import reviseReducer from './CRUD/revise/reducer';
+import handleModalReducer from './sortModal/reducer';
 
 const persistConfig = {
     key: 'root',
@@ -17,7 +18,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     adminMode: setAdminReducer,
     board: boardReducer,
-    revise: reviseReducer
+    revise: reviseReducer,
+    modal: handleModalReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);
