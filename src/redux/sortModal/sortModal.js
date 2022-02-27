@@ -1,9 +1,16 @@
 import { useState } from "react";
 
-const sortModal = () =>{
-
+const SortModal = () =>{
+    const [show, setShow] = useState(false);
+    const handleModalOpen = () =>{
+        setShow(true);
+    }
+    const handleModalClose = () => {
+        setShow(false);
+      };
     return (
-        <div hidden>
+        <div hidden={!show}
+             className={}>
             <fieldset>
                 <legend>현재</legend>
             </fieldset>
@@ -20,7 +27,7 @@ const sortModal = () =>{
                 </fieldset>
             </form>
         </div>
-    )
+    );
 }
 
-export default sortModal;
+export default SortModal;
