@@ -31,6 +31,7 @@ function Menu(){
     useEffect((path) => {
         path = location.pathname;
         setOpen(false);
+        document.body.style.overflow = "unset";
     }, [location]);
 
     return (
