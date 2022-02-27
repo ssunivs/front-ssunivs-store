@@ -11,7 +11,7 @@ import { EditorState,
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-import sortModal from "redux/sortModal/sortModal";
+import SortModal from "redux/sortModal/SortModal";
 
 const RichTextEditor = ({ setContent, setPost }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -119,7 +119,7 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
                            placeholder='제목'
                            onChange={onChangeTitle}/>
                     
-                    <div>
+                    <div className={styles.sortPosition}>
                         <select name="division" className={styles.editorSelects}
                             onChange={changeInput} required>
                             <option value="">분류</option>
@@ -127,10 +127,7 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
                             <option selected={(selected.division==='ssua')? true : false}>ssua</option>
                             <option selected={(selected.division==='etc')? true : false}>etc</option>
                         </select>
-                        
-                        <button type="button"
-                                
-                                style={{fontSize: "11px"}}>그룹관리</button>
+                        <SortModal />
                     </div>
                 </div>
 

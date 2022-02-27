@@ -48,3 +48,8 @@
     border-right: none;
     margin-right: 5px;
 }
+
+.sortPosition{
+    display: flex;
+    align-items: center;
+}

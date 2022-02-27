@@ -7,16 +7,21 @@ import SocialLinks from "components/SocialLinks";
 // import {SearchIcon} from "react-icons/fi";
 import styles from "components/Menu.module.css";
 
-/*
-//Detect LogInState
-import { connect } from "react-redux";
-import { setLogOut } from "redux/setAdmin/actions";
-*/
-
 function Menu(){
     const [open, setOpen] = useState(false);
     const onMenuClick = () =>{
         setOpen((current) => !current);
+        if(!open){
+            //Limit using scroll -> 근데 스크롤 없어질 때 안 이쁨.
+            document.body.style.overflow = "hidden";
+        }
+        else{
+            document.body.style.overflow = "visible";
+        }
+    }
+    const closeMenu = () =>{
+        setOpen(false);
+        document.body.style.overflow = "unset";
     }
 
     //Detect pathname
@@ -108,6 +113,10 @@ function Menu(){
                                         style={{color: (path==="/Cart")? "#A5D1FC" : ""}}>CART</li></Link>    
                 </ul> */}
             </div>
+
+            <div hidden={!open}
+                 id={styles.modalBackground}
+                 onClick={closeMenu} />
         </div>
     );
 }

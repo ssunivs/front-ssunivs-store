@@ -1,28 +1,81 @@
-import { SHOW_MODAL, HIDE_MODAL, REVERSE_MODAL } from "./types";
+import { GET_SORT_LIST, ADD_SORT, DELETE_SORT } from "./types";
+import axios from "axios";
 
 const initialState = {
-    modalState : false
+    sortList : []
 }
 
 const handleModalReducer = (state=initialState,action)=>{
     switch(action.type){
-        case SHOW_MODAL:
-            return{
+        case GET_SORT_LIST:
+            axios.post('')
+            // 성공한 경우 실행
+            .then((response) => {
+              return{
                 ...state,
-                modalState: true
+                sortList: response.data.sortList
+              }
+            })
+            // 에러인 경우 실행
+            .catch((error) => {
+              alert(error.response.data.message);
+              return{
+                ...state
+              }
+            })
+            // 항상 실행
+            .then(() => {});
+            return{
+                ...state
             }
         
-        case HIDE_MODAL:
-            return{
+        case ADD_SORT:
+            axios.post('', {
+                "addedSort": action.dataToAddSort.addedSort.value
+            })
+            // 성공한 경우 실행
+            .then((response) => {
+              return{
                 ...state,
-                modalState: false
+                sortList: response.data.sortList
+              }
+            })
+            // 에러인 경우 실행
+            .catch((error) => {
+              alert(error.response.data.message);
+              return{
+                ...state
+              }
+            })
+            // 항상 실행
+            .then(() => {});
+            return{
+                ...state
             }
 
-        case REVERSE_MODAL:
+        case DELETE_SORT:
+            // axios.delete('', {
+            //     "addedSort": action.dataToAddSort.addedSort.value
+            // })
+            // // 성공한 경우 실행
+            // .then((response) => {
+            //   return{
+            //     ...state,
+            //     sortList: response.data.sortList
+            //   }
+            // })
+            // // 에러인 경우 실행
+            // .catch((error) => {
+            //   alert(error.response.data.message);
+            //   return{
+            //     ...state
+            //   }
+            // })
+            // // 항상 실행
+            // .then(() => {});
             return{
-            ...state,
-            modalState: !state
-        }
+                ...state
+            }
         default: return state
     }
 }

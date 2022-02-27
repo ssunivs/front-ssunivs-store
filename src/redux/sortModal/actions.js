@@ -1,20 +1,26 @@
-import { SHOW_MODAL, HIDE_MODAL, REVERSE_MODAL } from "./types";
+import { GET_SORT_LIST, ADD_SORT, DELETE_SORT } from "./types";
 
 
-export const showModal = () =>{
+export const getSortList = () =>{
     return{
-        type: SHOW_MODAL
+        type: GET_SORT_LIST
     }
 }
 
-export const hideModal = () =>{
+export const addSort = (dataToAddSort) =>{
     return{
-        type: HIDE_MODAL
+        type: ADD_SORT,
+        dataToAddSort: {
+            addedSort: dataToAddSort.addedSort
+        }
     }
 }
 
-export const reverseModal = () =>{
+export const deleteSort = (dataToDeleteSort) =>{
     return{
-        type: REVERSE_MODAL
+        type: DELETE_SORT,
+        dataToDeleteSort: {
+            deletedSort: dataToDeleteSort.deletedSort
+        }
     }
 }
