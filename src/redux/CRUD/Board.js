@@ -132,7 +132,7 @@ const Board = () => {
                             (
                                 <List
                                     no={(boards.indexOf(post))+1}
-                                    className={tableStyle.notice_listTable}
+                                    className={tableStyle.notice_listRow}
                                     post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
