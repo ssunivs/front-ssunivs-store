@@ -6,7 +6,7 @@ function AboutSsua(){
         <div>
             <br></br>
             <NavBar />
-            <h1 className={headTitle.head}>슈아(ssu-a)를 소개합니다 !</h1>
+            <h1 className={headTitle.head}>슈아(𝐒𝐒𝐔-𝐀)를 소개합니다 !</h1>
         </div>
     );
 }
