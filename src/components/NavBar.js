@@ -6,7 +6,7 @@ function NavBar (){
     return (
         <div id={styles.navBar}>
             <ul>
-                <li><a href="/News">
+                <li><a href="/AboutSsua">
                     ABOUT US<i><BiChevronDown /></i></a>
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>
@@ -23,7 +23,7 @@ function NavBar (){
                                 <li><Link to="/Reservation">방문수령 예약</Link></li>
                             </ul>
                 </li>
-                <li><a href="/Contact">
+                <li><a href="/Notice">
                     BOARD<i><BiChevronDown /></i></a>
                         <span className={styles.accent}></span>
                             <ul className={styles.dropdown}>

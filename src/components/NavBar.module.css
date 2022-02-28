@@ -6,6 +6,7 @@
 
 #navBar ul li {
     background-color: #A5D1FC;
+    /* background-color: #ffffff; */
     float: left;
     list-style: none;
     margin-right: 10px;
@@ -18,7 +19,8 @@
     position: relative;
     color: #4b4b4b;
     text-decoration: none;
-    border: 3px solid #A5D1FC; /*테두리 색상*/
+    border: 3px solid #A5D1FC;
+    /*테두리 색상*/
     padding: 10px 15px 10px 25px;
     display: block;
     width: 150px;
