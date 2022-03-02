@@ -12,7 +12,7 @@ function NavBar (){
                             <ul className={styles.dropdown}>
                                 {/* <li><Link to="/News">News</Link></li> */}
                                 <li><Link to="/AboutSsua">𝐒𝐒𝐔-𝐀</Link></li>
-                                <li><Link to="/AboutSsunivers">SSUNIVERSE</Link></li>
+                                <li><Link to="/AboutSsuniverse">SSUNIVERSE</Link></li>
                             </ul>
                 </li>
                 <li><a href="https://www.ssunivs.com/">

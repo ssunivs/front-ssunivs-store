@@ -8,7 +8,7 @@ import {
 //Pages -> 코드 줄이는 거 연구필요..
 import Home from "pages/Home";
 import AboutSsua from "pages/AboutSsua";
-import AboutSsunivers from "pages/AboutSsunivers";
+import AboutSsuniverse from "pages/AboutSsuniverse";
 import News from "pages/News";
 import Reservation from "pages/Reservation";
 import Notice from "pages/notice/Notice";
@@ -35,7 +35,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/AboutSsua" component={AboutSsua} />
-            <Route path="/AboutSsunivers" component={AboutSsunivers} />
+            <Route path="/AboutSsuniverse" component={AboutSsuniverse} />
             <Route path="/News" component={News}/>
             <Route path="/Reservation" component={Reservation} />
             <Route path="/Notice" component={Notice} />
