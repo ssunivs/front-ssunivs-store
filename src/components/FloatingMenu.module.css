@@ -1,3 +1,11 @@
+.scrollToTop{
+    display : none;
+}
+
+.scrollToTopHidden{
+	display: none;
+}
+
 .floatingMenu{
     position:fixed;
 	display:block;
@@ -53,5 +61,11 @@
 	}
 	.openDetailMenu{
 		padding-inline-start: 18px;
+	}
+	.scrollToTop{
+		display :block;
+		position:fixed;
+		bottom: 100px;
+		right: 47px;
 	}
 }
