@@ -67,5 +67,6 @@
 		position:fixed;
 		bottom: 100px;
 		right: 47px;
+		cursor: pointer;
 	}
 }
