@@ -13,6 +13,31 @@ import getDay from "date-fns/getDay";
 import {Link} from "react-router-dom";
 // import reservation_img from "assets/reservation_img.png";
 
+// import axios from "axios";
+
+// function rsvFin(){
+//     const name = document.getElementById("rsv_name");
+//     const tel = document.getElementById("rsv_tel");
+//     const email = document.getElementById("rsv_email");
+//     const date = document.getElementById("rsv_date");
+
+//     axios({
+//         method:"POST",
+//         url: '/Reservation',
+//         data:{
+//             "name" : name.value,
+//             "tel" : tel.value,
+//             "email": email.value,
+//             "date": date.value
+//         }
+//     }).then((res)=>{
+//         console.log(res);
+//     }).catch(error=>{
+//         console.log(error);
+//         throw new Error(error);
+//     });
+// }
+
 function Reservation(){
     const [startDate, setStartDate] = useState(
         setHours(setMinutes(new Date(), 30), 16)
@@ -66,6 +91,7 @@ function Reservation(){
                 <br></br>
                 <p>방문 가능 한 날짜와 시간을 선택해주세요</p>
                     <DatePicker
+                    id = "rsv_date"
                     locale={ko}
                     selected={startDate}
                     onChange={date => setStartDate(date)}
@@ -136,7 +162,7 @@ function Reservation(){
             </div>
             <br></br>
             
-            <button id={styles.reservationFinBnt} type="submit">
+            <button id={styles.reservationFinBnt} type="submit" onclick="rsvFin()">
                     예약하기</button>
             </form>
 
