@@ -37,6 +37,8 @@
     border-top: none;
     border-left: none;
     border-right: none;
+
+    margin-right: 10px;
 }
 
 .editorSelects{

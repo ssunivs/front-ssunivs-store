@@ -15,7 +15,7 @@ const Board = () => {
         id: '',
         title: '',
         content: '',
-        division: '',
+        sort: '',
         writer: '',
         postDate: ''
     });
@@ -50,7 +50,7 @@ const Board = () => {
                 id: selected.id,
                 title: selected.title,
                 content: selected.content,
-                division: selected.division,
+                sort: selected.sort,
                 writer: selected.writer,
                 postDate: selected.postDate
             });
@@ -69,7 +69,7 @@ const Board = () => {
             id: '',
             title: '',
             content: '',
-            division: '',
+            sort: '',
             writer: '',
             postDate: ''
         })
@@ -112,18 +112,19 @@ const Board = () => {
 
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
+            {/* 분류 카테고리 구현 개빡세겠는데 ㅋㅋ */}
+            
             <table className={tableStyle.notice_table}
                    style={{display:(writeMode||reviseState)? 'none':''}}
                    border="0">
                 <thead>
                     <tr className={tableStyle.notice_table}>
-                        <th>No.</th>
+                        <th style={{display: (adminState)? "" : "none"}}>No.</th>
                         <th>분류</th>
                         <th>제목</th>
                         <th>작성자</th>
                         <th>작성일</th>
-                        <th style={{
-                            display: (adminState)? "" : "none"}}></th>
+                        <th style={{display: (adminState)? "" : "none"}}></th>
                     </tr>
                 </thead>
                 <tbody>

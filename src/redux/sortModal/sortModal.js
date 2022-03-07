@@ -23,28 +23,33 @@ const SortModal = () =>{
              <div id={styles.modalContainer}
                   onClick={e => e.stopPropagation()}>
               <h3>Sort 그룹관리</h3>
-               <fieldset>
+               <fieldset className={styles.sortListArea}>
                 <legend>현재</legend>
-                 <div>sortList 영역</div>
+                 <i>sortList 영역</i>
                </fieldset>
 
-              <form><fieldset>
-               <legend>추가</legend>
+              <div>
+              <form>
                 <input type="text"
-                       name="addedSort" required/>
-              </fieldset></form>
+                      name="addedSort"
+                      className={styles.sortInput} required/>
+                <button>추가하기</button>
+              </form>
 
-              <form><fieldset>
-               <legend>삭제</legend>
+              <form>
                 <input type="text"
-                       name="DeletedSort" required/>
-              </fieldset></form>
+                      name="DeletedSort"
+                      className={styles.sortInput} required/>
+                 <button>삭제하기</button>
+              </form>
+              </div>
+
              </div>
 
           </div>
          </div>
             <button type="button"
-                    style={{fontSize: "11px"}}
+                    style={{fontSize: "11px", width: "60px"}}
                     onClick={handleSortModalOpen}>그룹관리</button>
         </div>
     );
