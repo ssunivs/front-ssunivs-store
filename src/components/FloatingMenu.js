@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import {Link} from "react-router-dom";
 import styles from "components/FloatingMenu.module.css";
 import fixSsuaIcon from "../assets/ssua_floating_btn.png";
 import {GrMail,GrInstagram} from "react-icons/gr"
@@ -64,12 +64,11 @@ function FloatingMenu() {
                         rel="noopener noreferrer">
                             <li id={styles.floatingDetailIcons}><GrInstagram size="35" color="#04488C"/></li>
                         </a>
-                        <a title="Mail"
-                        href="mailto:ssua@ssunivs.com"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            <li id={styles.floatingDetailIcons}><GrMail size="35" color="#04488C"/></li>
-                        </a>
+                        <Link to="/Contact" title="Contact">
+                            <li id={styles.floatingDetailIcons}>
+                                <GrMail size="35" color="#04488C"/>
+                                </li>
+                        </Link>
                 </ul>
                     <img 
                     className={styles.fixSsuaIcon}
