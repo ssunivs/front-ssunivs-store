@@ -2,6 +2,8 @@ import styles from "pages/Contact.module.css";
 import mapStyles from "pages/Reservation.module.css";
 import {Link} from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
+import headTitle from "pages/headTitle.module.css";
+import NavBar from "components/NavBar.js";
 
 function Contact(){
         const Captcha = () => {
@@ -19,9 +21,10 @@ function Contact(){
     };
     return (
         <div>
-            <h1 className={styles.contact_head}>Contact</h1>
+            <br></br>
+            <NavBar />
+            <h1 className={headTitle.head}>CONTACT US</h1>
             <form className={styles.form} name="Contact" method="post" action="">
-
                     <label className={styles.contactForm}>
                     기업명 <input type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
@@ -46,7 +49,8 @@ function Contact(){
 
                     <label className={styles.contactForm}>
                     내용<br></br><br></br>
-                    <textarea className={styles.contactForm} name="contact_contents" required cols="173" rows="10"></textarea>
+                        <input type = "text" className={styles.contactForm}
+                        name="contact_contents" required cols="173" rows="10"></input>
                     </label>
                     <br></br><br></br>
                     <hr id={styles.contactLine2}></hr>
