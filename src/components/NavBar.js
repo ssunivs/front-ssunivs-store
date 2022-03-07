@@ -31,6 +31,13 @@ function NavBar (){
                                 <li><Link to="/FAQ">자주 묻는 질문</Link></li>
                             </ul>
                 </li>
+                <li><a href="/Contact">
+                    CONTACT<i><BiChevronDown /></i></a>
+                        <span className={styles.accent}></span>
+                            <ul className={styles.dropdown}>
+                                <li><Link to="/Contact">Contact Us</Link></li>
+                            </ul>
+                </li>
             </ul>
         </div>
     );
