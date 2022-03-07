@@ -25,11 +25,15 @@ import Footer from "components/Footer";
 import FloatingMenu from "components/FloatingMenu";
 import Wrap from "components/Wrap";
 
+//Scroll to top
+import ScrollToTop from "components/ScrollToTop";
+
 function App() {
 
   return (
       <Router>
         <Wrap>
+          <ScrollToTop />
           <Header />
           <FloatingMenu />
           <Switch>
