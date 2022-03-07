@@ -8,7 +8,7 @@ export const boardSave = (dataToSave) =>{
             id: dataToSave.id, //고유 id
             title: dataToSave.title,
             content: dataToSave.content,
-            division: dataToSave.division,
+            sort: dataToSave.sort,
             writer: dataToSave.writer,
             postDate: dataToSave.postDate
           }

@@ -11,6 +11,7 @@ import setMinutes from "date-fns/setMinutes";
 import getDay from "date-fns/getDay";
 
 import {Link} from "react-router-dom";
+// import reservation_img from "assets/reservation_img.png";
 
 function Reservation(){
     const [startDate, setStartDate] = useState(
@@ -121,11 +122,14 @@ function Reservation(){
             <span>주소</span>
             <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
             </p>
+            {/* <img 
+                className={styles.reservationImg}
+                src={reservation_img}
+                alt="reservation_img" 
+                /> */}
             <label id={styles.privacyCheck}>
             <input type="checkbox" name="rsv_agree" required></input>
-            {/* <div id={styles.privacyAgree}> */}
                 <span id={styles.privacyAgree}>개인정보동의서에 동의합니다.</span>   
-            {/* </div >             */}
             </label>
             <div id={styles.privacyLink}>
                 <span><Link to="/Privacy">(약관보기)</Link></span>

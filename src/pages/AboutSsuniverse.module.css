@@ -1,0 +1,26 @@
+.aboutSsuniverseImg{
+    width: 80%;
+    margin :auto;
+    display :block;
+}
+
+@media screen and (max-width:1199px){
+    /* 타블렛 가로 */
+    .aboutSsuniverseImg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:899px) {
+    /* 모바일 가로, 타블렛 세로 */
+    .aboutSsuniverseImg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:599px) {
+        /* 모바일 세로 */
+        .aboutSsuniverseImg{
+            width: 100%;
+        }
+}

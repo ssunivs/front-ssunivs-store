@@ -11,7 +11,7 @@ import { EditorState,
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-import SortModal from "redux/sortModal/sortModal";
+import SortModal from "redux/sortModal/SortModal";
 
 const RichTextEditor = ({ setContent, setPost }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -23,7 +23,7 @@ const RichTextEditor = ({ setContent, setPost }) => {
       id: selected.id,
       title: selected.title,
       content: selected.content,
-      division: selected.division,
+      sort: selected.sort,
       writer: selected.writer,
       postDate: selected.postDate
     });
@@ -120,12 +120,13 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
                            onChange={onChangeTitle}/>
                     
                     <div className={styles.sortPosition}>
-                        <select name="division" className={styles.editorSelects}
+                        <select name="sort" className={styles.editorSelects}
                             onChange={changeInput} required>
                             <option value="">분류</option>
-                            <option selected={(selected.division==='shop')? true : false}>shop</option>
-                            <option selected={(selected.division==='ssua')? true : false}>ssua</option>
-                            <option selected={(selected.division==='etc')? true : false}>etc</option>
+                            <option selected={(selected.sort==='shop')? true : false}>shop</option>
+                            <option selected={(selected.sort==='ssua')? true : false}>ssua</option>
+                            <option selected={(selected.sort==='카테고리')? true : false}>카테고리</option>
+                            <option selected={(selected.sort==='etc')? true : false}>etc</option>
                         </select>
                         <SortModal />
                     </div>

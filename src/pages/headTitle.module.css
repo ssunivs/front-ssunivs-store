@@ -1,11 +1,11 @@
 .head{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 150px;
     margin-bottom: 50px;
     color: #4b4b4b;
     font-family:'Segoe UI';
     font-size: 30px;
-    font-weight:normal;
+    font-weight:bold;
 
     animation: fadein 1s;
 }

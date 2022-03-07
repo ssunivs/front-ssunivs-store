@@ -63,8 +63,8 @@ function Menu(){
                 <Link to="/AboutSsua"><li className={styles.list}
                                         style={{color: (path==="/AboutSsua")? "#A5D1FC" : ""}}>𝐒𝐒𝐔-𝐀</li></Link>
                     <br></br>
-                <Link to="/AboutSsunivers"><li className={styles.list}
-                                            style={{color: (path==="/AboutSsunivers")? "#A5D1FC" : ""}}>SSUNIVERSE</li></Link>                           
+                <Link to="/AboutSsuniverse"><li className={styles.list}
+                                            style={{color: (path==="/AboutSsuniverse")? "#A5D1FC" : ""}}>SSUNIVERSE</li></Link>                           
                 </ul>
                     <br></br>
                 <li>STORE</li>

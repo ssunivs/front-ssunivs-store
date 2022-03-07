@@ -5,6 +5,7 @@
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: larger;
 }
 
 #reservationNotice > p{
@@ -61,6 +62,7 @@
     background-color: #4ba5ff;
     cursor: pointer;
     border: none;
+    border-radius: 10px;
 }
 
 #reservationOtherTimeBnt{
@@ -71,6 +73,7 @@
     background-color: #aaaaaa;
     cursor: pointer;
     border: none;
+    border-radius: 10px;
 }
 
 #map{
@@ -111,6 +114,12 @@
 
 .reservationInput{
     display: inline-block;
+}
+
+.reservationImg{
+    width: 800px;
+    margin :auto;
+    display :block;
 }
 @media screen and (max-width:599px) {
     /* 모바일 세로 */

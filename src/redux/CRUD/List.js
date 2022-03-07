@@ -7,8 +7,8 @@ const List = ({ no, className, post, postClickHandler, onDelete }) => {
     
     return(
             <tr className={className}>
-                <td>{no.toString().padStart(3,'0')}</td>
-                <td>{post.division}</td>
+                <td style={{display: (adminState)? "":"none"}}>{no.toString().padStart(3,'0')}</td>
+                <td>{post.sort}</td>
                 <td
                     onClick={()=>postClickHandler(post.id)}>
                     <Link to="/Notice.post">{post.title}</Link>

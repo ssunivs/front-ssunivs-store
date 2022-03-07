@@ -8,7 +8,7 @@ const initialState = {
     selected : {} //find함수를 통해서 boards에서 선택된 데이터를 넣을 예정
 }
 
-const axiosPost = (dataToSave) => {
+const uploadPost = (dataToSave) => {
 
   axios.post('/api/v1/post',
   {
@@ -41,12 +41,12 @@ const boardReducer = (state=initialState,action)=>{
           let dataToSave = action.dataToSave;
           let ids = state.ids;
             if(!dataToSave.id){ //id가 없으면
-              axiosPost(dataToSave);
+              uploadPost(dataToSave);
                 return {
                   ids: ids + 1,
                   boards: boards.concat({...dataToSave, id: ids + 1,
                           title: dataToSave.title, content: dataToSave.content, 
-                          postDate: saveDate, division: dataToSave.division,
+                          postDate: saveDate, sort: dataToSave.sort,
                           writer: dataToSave.writer}),
                   // boards: boards.concat({...dataToSave, })
                   
