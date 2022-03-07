@@ -12,6 +12,7 @@
 	/*화면 전체에서 얼마나 떨어져서 floating*/
 	bottom: 30px;
 	right: 50px;
+	z-index: 2;
 }
 
 .fixSsuaIcon{

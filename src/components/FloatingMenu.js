@@ -42,7 +42,7 @@ function FloatingMenu() {
         <div>
             <div className={open?  styles.scrollToTopHidden : styles.scrollToTop}
                 onClick={handleTop}>
-                <BiChevronUpCircle size="35" color="#04488C"/>
+                <BiChevronUpCircle size="35" color="#B0C4DE" opacity="0.5" />
             </div>
             <div className={styles.floatingMenu}>
                 <ul className={open? styles.openDetailMenu : styles.floatingDetailMenu}>
