@@ -1,28 +1,54 @@
 .contactForm{
     display:inline-block; 
-    /* padding-left:100px;
-    padding-right : 30px; */
-    margin-left:6%;
-    margin-right:6%
-}
-.contactForm input{
-    width:450px;
-    border:none; 
-}
-.contactForm textarea{
-    border : none;
 }
 
-.contactForm input:focus, .contactForm{
+.contactName{
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.smallForm{
+    width: 500px;
+    height: 30px;
+    border:none; 
+}
+
+.smallForm2{
+    width:435px;
+    height:30px;
+    border:none; 
+}
+
+.textForm{
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 1273px;
+    height: 300px;
+    resize: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: none;
+}
+
+.contactForm input:focus, .textForm:focus{
     outline: none;
 }
+
 #contactLine{
-    border: 0;
-    height: 0;
+    margin-left: 70px;
+    width: 90%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #2c2c2c;
-    width : 530px;
 }
+
+#contactLine2{
+    width: 90%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #2c2c2c;
+}
+
 .contactSend{
     border-radius: 100px;
     display :block;
@@ -33,20 +59,8 @@
     color : white;
     border: none;
     background-color: #6e96ec;
+}
 
-}
-#contactLine2{
-    /* margin-left : 150px;
-    margin-right : 165px; */
-    margin-left:6%;
-    margin-right:16%;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #2c2c2c;
-}
-.contactCenter {
-    /* display:block; */
-    margin : auto;
-}
 .contactBox input{
     margin-left : 6%;
 }
@@ -54,6 +68,7 @@
     text-underline-position: under;
     text-decoration: underline;
 }
+
 .recaptcha{
     margin-left:5%;
     margin-right:10%;
@@ -62,52 +77,48 @@
 
 /*모바일 세로 구현*/
 @media screen and (max-width:599px) {
-    .contact_head{
-        font-size:200%;
-        margin-left:0%;
+    .contactName{
+        margin-left: 0px;
+        margin-bottom: 5px;
+        font-size: 15px;
     }
-    .contactForm{
-        display:inline-block; 
-        margin-left:0%;
+    .smallForm{
+        width: 300px;
+        height: 30px;
     }
-    .contactForm input{
-        width:100px;
-        border:none; 
+    .smallForm2{
+        width:300px;
+        height:30px;
     }
-    .contactForm textarea{
-        border : none;
+
+    .textForm{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 300px;
+        height: 300px;
     }
-    .contactForm input:focus, .contactForm{
-        outline: none;
-    }
+
     #contactLine{
-        border: 0;
-        height: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid #2c2c2c;
-        width : 300px;
+        margin-left: 0px;
+        width: 100%;
     }
-    .contactSend{
-        border-radius: 100px;
-        display :block;
-        margin : auto;
-        width : 90px;
-        height : 40px;
-        font-size : 20px;
-        color : white;
-        border-color:  #6e96ec;
-        background-color: #6e96ec;  
-    }
+    
     #contactLine2{
         margin-left:0%;
-        border: 0;
-        height: 0;
+        /* border: 0;
+        height: 0; */
+        width : 100%;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid #2c2c2c;
-        width : 300px;
     }
+
+    .contactSend{
+        width : 120px;
+        height : 50px;
+        font-size : 20px;
+    }
+
     .contactCenter {
-        /* display:block; */
         margin : auto;
     }
     .contactBox input{
