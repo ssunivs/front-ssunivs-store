@@ -16,6 +16,17 @@
     to   { opacity: 1; transform: translateY(0);}
 }
 
+.sortSelection{
+    width : 95%;
+    max-width: 900px;
+    margin: auto;
+
+    color: #A5D1FC;
+    font-weight: bold;
+
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
 
 /* BoardNew */
 .editorElements{

@@ -14,7 +14,6 @@
     font-size: 16px;
     color: #04488C;
     
-    border-collapse: collapse;
     border-bottom: 2px solid rgb(231, 231, 231);
 }
 
@@ -73,11 +72,12 @@
 }
 
 .notice_listRow:hover{
-    letter-spacing: 0.8px;
-    transform: scale(1.05);
-
     height: 50px;
     background-color: #e3effe;
+    
+    border-collapse: collapse;
+    letter-spacing: 0.8px;
+    transform: scale(1.05);
 }
 
 /* NoticePost */
