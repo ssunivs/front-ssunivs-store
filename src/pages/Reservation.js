@@ -85,7 +85,8 @@ function Reservation(){
                 <div className={styles.reservationInput}>
                         <span>이메일</span>
                     </div>
-                    <input id="rsv_email" type="email" name="rsv_email" required></input>
+                    <input id="rsv_email" type="email" name="rsv_email" required
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3}$"></input>
                 </label>
                 <hr></hr>
                 <br></br>
