@@ -21,7 +21,8 @@
 
 .mainLogo{
     align-items: center;
-    width: 170px;
+    padding-top: 30px;
+    width: 200px;
 }
 
 /* #storeLogo{
@@ -34,44 +35,60 @@
 }
 
 @keyframes rotate{
-	 100% {
-    	transform: rotate(360deg);
+	100% {
+        transform: rotate(360deg);
     }
 }
 
-.helloSsunivs{
-    position: absolute;
-    cursor: pointer;
-    z-index: 3;
-    width: 150px;
-    left: 375%;
-    bottom: 40%;
-}
-
 .storeLogo {
-    /* position: absolute;
-    top: 30;
-    right: 0; */
     position: absolute;
     top: 30px;
 	right: 30px;
 }
 
 #storeLogoImage {
-    height: 80px;
+    height: 90px;
     cursor: pointer;
 }
 
-@media screen and (max-width:599px) {
-    /*모바일세로크기*/
+@media screen and (max-width:899px) {
+    /* 모바일 가로, 타블렛 세로 */
     .mainLogo{
-        align-items: center;
-        width: 130px;
+        width: 170px;
     }
     .Logos{
         left: 50%;
         transform: translateX(-50%); /* 로고 중앙 맞추기 위해*/
         padding-top: 40px;
+    }
+    #storeLogoImage {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    /*모바일세로크기*/
+    .mainLogo{
+        width: 130px;
+    }
+    .Logos{
+        left: 50%;
+        transform: translateX(-50%); /* 로고 중앙 맞추기 위해*/
+        padding-top: 30px;
+    }
+    #storeLogoImage {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:299px) {
+    .mainLogo{
+        width: 90px;
+    }
+    .Logos{
+        left: 50%;
+        transform: translateX(-50%); /* 로고 중앙 맞추기 위해*/
+        padding-top: 10px;
     }
     #storeLogoImage {
         height: 50px;
