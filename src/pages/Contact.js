@@ -24,45 +24,64 @@ function Contact(){
             <br></br>
             <NavBar />
             <h1 className={headTitle.head}>CONTACT US</h1>
+
             <form className={styles.form} name="Contact" method="post" action="">
                     <label className={styles.contactForm}>
-                    기업명 <input type="text" name="contact_name1" maxlenght="30" required></input> 
+                    <span className={styles.contactName}>기업명/단체명</span>
+                    <input className={styles.smallForm2}
+                    type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
                     
                     <label className={styles.contactForm}>
-                    이름 <input type="text" name="contact_name1" maxlenght="30" required></input> 
+                    <span className={styles.contactName}>&nbsp;이&nbsp;름&nbsp;</span>
+                    <input className={styles.smallForm}
+                    type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
                     <br></br><br></br>
                     
                     <label className={styles.contactForm}>
-                    이메일 <input type="text" name="contact_name1" maxlenght="30" required></input> 
+                    <span className={styles.contactName}>이메일 </span>
+                    <input className={styles.smallForm}
+                    type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
 
                     <label className={styles.contactForm}>
-                    연락처 <input type="text" name="contact_name1" maxlenght="30" required></input> 
+                    <span className={styles.contactName}>연락처 </span>
+                    <input className={styles.smallForm} 
+                    type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
                     <br></br><br></br>
 
-                    <label className={styles.contactForm}>
-                    내용<br></br><br></br>
-                        <input type = "text" className={styles.contactForm}
-                        name="contact_contents" required cols="173" rows="10"></input>
+                    <label>
+                    <span className={styles.contactName}>내용</span>
+                    <br></br><br></br>
+                        <textarea 
+                        className={styles.textForm}
+                        name="contact_contents"
+                        cols="40" rows="5" required>
+                        </textarea>
                     </label>
                     <br></br><br></br>
+
                     <hr id={styles.contactLine2}></hr>
                     <br></br>
+
                     <label className={styles.contactBox}>
-                    <input type="checkbox" name="agree" required></input><span id={styles.contactagree}>개인정보동의서에 동의합니다.</span><span id={styles.contactLink}><Link to="/Privacy"> (약관보기)</Link></span>
+                    <input type="checkbox" name="agree" required></input>
+                    <span id={styles.contactagree}>개인정보동의서에 동의합니다.</span>
+                    <span id={styles.contactLink}><Link to="/Privacy"> (약관보기)</Link></span>
                     </label>
                     <br></br><br></br>
+
                     <fieldset class={styles.recaptcha}>
-                    <Captcha/>
+                        <Captcha/>
                     </fieldset>
                     <br></br>
+
                     <input className={styles.contactSend} type="submit" value="Send" name="agreecheckbox"></input>
                     <br></br>
             </form>
