@@ -6,7 +6,6 @@ import click from "assets/click.png"; //수정
 // import Modal from "components/HomeModal";
 import Modal from "components/HomeModal2";
 
-
 function Home(){
     
     return (

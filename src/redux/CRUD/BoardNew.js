@@ -5,8 +5,8 @@ import styles from "./Board.module.css";
 import { useState, useEffect } from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState,
-         convertToRaw,
-         convertFromRaw } from 'draft-js';
+        convertToRaw,
+        convertFromRaw } from 'draft-js';
 
 import editorStyles from './RichTextEditor.module.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -78,7 +78,7 @@ const RichTextEditor = ({ setContent, setPost }) => {
           editorState={editorState}
           onEditorStateChange={onEditorStateChange}
         />
-       </div>
+      </div>
     );
   };
 
@@ -115,9 +115,9 @@ const BoardNew = ({ onSave, changeInput, setContent, post, resetForm, setPost })
             <form onSubmit={onSubmit}>
                 <div className={styles.editorElements}>
                     <input type="text" className={styles.editorTitle}
-                           name="title" value={title} required
-                           placeholder='제목'
-                           onChange={onChangeTitle}/>
+                          name="title" value={title} required
+                          placeholder='제목'
+                          onChange={onChangeTitle}/>
                     
                     <div className={styles.sortPosition}>
                         <select name="sort" className={styles.editorSelects}

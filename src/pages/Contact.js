@@ -44,7 +44,8 @@ function Contact(){
                     <label className={styles.contactForm}>
                     <span className={styles.contactName}>이메일 </span>
                     <input className={styles.smallForm}
-                    type="text" name="contact_name1" maxlenght="30" required></input> 
+                    type="email" name="contact_name1" maxlenght="30" required
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3}$"></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
 

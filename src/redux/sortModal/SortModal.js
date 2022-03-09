@@ -16,17 +16,17 @@ const SortModal = () =>{
 
     return (
         <div>
-         <div hidden={!show}>
+        <div hidden={!show}>
           <div id={styles.modalBackground}
-               onClick={handleSortModalClose}>
+              onClick={handleSortModalClose}>
 
-             <div id={styles.modalContainer}
+            <div id={styles.modalContainer}
                   onClick={e => e.stopPropagation()}>
               <h3>Sort 그룹관리</h3>
-               <fieldset className={styles.sortListArea}>
+              <fieldset className={styles.sortListArea}>
                 <legend>현재</legend>
-                 <i>sortList 영역</i>
-               </fieldset>
+              <i>sortList 영역</i>
+              </fieldset>
 
               <div>
               <form>
@@ -40,14 +40,14 @@ const SortModal = () =>{
                 <input type="text"
                       name="DeletedSort"
                       className={styles.sortInput} required/>
-                 <button>삭제하기</button>
+                <button>삭제하기</button>
               </form>
               </div>
 
-             </div>
+            </div>
 
           </div>
-         </div>
+        </div>
             <button type="button"
                     style={{fontSize: "11px", width: "60px"}}
                     onClick={handleSortModalOpen}>그룹관리</button>
