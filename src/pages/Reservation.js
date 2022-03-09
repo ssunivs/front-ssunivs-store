@@ -58,6 +58,30 @@ function Reservation(){
     var maxTime = new Date();
     maxTime.setMinutes(0);
     maxTime.setHours(18);
+
+    // function rsvFin(){
+    //     const name = document.getElementById("rsv_name");
+    //     const tel = document.getElementById("rsv_tel");
+    //     const email = document.getElementById("rsv_email");
+    //     const date = document.getElementById("rsv_date");
+    
+    //     axios({
+    //         method:"POST",
+    //         url: '/api/v1/order/pickup',
+    //         data:{
+    //             "name" : name.value,
+    //             "tel" : tel.value,
+    //             "email": email.value,
+    //             "date": date.value
+    //         }
+    //     }).then((res)=>{
+    //         console.log(res);
+    //     }).catch(error=>{
+    //         console.log(error);
+    //         throw new Error(error);
+    //     });
+    // }
+
     return (
         <div>
             <br></br>
@@ -163,7 +187,7 @@ function Reservation(){
             </div>
             <br></br>
             
-            <button id={styles.reservationFinBnt} type="submit" onclick="rsvFin()">
+            <button id={styles.reservationFinBnt} type="submit">
                     예약하기</button>
             </form>
 
