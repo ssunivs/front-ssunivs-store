@@ -45,11 +45,29 @@
     transition: all 0.5s;
 }
 
+
+@media screen and (max-width:899px) {
+  /* 모바일 가로, 타블렛 세로 */
+    .couponTag{
+      height: 7vmax;
+      top: 70vh;
+    }
+  .couponImg{
+    width: 520px;
+    height: 300px;
+    }
+  .modalCard{
+    width: 500px;
+    height: 300px;
+    }
+}
+
+
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
     .couponTag{
-            height: 50px;
-            top: 320px;
+            height: 8vmax;
+            top: 65vh;
     }
     .couponImg{
             width: 280px;
@@ -59,4 +77,19 @@
             width: 280px;
             height: 200px;
     }
+}
+
+@media screen and (max-width:299px) {
+  .couponTag{
+    height: 40px;
+    top: 60vh;
+  }
+.couponImg{
+    width: 280px;
+    height: 200px;
+  }
+.modalCard{
+    width: 280px;
+    height: 200px;
+  }
 }

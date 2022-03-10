@@ -1,5 +1,6 @@
 #home {
     text-align: center;
+    padding-top: 10vmin;
 }
 
 .clickStore{
@@ -57,43 +58,26 @@
     }
 }
 
-@media screen and (max-width:1199px){
-    /* 타블렛 가로 */
-    .mainSsua1{
-        width: 200px;
-        position: relative;
-        bottom: 20px;
-    }
-    
-    .mainSsua2{
-        width: 200px;
-        position: relative;
-        top : 40px;
-    }
-    
-    .mainSsua3{
-        width: 200px;
-        position: relative;
-        bottom: 20px;
-    }
-}
 
 @media screen and (max-width:899px) {
     /* 모바일 가로, 타블렛 세로 */
+    #home {
+        padding-top: 30vmin;
+    }
     .mainSsua1{
-        width: 170px;
+        width: 26vmin;
         position: relative;
         bottom: 20px;
     }
     
     .mainSsua2{
-        width: 170px;
+        width: 26vmin;
         position: relative;
         top : 40px;
     }
     
     .mainSsua3{
-        width: 170px;
+        width: 26vmin;
         position: relative;
         bottom: 20px;
     }
@@ -101,30 +85,54 @@
 
 @media screen and (max-width:599px) {
         /* 모바일 세로 */
+        #home {
+            padding-top: 25vmin;
+        }
         .mainSsua1{
-            width: 98px;
-            position: relative;
+            width: 25vmin;
             bottom: 20px;
         }
         
         .mainSsua2{
-            width: 98px;
-            position: relative;
+            width: 25vmin;
             top : 40px;
         }
         
         .mainSsua3{
-            width: 98px;
-            position: relative;
+            width: 25vmin;
             bottom: 20px;
         }
         .clickStore{
-            position: absolute;
             top: 80px;
             right: 30px;
             height: 40px;
-            /* z-index: 3; */
         }
+}
+
+@media screen and (max-width:299px) {
+    /* 모바일 세로 */
+    #home {
+        padding-top: 30vmin;
+    }
+    .mainSsua1{
+        width: 22vmin;
+        bottom: 20px;
+    }
+    
+    .mainSsua2{
+        width: 22vmin;
+        top : 40px;
+    }
+    
+    .mainSsua3{
+        width: 22vmin;
+        bottom: 20px;
+    }
+    .clickStore{
+        top: 80px;
+        right: 30px;
+        height: 40px;
+    }
 }
 
 @keyframes fadein {
