@@ -61,18 +61,20 @@
 .notice_listRow {
     width : 95%;
     max-width: 900px;
-    height : 50px;
+    height : 60px;
     margin : auto;
+    
+    font-weight: 400;
 
     border-collapse: collapse;
     text-align: center;
     border-bottom: 0.8px solid rgb(231, 231, 231);
-
+    
     transition: all 0.4s;
 }
 
 .notice_listRow:hover{
-    height: 50px;
+    height: 70px;
     background-color: #e3effe;
     
     border-collapse: collapse;
@@ -80,8 +82,12 @@
     transform: scale(1.05);
 }
 
+.notice_listOnlyMobile{
+    display: none;
+}
+
 /* NoticePost */
-#aboveContainer{
+#overContainer{
     width : 95%;
     max-width: 900px;
     margin : auto;
@@ -133,23 +139,41 @@
     align-items: center;
 }
 
-@media screen and (max-width:750px) {
-    .notice_table th:nth-child(-n+2){
-        width: 60px;
+@media screen and (max-width:700px) {
+    .notice_table{
+        border-top: 0.8px solid rgb(231, 231, 231);
     }
-    
-    .notice_table th:nth-child(n+4):nth-child(-n+5){
-        width: 60px;
+
+    #notice_th{
+        display: none;
+    }
+
+    .notice_listOnlyWeb{
+        display: none;
+    }
+
+    .notice_listOnlyMobile{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        
+        font-size: 0.8rem;
+    }
+
+    .notice_listTitle{
+        font-size: 1.2rem;
+    }
+
+    .notice_listOnlyMobile div{
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
-    .notice_table {
-        font-size: 14px;
-    }
 
-    #aboveContainer{
+    #overContainer{
         margin-top: auto;
         font-size: 1rem;
     }

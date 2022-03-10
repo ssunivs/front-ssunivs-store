@@ -120,7 +120,8 @@ const Board = () => {
                    style={{display:(writeMode||reviseState)? 'none':''}}
                    border="0">
                 <thead>
-                    <tr className={tableStyle.notice_table}>
+                    <tr id={tableStyle.notice_th}
+                        className={tableStyle.notice_table}>
                         <th style={{display: (adminState)? "" : "none"}}>No.</th>
                         <th>분류</th>
                         <th>제목</th>
@@ -135,7 +136,7 @@ const Board = () => {
                             (
                                 <List
                                     no={(boards.indexOf(post))+1}
-                                    className={tableStyle.notice_listRow}
+                                    tableStyle={tableStyle}
                                     post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
