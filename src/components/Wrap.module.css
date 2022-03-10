@@ -1,9 +1,34 @@
 #wrap{
-    padding: 50px 40px 100px 40px;
+    padding: 50px 40px 400px 40px;
 
     color: #2c2c2c;
     font-weight: 300;
-    font-family: "Roboto Slab", Arial, sans-serif;
+    font-family: "Roboto Slab", Arial,'Noto Sans KR', sans-serif;
 
     transition: all 0.5s;
+}
+
+@media screen and (max-width:1199px){
+    /* 타블렛 가로 */
+}
+
+@media screen and (max-width:899px) {
+    /* 모바일 가로, 타블렛 세로 */
+    #wrap{
+        padding: 50px 40px 500px 40px;
+    }
+    
+}
+
+@media screen and (max-width:599px) {
+        /* 모바일 세로 */
+        #wrap{
+            padding: 50px 40px 500px 40px;
+        }
+}
+
+@media screen and (max-width:299px) {
+    #wrap{
+        padding: 50px 40px 300px 40px;
+    }
 }

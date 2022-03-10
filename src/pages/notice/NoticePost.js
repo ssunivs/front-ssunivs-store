@@ -24,7 +24,7 @@ function NoticePost(){
         <div>
             <br></br>
             <NavBar />
-            <div id={styles.aboveContainer}>
+            <div id={styles.overContainer}>
                 <div className={styles.sort}>{selected.sort}</div>
                 <h1>{selected.title}</h1>
                 <div className={styles.information}>

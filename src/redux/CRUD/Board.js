@@ -35,6 +35,7 @@ const Board = () => {
             alert("저장되었습니다.");
             dispatch(boardSave(dataToSave));
             offWriteMode();
+            window.scrollTo(0, 0);
         }
     }
 
@@ -112,13 +113,15 @@ const Board = () => {
 
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
-            {/* 분류 카테고리 구현 개빡세겠는데 ㅋㅋ */}
-            
+            <div className={styles.sortSelection}>
+                전체(2)&nbsp; 카테고리(1)&nbsp; shop(1)
+            </div>
             <table className={tableStyle.notice_table}
                    style={{display:(writeMode||reviseState)? 'none':''}}
                    border="0">
                 <thead>
-                    <tr className={tableStyle.notice_table}>
+                    <tr id={tableStyle.notice_th}
+                        className={tableStyle.notice_table}>
                         <th style={{display: (adminState)? "" : "none"}}>No.</th>
                         <th>분류</th>
                         <th>제목</th>
@@ -133,7 +136,7 @@ const Board = () => {
                             (
                                 <List
                                     no={(boards.indexOf(post))+1}
-                                    className={tableStyle.notice_listRow}
+                                    tableStyle={tableStyle}
                                     post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
