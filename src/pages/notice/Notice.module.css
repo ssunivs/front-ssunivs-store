@@ -148,6 +148,14 @@
         display: none;
     }
 
+    .notice_listRow{
+        height: 70px;
+    }
+
+    .notice_listRow:hover{
+        height: 80px;
+    }
+
     .notice_listOnlyWeb{
         display: none;
     }
@@ -162,6 +170,7 @@
 
     .notice_listTitle{
         font-size: 1.2rem;
+        font-weight: 400;
     }
 
     .notice_listOnlyMobile div{
