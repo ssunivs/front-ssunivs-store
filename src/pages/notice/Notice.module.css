@@ -95,12 +95,20 @@
     margin-bottom: 50px;
 
     font-weight: bold;
-    font-size: 19px;
+    font-size: 22px;
+}
+
+.sort{
+    display: flex;
+    justify-content: flex-start;
+    color:#A5D1FC;
 }
 
 .information{
     display: flex;
     align-items: baseline;
+
+    font-weight: 400;
 }
 
 #container{
@@ -108,12 +116,6 @@
     max-width: 900px;
     min-height: 400px;
     margin : auto;
-}
-
-.sort{
-    display: flex;
-    justify-content: flex-start;
-    color:#A5D1FC;
 }
 
 .postInformation{
@@ -148,6 +150,14 @@
         display: none;
     }
 
+    .notice_listRow{
+        height: 80px;
+    }
+
+    .notice_listRow:hover{
+        height: 90px;
+    }
+
     .notice_listOnlyWeb{
         display: none;
     }
@@ -157,11 +167,12 @@
         justify-content: center;
         align-items: baseline;
         
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .notice_listTitle{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 400;
     }
 
     .notice_listOnlyMobile div{

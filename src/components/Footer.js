@@ -73,7 +73,7 @@ function Footer(){
     
                     <p>© 슈니버스 Co. All Rights Reserved. </p>
                 </div>
-                <SocialLinks size="25px" color="#666666"/>
+                <SocialLinks size="25px" color="#666666" position="footer"/>
             </div>
         </footer>
     );

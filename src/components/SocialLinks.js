@@ -12,7 +12,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 import styles from "components/SocialLinks.module.css";
 
-function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑니다
+function SocialLinks( { size, color, position } ){ //햄버거 메뉴, 푸터에 들어갑니다
     return (
         <div className={styles.socialIcons}>
             <a title="KakaoTalk"
@@ -28,9 +28,11 @@ function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑
                 rel="noopener noreferrer"
                 style={{fontSize : size,
                     color: color}}><HiOutlineMail className={styles.icon}/></a>
-            <br></br>
-            <CgLoadbar  className={styles.iconsConnection} size="15"/>
-            <br></br>
+            <br hidden={(position==='footer')}></br>
+            <CgLoadbar  className={styles.iconsConnection}
+                        style={{display:(position==='footer')?"none":""}}
+                        size="15"/>
+            <br hidden={(position==='footer')}></br>
             <a title="Instagram"
                 href="https://www.instagram.com/snvs.official/"
                 target="_blank"
@@ -51,7 +53,7 @@ function SocialLinks( { size, color } ){ //햄버거 메뉴, 푸터에 들어갑
                 rel="noopener noreferrer"
                 style={{fontSize : size,
                     color: color}}><RiYoutubeFill className={styles.icon}/></a>
-            <br></br>
+            <br hidden={(position==='footer')}></br>
             <a  title="Notion"
                 href="https://www.notion.so/ssuniverse/SSUNIVERSE-7373f0cd163d4d2ca0b1574389441727"
                 target="_blank"

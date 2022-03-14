@@ -113,21 +113,24 @@ const Board = () => {
 
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
-            <div className={styles.sortSelection}>
-                전체(2)&nbsp; 카테고리(1)&nbsp; shop(1)
+            <div className={styles.sortSelection}
+                 style={{display:(writeMode||reviseState)?"none":""}}>
+                <div>전체(2)</div>
+                <div>카테고리(1)</div>
+                <div>shop(1)</div>
             </div>
             <table className={tableStyle.notice_table}
-                   style={{display:(writeMode||reviseState)? 'none':''}}
+                   hidden={(writeMode||reviseState)}
                    border="0">
                 <thead>
                     <tr id={tableStyle.notice_th}
                         className={tableStyle.notice_table}>
-                        <th style={{display: (adminState)? "" : "none"}}>No.</th>
+                        <th hidden={!adminState}>No.</th>
                         <th>분류</th>
                         <th>제목</th>
                         <th>작성자</th>
                         <th>작성일</th>
-                        <th style={{display: (adminState)? "" : "none"}}></th>
+                        <th hidden={!adminState}></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -148,7 +151,7 @@ const Board = () => {
             </table>
 
             <div className={(adminState)&&!(writeMode||reviseState)? styles.editorElements:tableStyle.backToNoticeButton_positon}>
-                <button style={{display: (adminState)&&!(writeMode||reviseState)? '':'none'}}
+                <button hidden={!((adminState)&&!(writeMode||reviseState))}
                         onClick={offAdmin}>
                     관리자 로그아웃
                 </button>
@@ -160,7 +163,7 @@ const Board = () => {
                 </Link>
             </div>
 
-            <div style={{display: (writeMode||reviseState)? '':'none'}}>
+            <div hidden={!(writeMode||reviseState)}>
                 <BoardNew
                     onSave={onSave}
                     changeInput={changeInput}
