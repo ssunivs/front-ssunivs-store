@@ -114,8 +114,10 @@ const Board = () => {
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
             <div className={styles.sortSelection}
-                 hidden={(writeMode||reviseState)}>
-                전체(2)&nbsp; 카테고리(1)&nbsp; shop(1)
+                 style={{display:(writeMode||reviseState)?"none":""}}>
+                <div>전체(2)</div>
+                <div>카테고리(1)</div>
+                <div>shop(1)</div>
             </div>
             <table className={tableStyle.notice_table}
                    hidden={(writeMode||reviseState)}
