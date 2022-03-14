@@ -1,7 +1,7 @@
 /* 코드 정리필요... */
 .notice_table {
     width : 95%;
-    max-width: 900px;
+    max-width: 1000px;
     height : 40px;
     margin : auto;
 
@@ -47,7 +47,7 @@
 
 .backToNoticeButton_positon{
     width : 95%;
-    max-width: 900px;
+    max-width: 1000px;
     height : 40px;
     margin : auto;
     
@@ -60,8 +60,8 @@
 /* List */
 .notice_listRow {
     width : 95%;
-    max-width: 900px;
-    height : 60px;
+    max-width: 1000px;
+    height : 70px;
     margin : auto;
     
     font-weight: 400;
@@ -74,7 +74,7 @@
 }
 
 .notice_listRow:hover{
-    height: 70px;
+    height: 80px;
     background-color: #e3effe;
     
     border-collapse: collapse;
@@ -89,7 +89,7 @@
 /* NoticePost */
 #overContainer{
     width : 95%;
-    max-width: 900px;
+    max-width: 1000px;
     margin : auto;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -113,7 +113,7 @@
 
 #container{
     width : 95%;
-    max-width: 900px;
+    max-width: 1000px;
     min-height: 400px;
     margin : auto;
 }
@@ -132,7 +132,7 @@
 
 #underContainer{
     width : 95%;
-    max-width: 900px;
+    max-width: 1000px;
     min-height: 50px;
     margin : auto;
 
