@@ -8,13 +8,13 @@
     font-size: larger;
 }
 
-#reservationNotice > p{
+/* #reservationNotice > p{
     font-weight: 500;
 }
 
 #reservationNotice > span{
     font-weight:900;
-}
+} */
 
 #privacyAgree{
     display: inline-block;
@@ -37,7 +37,6 @@
 
 .reservationDateBnt{
     color: #fff;
-    font-weight: bolder;
     margin: auto;
     display: block;
     padding : 10px 20px;
@@ -84,7 +83,7 @@
 
 .reservationForm span{
     padding-right: 15px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .reservationForm hr{
@@ -109,7 +108,7 @@
 }
 
 .reservationForm p{
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .reservationInput{
