@@ -71,7 +71,7 @@ function Contact(){
                     </label>
                     <br></br><br></br>
 
-                    <hr id={styles.contactLine2}></hr>
+                    <hr id={styles.contactLine}></hr>
                     <br></br>
 
                     <label className={styles.contactBox}>

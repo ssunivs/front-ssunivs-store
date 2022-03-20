@@ -5,31 +5,33 @@
 .contactName {
     font-size: 20px;
     display: inline-block;
-    margin-left: 8%;
+    margin-left: 10%;
     margin-right: 8%;
+    margin-bottom: 10px;
 }
 
 .smallForm {
-    margin-left:1%;
-    width: 700px;
-    height: 60px;
+    margin-left:10%;
+    width: 80%;
+    height: 40px;
     border:none; 
+    font-size: 18px;
 }
 
 .smallForm2 {
-    margin-left:-3.5%;
-    width:435px;
-    height:30px;
+    margin-left:10%;
+    width:80%;
+    height:40px;
     border:none; 
+    font-size: 18px;
 } 
 
 .textForm{
-    margin-left: 8%;
-    margin-right: 8%;
-    width: 1273px;
+    margin-left: 10%;    
+    width: 80%;
     height: 300px;
     resize: none;
-    font-size: 15px;
+    font-size: 18px;
     font-family: sans-serif;
     border: none;
 }
@@ -39,18 +41,7 @@
 }
 
 #contactLine {
-    margin-left: 8%;
-    margin-right : 8%;
-    /* width: 90%; */
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #2c2c2c;
-}
-
-#contactLine2 {
-    margin-left: 8%;
-    margin-right : 8%;
-
-    /* width: 90%; */
+    width: 80%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #2c2c2c;
 }
@@ -89,6 +80,7 @@
         font-size: 15px;
     }
     .smallForm{
+        margin-left:0.5%;
         width: 300px;
         height: 30px;
     }
@@ -108,15 +100,6 @@
     #contactLine{
         margin-left: 0px;
         width: 100%;
-    }
-    
-    #contactLine2{
-        margin-left:0%;
-        /* border: 0;
-        height: 0; */
-        width : 100%;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid #2c2c2c;
     }
 
     .contactSend{
