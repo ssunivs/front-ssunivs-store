@@ -26,21 +26,22 @@ function Contact(){
             <h1 className={headTitle.head}>CONTACT US</h1>
 
             <form className={styles.form} name="Contact" method="post" action="">
+                    <br></br>
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>기업명/단체명</span>
+                    <span className={styles.contactName}>기업명 / 단체명</span>
                     <input className={styles.smallForm2}
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
+                    <br></br>
                     
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>&nbsp;이&nbsp;름&nbsp;</span>
+                    <span className={styles.contactName}>이&nbsp;름&nbsp;</span>
                     <input className={styles.smallForm}
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
-                    <br></br><br></br>
-                    
+                    <br></br>
                     <label className={styles.contactForm}>
                     <span className={styles.contactName}>이메일 </span>
                     <input className={styles.smallForm}
@@ -48,6 +49,7 @@ function Contact(){
                     pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$"></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
+                    <br></br>
 
                     <label className={styles.contactForm}>
                     <span className={styles.contactName}>연락처 </span>
@@ -55,7 +57,7 @@ function Contact(){
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
-                    <br></br><br></br>
+                    <br></br>
 
                     <label>
                     <span className={styles.contactName}>내용</span>

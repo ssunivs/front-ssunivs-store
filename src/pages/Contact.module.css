@@ -1,12 +1,12 @@
 .contactForm{
-    display:inline-block; 
+    display:block; 
 }
 
-.contactName{
+.contactName {
     font-size: 20px;
     display: inline-block;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 .smallForm{
@@ -22,8 +22,8 @@
 }
 
 .textForm{
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 8%;
+    margin-right: 8%;
     width: 1273px;
     height: 300px;
     resize: none;
@@ -36,15 +36,19 @@
     outline: none;
 }
 
-#contactLine{
-    margin-left: 70px;
-    width: 90%;
+#contactLine {
+    margin-left: 8%;
+    margin-right : 8%;
+    /* width: 90%; */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #2c2c2c;
 }
 
-#contactLine2{
-    width: 90%;
+#contactLine2 {
+    margin-left: 8%;
+    margin-right : 8%;
+
+    /* width: 90%; */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #2c2c2c;
 }
@@ -62,7 +66,7 @@
 }
 
 .contactBox input{
-    margin-left : 6%;
+    margin-left : 8%;
 }
 #contactLink{
     text-underline-position: under;
@@ -70,8 +74,8 @@
 }
 
 .recaptcha{
-    margin-left:5%;
-    margin-right:10%;
+    margin-left:7%;
+    margin-right:8%;
     border: 0px solid #e3e3e3;
 }
 
@@ -123,7 +127,7 @@
     }
     .contactBox input{
         font-size:1px;
-        margin-left : 0%;
+        margin-left :0%;
     }
     #contactLink{
         font-size:15px;
