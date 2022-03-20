@@ -11,32 +11,6 @@ import setMinutes from "date-fns/setMinutes";
 import getDay from "date-fns/getDay";
 
 import {Link} from "react-router-dom";
-// import reservation_img from "assets/reservation_img.png";
-
-// import axios from "axios";
-
-// function rsvFin(){
-//     const name = document.getElementById("rsv_name");
-//     const tel = document.getElementById("rsv_tel");
-//     const email = document.getElementById("rsv_email");
-//     const date = document.getElementById("rsv_date");
-
-//     axios({
-//         method:"POST",
-//         url: '/Reservation',
-//         data:{
-//             "name" : name.value,
-//             "tel" : tel.value,
-//             "email": email.value,
-//             "date": date.value
-//         }
-//     }).then((res)=>{
-//         console.log(res);
-//     }).catch(error=>{
-//         console.log(error);
-//         throw new Error(error);
-//     });
-// }
 
 function Reservation(){
     const [startDate, setStartDate] = useState(
@@ -58,29 +32,6 @@ function Reservation(){
     var maxTime = new Date();
     maxTime.setMinutes(0);
     maxTime.setHours(18);
-
-    // function rsvFin(){
-    //     const name = document.getElementById("rsv_name");
-    //     const tel = document.getElementById("rsv_tel");
-    //     const email = document.getElementById("rsv_email");
-    //     const date = document.getElementById("rsv_date");
-    
-    //     axios({
-    //         method:"POST",
-    //         url: '/api/v1/order/pickup',
-    //         data:{
-    //             "name" : name.value,
-    //             "tel" : tel.value,
-    //             "email": email.value,
-    //             "date": date.value
-    //         }
-    //     }).then((res)=>{
-    //         console.log(res);
-    //     }).catch(error=>{
-    //         console.log(error);
-    //         throw new Error(error);
-    //     });
-    // }
 
     return (
         <div>
@@ -171,13 +122,9 @@ function Reservation(){
             방문 수령 변경 예약은 카카오톡 채널로 문의 바랍니다!
             </p>
             <span>주소</span>
-            <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)<br></br>
+            <p>서울특별시 동작구 상도로55길 8, 304호(상도동, 챌린지스테이션)
+            <br></br>
             </p>
-            {/* <img 
-                className={styles.reservationImg}
-                src={reservation_img}
-                alt="reservation_img" 
-                /> */}
             <label id={styles.privacyCheck}>
             <input type="checkbox" name="rsv_agree" required></input>
                 <span id={styles.privacyAgree}>개인정보동의서에 동의합니다.</span>   
