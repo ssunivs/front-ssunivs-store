@@ -82,9 +82,8 @@ function Contact(){
 
                     <fieldset class={styles.recaptcha}>
                         <Captcha/>
-                    </fieldset>
-                    <br></br>
-
+                    </fieldset><br></br>
+                    
                     <input className={styles.contactSend} type="submit" value="Send" name="agreecheckbox"></input>
                     <br></br>
             </form>
