@@ -36,11 +36,12 @@ function Contact(){
                     <br></br>
                     
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>이&nbsp;름&nbsp;</span>
+                    <span className={styles.contactName}>이&nbsp;름&nbsp;&nbsp;</span>
                     <input className={styles.smallForm}
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
                     </label>
+
                     <br></br>
                     <label className={styles.contactForm}>
                     <span className={styles.contactName}>이메일 </span>
@@ -85,6 +86,7 @@ function Contact(){
                     </fieldset><br></br>
                     
                     <input className={styles.contactSend} type="submit" value="Send" name="agreecheckbox"></input>
+                    <br></br>
                     <br></br>
             </form>
             <iframe title="map" id={mapStyles.map}

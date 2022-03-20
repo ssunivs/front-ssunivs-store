@@ -1,4 +1,4 @@
-.contactForm{
+.contactForm {
     display:block; 
 }
 
@@ -9,17 +9,19 @@
     margin-right: 8%;
 }
 
-.smallForm{
-    width: 500px;
-    height: 30px;
+.smallForm {
+    margin-left:1%;
+    width: 700px;
+    height: 60px;
     border:none; 
 }
 
-.smallForm2{
+.smallForm2 {
+    margin-left:-3.5%;
     width:435px;
     height:30px;
     border:none; 
-}
+} 
 
 .textForm{
     margin-left: 8%;
@@ -91,6 +93,7 @@
         height: 30px;
     }
     .smallForm2{
+        margin-left:0.5%;
         width:300px;
         height:30px;
     }
