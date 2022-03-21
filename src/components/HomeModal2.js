@@ -11,7 +11,7 @@ export default function HomeModal2() {
     if (currentClass === "modalCard") {
       return;
     }
-    
+    document.body.style.overflow = "visible";
     setShow(false);
   };
   
