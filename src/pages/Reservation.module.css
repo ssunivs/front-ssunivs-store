@@ -1,3 +1,7 @@
+.requiredIcon{
+    margin-bottom: 4px;
+}
+
 #reservationNotice{
     color: #2c2c2c;
     text-align: center;
@@ -7,14 +11,6 @@
     padding-bottom: 10px;
     font-size: larger;
 }
-
-/* #reservationNotice > p{
-    font-weight: 500;
-}
-
-#reservationNotice > span{
-    font-weight:900;
-} */
 
 #privacyAgree{
     display: inline-block;

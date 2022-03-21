@@ -9,6 +9,7 @@ import styles from "pages/Reservation.module.css";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import getDay from "date-fns/getDay";
+import requiredIcon from "assets/ico_required_blue.gif";
 
 import {Link} from "react-router-dom";
 
@@ -44,21 +45,27 @@ function Reservation(){
             action=" " name="reservationInfo" method="post">
                 <label>
                     <div className={styles.reservationInput}>
-                        <span>성함&nbsp;&nbsp;&nbsp;</span>
+                        <span>성&nbsp;함&nbsp;
+                        <img className={styles.requiredIcon} src={requiredIcon} alt="required"/>
+                        </span>
                     </div>
                     <input id="rsv_name" name="rsv_name" type="text" required></input>
                 </label>
                 <hr></hr>
                 <label>
                     <div className={styles.reservationInput}>
-                        <span>연락처</span>
+                        <span>연락처&nbsp;
+                        <img className={styles.requiredIcon} src={requiredIcon} alt="required"/>
+                        </span>
                     </div>
                     <input id="rsv_tel" type="tel" name="rsv_tel" pattern="[0-9]+" required></input>
                 </label>
                 <hr></hr>
                 <label>
                 <div className={styles.reservationInput}>
-                        <span>이메일</span>
+                        <span>이메일&nbsp;
+                        <img className={styles.requiredIcon} src={requiredIcon} alt="required"/>
+                        </span>
                     </div>
                     <input id="rsv_email" type="email" name="rsv_email" required
                     pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3}$"></input>

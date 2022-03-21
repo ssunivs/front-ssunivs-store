@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import headTitle from "pages/headTitle.module.css";
 import NavBar from "components/NavBar.js";
+import requiredIcon from "assets/ico_required_blue.gif";
 
 function Contact(){
         const Captcha = () => {
@@ -28,7 +29,8 @@ function Contact(){
             <form className={styles.form} name="Contact" method="post" action="">
                     <br></br>
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>기업명 / 단체명</span>
+                    <span className={styles.contactName}>기업명 / 단체명&nbsp;
+                    <img className={styles.requiredIcon} src={requiredIcon} alt="required"/></span>
                     <input className={styles.smallForm2}
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
@@ -36,7 +38,8 @@ function Contact(){
                     <br></br>
                     
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>이&nbsp;름&nbsp;&nbsp;</span>
+                    <span className={styles.contactName}>이&nbsp;름&nbsp;
+                    <img className={styles.requiredIcon} src={requiredIcon} alt="required"/></span>
                     <input className={styles.smallForm}
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
@@ -44,7 +47,8 @@ function Contact(){
 
                     <br></br>
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>이메일 </span>
+                    <span className={styles.contactName}>이메일&nbsp;
+                    <img className={styles.requiredIcon} src={requiredIcon} alt="required"/></span>
                     <input className={styles.smallForm}
                     type="email" name="contact_name1" maxlenght="30" required
                     pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$"></input> 
@@ -53,7 +57,8 @@ function Contact(){
                     <br></br>
 
                     <label className={styles.contactForm}>
-                    <span className={styles.contactName}>연락처 </span>
+                    <span className={styles.contactName}>연락처&nbsp;
+                    <img className={styles.requiredIcon} src={requiredIcon} alt="required"/></span>
                     <input className={styles.smallForm} 
                     type="text" name="contact_name1" maxlenght="30" required></input> 
                     <hr id={styles.contactLine}></hr>
@@ -61,7 +66,8 @@ function Contact(){
                     <br></br>
 
                     <label>
-                    <span className={styles.contactName}>내용</span>
+                    <span className={styles.contactName}>내용&nbsp;
+                    <img className={styles.requiredIcon} src={requiredIcon} alt="required"/></span>
                     <br></br><br></br>
                         <textarea 
                         className={styles.textForm}
