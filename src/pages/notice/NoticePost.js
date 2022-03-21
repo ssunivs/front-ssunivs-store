@@ -35,6 +35,7 @@ function NoticePost(){
 
             <div id={styles.container}
                  dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
+            {contentRawToHtml}
 
             <div id={styles.underContainer}>
                 <Link to={adminState?'/Notice':'/LogIn'}

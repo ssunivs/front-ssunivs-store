@@ -17,6 +17,7 @@ export default function HomeModal2() {
   
   const handleModalOpen = () => {
     setShow(true);
+    document.body.style.overflow = "hidden";
   };
   
   return (
