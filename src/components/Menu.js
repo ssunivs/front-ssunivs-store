@@ -79,7 +79,7 @@ function Menu(){
                 <li>BOARD</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Notice"><li className={styles.list}
-                                    style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>Notice</li></Link>
+                                    style={{color: (path==="/Notice")? "#A5D1FC" : ""}}>NOTICE</li></Link>
                     <br></br>
                 <Link to="/FAQ"><li className={styles.list}
                                     style={{color: (path==="/FAQ")? "#A5D1FC" : ""}}>자주 묻는 질문</li></Link>                    
@@ -88,7 +88,7 @@ function Menu(){
                 <li>CONTACT</li>
                 <ul className={styles.detailLists}>
                 <Link to="/Contact"><li className={styles.list}
-                                        style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>Contact Us</li></Link>
+                                        style={{color: (path==="/Contact")? "#A5D1FC" : ""}}>CONTACT US</li></Link>
                     <br></br>                        
                 {/* <a  href="mailto:ssua@ssunivs.com"
                     target="_blank"
