@@ -9,7 +9,7 @@ import Modal from "components/HomeModal2";
 function Home(){
     
     return (
-        <div>
+        <div className={styles.homeContainer}>
             <div>
                 <img
                 className={styles.clickStore}

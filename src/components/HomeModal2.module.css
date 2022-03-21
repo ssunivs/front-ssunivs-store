@@ -58,8 +58,8 @@
 @media screen and (max-width:899px) {
   /* 모바일 가로, 타블렛 세로 */
     .couponTag{
-      height: 7vmax;
-      top: 70vh;
+      height: 8vmax;
+      top: 25vh;
     }
   .couponImg{
     width: 520px;
@@ -75,8 +75,8 @@
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
     .couponTag{
-            height: 8vmax;
-            top: 65vh;
+            height: 10vmax;
+            top: 25vh;
     }
     .couponImg{
             width: 280px;
@@ -90,8 +90,8 @@
 
 @media screen and (max-width:299px) {
   .couponTag{
-    height: 40px;
-    top: 60vh;
+    height: 8vmax;
+    top: 30vh;
   }
 .couponImg{
     width: 280px;

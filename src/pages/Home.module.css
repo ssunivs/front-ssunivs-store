@@ -1,6 +1,15 @@
+.homeContainer{
+    height: 100vh;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
 #home {
-    text-align: center;
-    padding-top: 10vmin;
+    display : flex;
+    justify-content : center;
+    align-items : center;
 }
 
 .clickStore{
@@ -8,99 +17,55 @@
     top: 110px;
 	right: 30px;
     height: 70px;
-    /* z-index: 1; */
 }
 
 
 /* 빅데스크탑 */
 .mainSsua1{
-    width: 300px;
-    position: relative;
-    bottom: 20px;
-    
+    width: 15vw;
     animation: fadein 3s;
 }
 
 .mainSsua2{
-    width: 300px;
-    position: relative;
-    top : 40px;
-
+    width: 15vw;
+    padding-top: 8vw;
     animation: fadein 3s;
 }
 
 .mainSsua3{
-    width: 300px;
-    position: relative;
-    bottom: 20px;
-
+    width: 15vw;
     animation: fadein 3s;
 }
 
-@media screen and (max-width:1799px){
-    /* 데스크탑(기준)*/
-    .mainSsua1{
-        width: 200px;
-        position: relative;
-        bottom: 20px;
-    }
-    
-    .mainSsua2{
-        width: 200px;
-        position: relative;
-        top : 40px;
-    }
-    
-    .mainSsua3{
-        width: 200px;
-        position: relative;
-        bottom: 20px;
-    }
-}
-
-
 @media screen and (max-width:899px) {
     /* 모바일 가로, 타블렛 세로 */
-    #home {
-        padding-top: 30vmin;
-    }
     .mainSsua1{
-        width: 26vmin;
-        position: relative;
-        bottom: 20px;
+        width: 25vw;
     }
     
     .mainSsua2{
-        width: 26vmin;
-        position: relative;
-        top : 40px;
+        width: 25vw;
+        padding-top: 10vw;
     }
     
     .mainSsua3{
-        width: 26vmin;
-        position: relative;
-        bottom: 20px;
+        width: 25vw;
     }
 }
 
 @media screen and (max-width:599px) {
         /* 모바일 세로 */
-        #home {
-            padding-top: 25vmin;
-        }
         .mainSsua1{
-            width: 25vmin;
-            bottom: 20px;
+            width: 28vmin;
         }
         
         .mainSsua2{
-            width: 25vmin;
-            top : 40px;
+            width: 28vmin;
+            padding-top: 15vw;
         }
         
         .mainSsua3{
-            width: 25vmin;
-            bottom: 20px;
+            width: 28vmin;
         }
         .clickStore{
             top: 80px;
@@ -111,22 +76,17 @@
 
 @media screen and (max-width:299px) {
     /* 모바일 세로 */
-    #home {
-        padding-top: 30vmin;
-    }
     .mainSsua1{
-        width: 22vmin;
-        bottom: 20px;
+        width: 25vmin;
     }
     
     .mainSsua2{
-        width: 22vmin;
-        top : 40px;
+        width: 25vmin;
+        padding-top: 13vw;
     }
     
     .mainSsua3{
-        width: 22vmin;
-        bottom: 20px;
+        width: 25vmin;
     }
     .clickStore{
         top: 80px;
