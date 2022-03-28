@@ -26,7 +26,7 @@
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
     .head{
-        margin-top: -30px;
+        margin-top: 80px;
         margin-bottom: 30px;
         color: #4b4b4b;
         font-size: 20px;
