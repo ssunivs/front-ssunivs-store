@@ -23,14 +23,14 @@ import hover_sy from "assets/member_profile/hover/hover-sy.png";
 import hover_bm from "assets/member_profile/hover/hover-bm.png";
 import hover_jc from "assets/member_profile/hover/hover-jc.png";
 
-// import clicked_jy from "assets/member_profile/cliked/clicked-jy.png";
-// import clicked_jm from "assets/member_profile/cliked/clicked-jm.png";
-// import clicked_ji from "assets/member_profile/cliked/clicked-ji.png";
-// import clicked_wj from "assets/member_profile/cliked/clicked-wj.png";
-// import clicked_gh from "assets/member_profile/cliked/clicked-gh.png";
-// import clicked_sy from "assets/member_profile/cliked/clicked-sy.png";
-// import clicked_bm from "assets/member_profile/cliked/clicked-bm.png";
-// import clicked_jc from "assets/member_profile/cliked/clicked-jc.png";
+// import clicked_jy from "assets/member_profile/clicked/clicked-jy.png";
+// import clicked_jm from "assets/member_profile/clicked/clicked-jm.png";
+// import clicked_ji from "assets/member_profile/clicked/clicked-ji.png";
+// import clicked_wj from "assets/member_profile/clicked/clicked-wj.png";
+// import clicked_gh from "assets/member_profile/clicked/clicked-gh.png";
+// import clicked_sy from "assets/member_profile/clicked/clicked-sy.png";
+// import clicked_bm from "assets/member_profile/clicked/clicked-bm.png";
+// import clicked_jc from "assets/member_profile/clicked/clicked-jc.png";
 
 
 function AboutSsunivers(){
@@ -42,15 +42,6 @@ function AboutSsunivers(){
     const [isProfileHover6, setIsProfileHover6] = useState(false);
     const [isProfileHover7, setIsProfileHover7] = useState(false);
     const [isProfileHover8, setIsProfileHover8] = useState(false);
-
-    // const [isProfileClicked1, setIsProfileClicked1] = useState(false);
-    // const [isProfileClicked2, setIsProfileClicked2] = useState(false);
-    // const [isProfileClicked3, setIsProfileClicked3] = useState(false);
-    // const [isProfileClicked4, setIsProfileClicked4] = useState(false);
-    // const [isProfileClicked5, setIsProfileClicked5] = useState(false);
-    // const [isProfileClicked6, setIsProfileClicked6] = useState(false);
-    // const [isProfileClicked7, setIsProfileClicked7] = useState(false);
-    // const [isProfileClicked8, setIsProfileClicked8] = useState(false);
 
     return (
         <div>
@@ -66,6 +57,8 @@ function AboutSsunivers(){
                         <a href="https://www.instagram.com/jminnisfree" target="_blank" rel="noopener noreferrer">
                             <img className={styles.member_profile_img}
                             src={isProfileHover1 ? hover_jm : regular_jm} alt="CEO 최정민"></img>
+                            {/* <img className={styles.member_profile_clicked_img}
+                            src={clicked_jm} alt="CEO 최정민"></img> */}
                         </a>
                     </div>
                     <div className={styles.member_item}

@@ -19,7 +19,7 @@
     row-gap: 20px;
 }
 
-/*가로 576 세로 344 */
+/* 명함 가로 576 세로 344 */
 
 .member_item{
     position: relative;
@@ -29,7 +29,28 @@
     position: static;
     width: 288px;
     cursor: pointer;
+
+    visibility: visible;
 }
+
+/* .member_profile_clicked_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 288px;
+    cursor: pointer;
+
+    display: none;
+}
+
+.member_profile_img:active.member_profile_clicked_img{
+    display: block;
+}
+
+.member_profile_img:active.member_profile_img{
+    visibility: hidden;
+} */
+
 
 @media screen and (max-width:1199px){
     /* 타블렛 가로 */
