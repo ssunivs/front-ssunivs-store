@@ -1,5 +1,6 @@
 .scrollToTop{
     display : none;
+	z-index: 2;
 }
 
 .scrollToTopHidden{
