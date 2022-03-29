@@ -1,20 +1,21 @@
-.Privacy_head{
-    font-size: 270%;
-    margin-left:9%;
-}
 .PrivacyContent{
     margin-left:9%;
-    font-size:70%;
     font-weight:bold;
 }
+
+h1{
+    text-align: left !important; 
+    margin-left:9%;
+    font-size: 50px;
+}
+
 @media screen and (max-width:599px) {
-.Privacy_head{
-    font-size: 150%;
-    margin-left:2%;
-}
 .PrivacyContent{
     margin-left:2%;
-    font-size:70%;
     font-weight:bold;
-}
+    }
+    h1{
+        margin-left:2%;
+        font-size: 30px;
+    }
 }
