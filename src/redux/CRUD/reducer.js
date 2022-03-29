@@ -2,69 +2,81 @@ import { SAVE, SELECTED, DELETE, UNSELECTED } from "./types";
 import axios from "axios";
 
 const initialState = {
-    boards: [
-      ],
-    ids: 5, //ids 빼주기
-    selected : {} //find함수를 통해서 boards에서 선택된 데이터를 넣을 예정
+    selected : {}
 }
 
 const uploadPost = (dataToSave) => {
-
   axios.post('/api/v1/post',
   {
     "title": dataToSave.title,
     "content": dataToSave.content
   })
-  // 성공한 경우 실행
   .then((response) => {
-    console.log(response.data);
+    alert('"'+ response.data.title + '"이(가) 저장되었습니다.');
+    window.scrollTo(0, 0);
   })
-  // 에러인 경우 실행
   .catch((error) => {
     alert(error.response.data.message);
   })
-  // 항상 실행
+  .then(() => {});
+}
+
+const patchPost = (dataToSave, id) => {
+  axios.patch(`/api/v1/post/${id}`,
+  {
+    "title": dataToSave.title,
+    "content": dataToSave.content
+  })
+  .then((response) => {
+    alert('"'+ response.data.title + '"이(가) 수정되었습니다.');
+  })
+  .catch((error) => {
+    alert(error.response.data.message);
+  })
+  .then(() => {});
+}
+
+const deletePost = (id) => {
+  axios.delete(`/api/v1/post/${id}`)
+  .then(() => {
+    alert('게시물이 삭제되었습니다.');
+  })
+  .catch((error) => {
+    alert(error.response.data.message);
+  })
   .then(() => {});
 }
 
 const boardReducer = (state=initialState,action)=>{
 
-  let boards = state.boards;
-
-  const saveRawDate = new Date();
-  const saveDate = (saveRawDate.getMonth()+1).toString().padStart(2,'0')
-                  +'/'
-                  +saveRawDate.getDate().toString().padStart(2,'0')
-
+  let dataToSave = action.dataToSave;
+  let postId = action.postId;
     switch(action.type){
-        case SAVE: //저장할 때 날짜랑 id빼주기
-          let dataToSave = action.dataToSave;
-          let ids = state.ids;
-            if(!dataToSave.id){ //id가 없으면
-              uploadPost(dataToSave);
-                return {
-                  ids: ids + 1,
-                  boards: boards.concat({...dataToSave, id: ids + 1,
-                          title: dataToSave.title, content: dataToSave.content, 
-                          postDate: saveDate, sort: dataToSave.sort,
-                          writer: dataToSave.writer}),
-                  // boards: boards.concat({...dataToSave, })
-                  
-                  selected: {}
-                }
-              }
-            return {...state, boards: boards.map(post =>
-              post.id === dataToSave.id ? {...dataToSave, postDate: saveDate} : post), selected: {}}
+        case SAVE:
+          if(!dataToSave.id){
+            uploadPost(dataToSave);
+            }
+          if(dataToSave.id){
+            patchPost(dataToSave);
+            }
+          return {...state, selected: {}}
 
         case DELETE:
-              return {
-                ...state, boards: boards.filter( post => post.id !== action.postId), selected: {}
-              }
+          if(postId){
+            deletePost(postId);
+            }
+          if(!postId){
+            alert("게시물이 존재하지 않습니다");
+            }
+          return {...state}
             
         case SELECTED:
+          if(postId){
             return {
-              ...state, selected: boards.find(post => post.id === action.postId)
+              ...state, selected: postId
             }
+            }
+          return {...state}
 
         case UNSELECTED:
             return {
