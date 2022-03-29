@@ -5,7 +5,7 @@ function Privacy(){
     return (
         <div>
             <div className={headTitle.head}>
-                <h1>개인정보처리방침</h1>
+                <h1 id={styles.Privacy}>개인정보처리방침</h1>
             </div>
             <p className={styles.PrivacyContent}>
             'OOO'은 (이하 '회사'는)<br></br>

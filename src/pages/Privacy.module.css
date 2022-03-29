@@ -3,10 +3,10 @@
     font-weight:bold;
 }
 
-h1{
+#Privacy{
     text-align: left !important; 
-    margin-left:9%;
-    font-size: 50px;
+    margin-left:9% !important;
+    font-size: 50px !important;
 }
 
 @media screen and (max-width:599px) {
@@ -14,8 +14,8 @@ h1{
     margin-left:2%;
     font-weight:bold;
     }
-    h1{
-        margin-left:2%;
-        font-size: 30px;
+    #Privacy{
+        margin-left:2% !important;
+        font-size: 30px !important;
     }
 }
