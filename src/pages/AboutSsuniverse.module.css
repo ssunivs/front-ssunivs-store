@@ -4,6 +4,33 @@
     display :block;
 }
 
+.member_container{
+    display: grid;
+
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 200px;
+
+    align-items: center;
+    justify-items: center;
+
+    align-content: stretch;
+    justify-content: center;
+
+    row-gap: 20px;
+}
+
+/*가로 576 세로 344 */
+
+.member_item{
+    position: relative;
+}
+
+.member_profile_img{
+    position: static;
+    width: 288px;
+    cursor: pointer;
+}
+
 @media screen and (max-width:1199px){
     /* 타블렛 가로 */
     .aboutSsuniverseImg{
@@ -22,5 +49,13 @@
         /* 모바일 세로 */
         .aboutSsuniverseImg{
             width: 100%;
+        }
+        .member_container{
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 200px;
+        }
+        .member_profile_img{
+            width: 250px;
         }
 }
