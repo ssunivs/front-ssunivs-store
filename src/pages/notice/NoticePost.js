@@ -14,28 +14,30 @@ function NoticePost(){
     const {selected} = useSelector(state => state.board);
     const contentRawToHtml = draftToHtml(JSON.parse(selected.content));
     
+    const substrCreatedAt = selected.createdAt.substr(5,2) + '/' + selected.createdAt.substr(8,2);
+    const substrUpdatedAt = selected.updatedAt.substr(0,10);
+
     const dispatch = useDispatch();
 
     const onRevise = () => {
         dispatch(setRevise());
     }
-
     return (
         <div>
             <br></br>
             <NavBar />
             <div id={styles.overContainer}>
-                <div className={styles.sort}>{selected.sort}</div>
+                {/* <div className={styles.sort}>{selected.sort}</div> */}
+                <div className={styles.sort}>임시 분류</div>
                 <h1>{selected.title}</h1>
                 <div className={styles.information}>
-                    <div>{selected.writer} | {selected.postDate}</div>
-                    <i>&nbsp; (2022-02-28 수정됨)</i>
+                    <div>{selected.writer.username} | {substrCreatedAt}</div>
+                    <i>&nbsp; {substrUpdatedAt}</i>
                 </div>
             </div>
 
             <div id={styles.container}
                  dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
-            {contentRawToHtml}
 
             <div id={styles.underContainer}>
                 <Link to={adminState?'/Notice':'/LogIn'}

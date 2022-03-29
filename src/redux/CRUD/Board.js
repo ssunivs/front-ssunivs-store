@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected, boardUnSelected } from "./action";
 import { unsetRevise } from "./revise/action";
 import { setOutAdmin } from "redux/setAdmin/actions";
+import axios from "axios";
 
 import styles from "./Board.module.css";
 import tableStyle from "../../pages/notice/Notice.module.css";
@@ -27,34 +28,32 @@ const Board = () => {
 
     const onDelete = (postId) => {
         if(window.confirm("영구히 삭제합니다. 정말 삭제하시겠습니까?")===true){
-            alert("삭제되었습니다.");
             dispatch(boardDelete(postId))};
+            getPostList();
+            window.scrollTo(0, 0);
         }
     const onSave = (dataToSave) => {
         if(window.confirm("저장하시겠습니까?")===true){
-            alert("저장되었습니다.");
             dispatch(boardSave(dataToSave));
             offWriteMode();
-            window.scrollTo(0, 0);
         }
     }
 
-    const {selected} = useSelector(state => state.board);
-
-    
-    const postClickHandler = (postId) => 
+    const getOnePost = async (id) => {
+        try {
+          const response = await axios.get(`/api/v1/post/${id}`);
+          const getOnePostData = await response.data;
+          dispatch(boardSelected(getOnePostData))
+             
+        } catch(error) {
+          alert(error.response.data.message);
+          return Promise.reject(error)
+        }
+      }
+    const postClickHandler = (postId) =>
     {
-        dispatch(boardSelected(postId));
-        
-        if(JSON.stringify(selected) !== '{}') {
-            setPost({
-                id: selected.id,
-                title: selected.title,
-                content: selected.content,
-                sort: selected.sort,
-                writer: selected.writer,
-                postDate: selected.postDate
-            });
+        if(postId) {
+            getOnePost(postId)
         }
     }
     
@@ -76,8 +75,6 @@ const Board = () => {
         })
         dispatch(boardUnSelected());
     }
-    
-    const {boards} = useSelector(state => state.board);
 
     //Detect reviseState
     const {reviseState} = useSelector(state => state.revise);
@@ -111,6 +108,19 @@ const Board = () => {
         dispatch(setOutAdmin());
     }
 
+    const [board, setBoard] = useState([]);
+    const getPostList = async () => {
+        try {
+          const getPostData = await axios.get('/api/v1/post');
+          setBoard(getPostData.data.content);
+        } catch(error) {
+          alert(error.response.data);
+        }
+      }
+    useEffect(() => {
+        getPostList();
+    }, [board]);
+
     return(
         <div id={writeMode? styles.containerSlideUp:styles.containerSlideDown}>
             <div className={styles.sortSelection}
@@ -134,18 +144,18 @@ const Board = () => {
                     </tr>
                 </thead>
                 <tbody>
-        {/* 지금은 boards지만 */}
-                        {boards.map(post =>
+                    {
+                        board.map(post =>
                             (
                                 <List
-                                    no={(boards.indexOf(post))+1}
+                                    no={(board.indexOf(post))+1}
                                     tableStyle={tableStyle}
                                     post={post}
                                     postClickHandler={postClickHandler}
                                     onDelete={onDelete}
                                 />
                             ))
-                        }
+                    }
                 </tbody>
 
             </table>

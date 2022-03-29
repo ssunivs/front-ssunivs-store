@@ -91,7 +91,7 @@
     width : 95%;
     max-width: 1000px;
     margin : auto;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 50px;
 
     font-weight: bold;
@@ -185,7 +185,7 @@
     /* 모바일 세로 */
 
     #overContainer{
-        margin-top: auto;
+        margin-top: 80px;
         font-size: 1rem;
     }
 }

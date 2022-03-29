@@ -5,12 +5,9 @@ export const boardSave = (dataToSave) =>{
     return{
         type: SAVE,
         dataToSave: {
-            id: dataToSave.id, //고유 id
             title: dataToSave.title,
             content: dataToSave.content,
-            sort: dataToSave.sort,
-            writer: dataToSave.writer,
-            postDate: dataToSave.postDate
+            sort: dataToSave.sort
           }
     }
 }
