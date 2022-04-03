@@ -38,9 +38,7 @@ const patchPost = (dataToSave, id) => {
 
 const deletePost = (id) => {
   axios.delete(`/api/v1/post/${id}`)
-  .then(() => {
-    alert('게시물이 삭제되었습니다.');
-  })
+  .then(alert('게시물이 삭제되었습니다.'))
   .catch((error) => {
     alert(error.response.data.message);
   })
@@ -72,9 +70,7 @@ const boardReducer = (state=initialState,action)=>{
             
         case SELECTED:
           if(postId){
-            return {
-              ...state, selected: postId
-            }
+            return {...state, selected: postId}
             }
           return {...state}
 

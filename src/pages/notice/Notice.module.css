@@ -70,6 +70,7 @@
     text-align: center;
     border-bottom: 0.8px solid rgb(231, 231, 231);
     
+    cursor: pointer;
     transition: all 0.4s;
 }
 
@@ -87,6 +88,15 @@
 }
 
 /* NoticePost */
+.containerSlideUp{
+    animation: slideUp 0.8s;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(+10%);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
 #overContainer{
     width : 95%;
     max-width: 1000px;

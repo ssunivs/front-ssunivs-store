@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { boardSave, boardDelete, boardSelected, boardUnSelected } from "./action";
@@ -18,7 +18,6 @@ const Board = () => {
         content: '',
         sort: '',
         writer: '',
-        postDate: ''
     });
 
     const dispatch = useDispatch();
@@ -26,25 +25,31 @@ const Board = () => {
     //Detect AdminMode
     const {adminState} = useSelector(state => state.adminMode);
 
-    const onDelete = (postId) => {
+    const onDelete = (e, postId) => {
+        e.stopPropagation();
         if(window.confirm("영구히 삭제합니다. 정말 삭제하시겠습니까?")===true){
             dispatch(boardDelete(postId))};
-            getPostList();
             window.scrollTo(0, 0);
         }
     const onSave = (dataToSave) => {
         if(window.confirm("저장하시겠습니까?")===true){
             dispatch(boardSave(dataToSave));
-            offWriteMode();
+
+            if(reviseState === true){
+                offRevise();
+            }
+            setWriteMode(false);
+            resetForm();
         }
     }
 
+    const history = useHistory();
     const getOnePost = async (id) => {
         try {
           const response = await axios.get(`/api/v1/post/${id}`);
           const getOnePostData = await response.data;
           dispatch(boardSelected(getOnePostData))
-             
+          history.push('/Notice.post');
         } catch(error) {
           alert(error.response.data.message);
           return Promise.reject(error)
@@ -70,8 +75,7 @@ const Board = () => {
             title: '',
             content: '',
             sort: '',
-            writer: '',
-            postDate: ''
+            writer: ''
         })
         dispatch(boardUnSelected());
     }
@@ -91,10 +95,16 @@ const Board = () => {
     }
 
     const offWriteMode = () =>{
-        if(reviseState === true){
-            offRevise();
+        if(window.confirm("게시물 작성이 취소됩니다. 게시판으로 돌아가시겠습니까?")===true){
+            setWriteMode(false);
+            if(reviseState === true){
+                offRevise();
+                alert("게시물 수정이 취소되었습니다.");
+            } else {
+                alert("게시물 작성이 취소되었습니다.");
+            }
+            resetForm();
         }
-        setWriteMode(false);
     }
 
     const setContent = (contentRaw) => {
@@ -178,7 +188,6 @@ const Board = () => {
                     onSave={onSave}
                     changeInput={changeInput}
                     post={post}
-                    resetForm={resetForm}
                     setContent={setContent}
                     setPost={setPost}
                 />

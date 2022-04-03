@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const List = ({ no, tableStyle, post, postClickHandler, onDelete }) => {
@@ -6,15 +5,20 @@ const List = ({ no, tableStyle, post, postClickHandler, onDelete }) => {
     const {adminState} = useSelector(state => state.adminMode);
     const substrUpdatedAt = post.updatedAt.substr(5,2) + '/' + post.updatedAt.substr(8,2);
     
+    const delayAndGo = (e, postId) =>{
+        e.preventDefault();
+        postClickHandler(postId);
+    }
+
     return(
-            <tr className={tableStyle.notice_listRow}>
+            <tr className={tableStyle.notice_listRow}
+                onClick={(e)=>delayAndGo(e, post.id)}>
                 <td style={{display: (adminState)? "":"none"}}>{no.toString().padStart(3,'0')}</td>
                 <td className={tableStyle.notice_listOnlyWeb}>임시 분류</td>
                 {/* <td className={tableStyle.notice_listOnlyWeb}>{post.sort}</td> */}
                 <td className={tableStyle.notice_listTitle}
-                    onClick={()=>postClickHandler(post.id)}
                     >
-                    <Link to="/Notice.post">{post.title}</Link>
+                    {post.title}
                     <div className={tableStyle.notice_listOnlyMobile}>
                         <div>임시 분류</div>
                         {/* <div>{post.sort}</div> */}
@@ -25,10 +29,9 @@ const List = ({ no, tableStyle, post, postClickHandler, onDelete }) => {
                 <td className={tableStyle.notice_listOnlyWeb}>{post.writer.username}</td>
                 <td className={tableStyle.notice_listOnlyWeb}>{substrUpdatedAt}</td>
 
-                <td><button onClick={() => onDelete(post.id)}
+                <td><button onClick={(e) => onDelete(e, post.id)}
+                // 딜리트 눌러도 post 열리네...
                 style={{display: (adminState)? "":"none"}}>X</button></td>
-
-                <td style={{display: "none"}}>{post.content}</td>
             </tr>
     );
 };

@@ -26,7 +26,8 @@ function NoticePost(){
         <div>
             <br></br>
             <NavBar />
-            <div id={styles.overContainer}>
+            <div id={styles.overContainer}
+                 className={styles.containerSlideUp}>
                 {/* <div className={styles.sort}>{selected.sort}</div> */}
                 <div className={styles.sort}>임시 분류</div>
                 <h1>{selected.title}</h1>
@@ -37,9 +38,11 @@ function NoticePost(){
             </div>
 
             <div id={styles.container}
+                 className={styles.containerSlideUp}
                  dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
 
-            <div id={styles.underContainer}>
+            <div id={styles.underContainer}
+                 className={styles.containerSlideUp}>
                 <Link to={adminState?'/Notice':'/LogIn'}
                     style={{display: adminState?'':'none'}}
                     onClick={onRevise}>
