@@ -39,7 +39,7 @@ function NoticePost(){
 
             <div id={styles.container}
                  className={styles.containerSlideUp}
-                 dangerouslySetInnerHTML={{__html: contentRawToHtml}} />
+                 dangerouslySetInnerHTML={{__html: contentRawToHtml}} /> 
 
             <div id={styles.underContainer}
                  className={styles.containerSlideUp}>

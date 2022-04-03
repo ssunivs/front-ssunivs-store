@@ -127,6 +127,9 @@
     min-height: 400px;
     margin : auto;
 }
+#container img{
+    width: stretch !important;
+}
 
 .postInformation{
     display: flex;

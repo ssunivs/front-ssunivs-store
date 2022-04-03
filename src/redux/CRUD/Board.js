@@ -28,9 +28,9 @@ const Board = () => {
     const onDelete = (e, postId) => {
         e.stopPropagation();
         if(window.confirm("영구히 삭제합니다. 정말 삭제하시겠습니까?")===true){
-            dispatch(boardDelete(postId))};
+            dispatch(boardDelete(postId));
             window.scrollTo(0, 0);
-        }
+        }}
     const onSave = (dataToSave) => {
         if(window.confirm("저장하시겠습니까?")===true){
             dispatch(boardSave(dataToSave));
