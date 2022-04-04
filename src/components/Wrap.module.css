@@ -8,19 +8,23 @@
     transition: all 0.5s;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;  /* 스크롤바의 너비 */
+::-webkit-scrollbar {
+    width: 10px;  /* 스크롤바의 너비 */
+    /* height: 20px; */
 }
 
-body::-webkit-scrollbar-thumb {
-    height: 30%;
-    background: #217af4; 
+::-webkit-scrollbar-thumb {
+    height: 10px;
+    /* height: 30%; */
+    /* background: #217af4;  */
+    background: #c5dffa;
+    /* background: aliceblue; */
     /* 스크롤바의 색상#217af4  #04488C  #c5dffa 푸터하늘 aliceblue */ 
     
     border-radius: 10px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: rgba(33, 122, 244, .1);
     /* background: aliceblue; */
 }
