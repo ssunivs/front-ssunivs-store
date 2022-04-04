@@ -73,6 +73,7 @@ const Board = () => {
     const onWriteMode = () =>{
         dispatch(boardUnSelected());
         setWriteMode(true);
+        window.scrollTo(0, 0);
     }
 
     const offWriteMode = () =>{
@@ -85,6 +86,7 @@ const Board = () => {
                 alert("게시물 작성이 취소되었습니다.");
             }
             resetForm();
+            window.scrollTo(0, 0);
         }
     }
 
