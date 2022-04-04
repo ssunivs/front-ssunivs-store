@@ -1,7 +1,7 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { boardSave, boardDelete, boardSelected, boardUnSelected } from "./action";
+import { boardSave, boardDelete, boardUnSelected } from "./action";
 import { unsetRevise } from "./revise/action";
 import { setOutAdmin } from "redux/setAdmin/actions";
 import axios from "axios";
@@ -40,25 +40,6 @@ const Board = () => {
             }
             setWriteMode(false);
             resetForm();
-        }
-    }
-
-    const history = useHistory();
-    const getOnePost = async (id) => {
-        try {
-          const response = await axios.get(`/api/v1/post/${id}`);
-          const getOnePostData = await response.data;
-          dispatch(boardSelected(getOnePostData))
-          history.push('/Notice.post');
-        } catch(error) {
-          alert(error.response.data.message);
-          return Promise.reject(error)
-        }
-      }
-    const postClickHandler = (postId) =>
-    {
-        if(postId) {
-            getOnePost(postId)
         }
     }
     
@@ -161,7 +142,6 @@ const Board = () => {
                                     no={(board.indexOf(post))+1}
                                     tableStyle={tableStyle}
                                     post={post}
-                                    postClickHandler={postClickHandler}
                                     onDelete={onDelete}
                                 />
                             ))

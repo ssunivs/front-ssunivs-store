@@ -1,18 +1,16 @@
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-const List = ({ no, tableStyle, post, postClickHandler, onDelete }) => {
+const List = ({ no, tableStyle, post, onDelete }) => {
     //Detect AdminMode
     const {adminState} = useSelector(state => state.adminMode);
     const substrUpdatedAt = post.updatedAt.substr(5,2) + '/' + post.updatedAt.substr(8,2);
-    
-    const delayAndGo = (e, postId) =>{
-        e.preventDefault();
-        postClickHandler(postId);
-    }
+
+    const history = useHistory();
 
     return(
             <tr className={tableStyle.notice_listRow}
-                onClick={(e)=>delayAndGo(e, post.id)}>
+                onClick={()=> history.push('/NoticePost/' + post.id)}>
                 <td style={{display: (adminState)? "":"none"}}>{no.toString().padStart(3,'0')}</td>
                 <td className={tableStyle.notice_listOnlyWeb}>임시 분류</td>
                 {/* <td className={tableStyle.notice_listOnlyWeb}>{post.sort}</td> */}

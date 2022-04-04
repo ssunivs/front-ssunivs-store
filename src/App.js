@@ -45,7 +45,7 @@ function App() {
             <Route path="/Notice" component={Notice} />
             <Route path="/FAQ" component={FAQ} />
             <Route path="/Contact" component={Contact}/>
-            <Route path="/Notice.post" component={NoticePost} />
+            <Route path="/NoticePost/:id" component={NoticePost} />
             <Route path="/LogIn" component={LogIn}/>
             <Route path="/Privacy" component={Privacy}/>
           </Switch>   
