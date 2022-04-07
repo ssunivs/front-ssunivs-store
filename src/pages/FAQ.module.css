@@ -1,35 +1,55 @@
+details[open] summary ~ * {
+  animation: sweep 0.8s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    /* margin-left: -10px; */
+  }
+  100% {
+    opacity: 1;
+    /* margin-left: 0px; */
+  }
+}
+
 .faq > details {
-    user-select: none;
+  user-select: none;
 }
 
-.faqDetails > summary{
+.faqDetails > summary {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #808080;
+}
+
+.faqDetails > summary:hover {
+  color: black;
+}
+
+.faqDetails p {
+  display: block;
+  font-size: 15px;
+  padding: 20px;
+  padding-left: 30px;
+  background-color: aliceblue;
+  list-style-position: inside;
+}
+
+.faq hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 599px) {
+  /* 모바일 세로 */
+  .faqDetails > summary {
     margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.faqDetails p{
-    display: block;
-    font-size:15px;
-    padding : 20px;
-    padding-left : 30px;
-    background-color :aliceblue ;
-    list-style-position: inside;
-}
-
-.faq hr{
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-@media screen and (max-width:599px) {
-    /* 모바일 세로 */
-    .faqDetails > summary{
-        margin-bottom: 5px;
-        font-size: 15px;
-    }
-    .faqDetails p{
-        font-size:13px;
-    }
+    font-size: 15px;
+  }
+  .faqDetails p {
+    font-size: 13px;
+  }
 }
