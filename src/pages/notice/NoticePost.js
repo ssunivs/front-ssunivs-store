@@ -42,7 +42,7 @@ function NoticePost(){
     const dispatch = useDispatch();
 
     const onRevise = () => {
-        dispatch(setRevise());
+        dispatch(setRevise(id));
     }
     return (
         <div>
@@ -68,8 +68,8 @@ function NoticePost(){
             <div id={styles.underContainer}
                  className={styles.containerSlideUp}>
                 <Link to={adminState?'/Notice':'/LogIn'}
-                    style={{display: adminState?'':'none'}}
-                    onClick={onRevise}>
+                      style={{display: adminState?'':'none'}}
+                      onClick={onRevise}>
                     <button className={styles.noticeButton}>수정하기</button>
                 </Link>
 
